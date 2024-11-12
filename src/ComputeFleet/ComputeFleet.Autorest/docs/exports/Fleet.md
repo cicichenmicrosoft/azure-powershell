@@ -26,9 +26,6 @@ create a Fleet
 ### [Remove-Fleet](Remove-Fleet.md)
 Delete a Fleet
 
-### [Set-Fleet](Set-Fleet.md)
-update a Fleet
-
 ### [Update-Fleet](Update-Fleet.md)
 update a Fleet
 

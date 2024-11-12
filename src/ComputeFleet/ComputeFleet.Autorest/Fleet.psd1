@@ -11,7 +11,7 @@
   DotNetFrameworkVersion = '4.7.2'
   RequiredAssemblies = './bin/Fleet.private.dll'
   FormatsToProcess = './Fleet.format.ps1xml'
-  FunctionsToExport = 'Get-Fleet', 'Get-FleetVirtualMachineScaleSet', 'Get-Operation', 'New-Fleet', 'Remove-Fleet', 'Set-Fleet', 'Update-Fleet'
+  FunctionsToExport = 'Get-Fleet', 'Get-FleetVirtualMachineScaleSet', 'Get-Operation', 'New-Fleet', 'Remove-Fleet', 'Update-Fleet'
   PrivateData = @{
     PSData = @{
       Tags = ''

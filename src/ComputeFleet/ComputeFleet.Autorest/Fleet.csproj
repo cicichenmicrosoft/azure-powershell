@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>Fleet.private</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <RootNamespace>Sample.API</RootNamespace>
+    <RootNamespace>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet</RootNamespace>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>./bin</OutputPath>

@@ -33,7 +33,7 @@ https://learn.microsoft.com/powershell/module/fleet/get-fleet
 #>
 function Get-Fleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
-[CmdletBinding(DefaultParameterSetName='ListBySubscription', PositionalBinding=$false)]
+[CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
@@ -42,7 +42,7 @@ param(
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
+    [Parameter(ParameterSetName='List1', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
@@ -50,8 +50,8 @@ param(
     ${ResourceGroupName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='ListBySubscription', Mandatory)]
-    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
+    [Parameter(ParameterSetName='List', Mandatory)]
+    [Parameter(ParameterSetName='List1', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
@@ -115,8 +115,8 @@ begin {
         $mapping = @{
             Get = 'Fleet.private\Get-Fleet_Get';
             GetViaIdentity = 'Fleet.private\Get-Fleet_GetViaIdentity';
-            ListBySubscription = 'Fleet.private\Get-Fleet_List';
-            ListByResourceGroup = 'Fleet.private\Get-Fleet_List1';
+            List = 'Fleet.private\Get-Fleet_List';
+            List1 = 'Fleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
