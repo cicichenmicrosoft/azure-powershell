@@ -15,69 +15,69 @@ List VirtualMachineScaleSet resources by Fleet
 {{ Add code here }}
 
 .Outputs
-Sample.API.Models.IVirtualMachineScaleSet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet
 .Link
 https://learn.microsoft.com/powershell/module/fleet/get-fleetvirtualmachinescaleset
 #>
 function Get-FleetVirtualMachineScaleSet {
-[OutputType([Sample.API.Models.IVirtualMachineScaleSet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Fleet
     ${Name},
 
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
     ${ResourceGroupName},
 
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -95,8 +95,8 @@ begin {
             List = 'Fleet.private\Get-FleetVirtualMachineScaleSet_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)

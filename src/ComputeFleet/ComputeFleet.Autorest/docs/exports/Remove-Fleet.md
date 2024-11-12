@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Identity Parameter
 
 ```yaml
-Type: Sample.API.Models.IFleetIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 Parameter Sets: DeleteViaIdentity
 Aliases:
 
@@ -188,7 +188,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Sample.API.Models.IFleetIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 
 ## OUTPUTS
 

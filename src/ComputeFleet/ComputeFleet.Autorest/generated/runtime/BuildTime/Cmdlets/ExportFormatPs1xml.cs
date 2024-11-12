@@ -9,7 +9,7 @@ using System.Linq;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace Sample.API.Runtime.PowerShell
+namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
 {
   [Cmdlet(VerbsData.Export, "FormatPs1xml")]
   [DoNotExport]
@@ -19,7 +19,7 @@ namespace Sample.API.Runtime.PowerShell
     [ValidateNotNullOrEmpty]
     public string FilePath { get; set; }
 
-    private const string ModelNamespace = @"Sample.API.Models";
+    private const string ModelNamespace = @"Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101";
     private const string SupportNamespace = @"${$project.supportNamespace.fullName}";
     private const string PropertiesExcludedForTableview = @"";
 

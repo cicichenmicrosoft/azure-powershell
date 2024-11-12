@@ -3,7 +3,7 @@
 
 namespace Sample.API
 {
-    using static Sample.API.Runtime.Extensions;
+    using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
     using SignalDelegate = global::System.Func<string, global::System.Threading.CancellationToken, global::System.Func<global::System.EventArgs>, global::System.Threading.Tasks.Task>;
     using EventListenerDelegate = global::System.Func<string, global::System.Threading.CancellationToken, global::System.Func<global::System.EventArgs>, global::System.Func<string, global::System.Threading.CancellationToken, global::System.Func<global::System.EventArgs>, global::System.Threading.Tasks.Task>, global::System.Management.Automation.InvocationInfo, string, global::System.Exception, global::System.Threading.Tasks.Task>;
 
@@ -16,13 +16,13 @@ namespace Sample.API
 
         private static readonly global::System.Object _initLock = new global::System.Object();
 
-        private static Sample.API.Module _instance;
+        private static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module _instance;
 
         /// <summary>the ISendAsync pipeline instance</summary>
-        private Sample.API.Runtime.HttpPipeline _pipeline;
+        private Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline _pipeline;
 
         /// <summary>the ISendAsync pipeline instance (when proxy is enabled)</summary>
-        private Sample.API.Runtime.HttpPipeline _pipelineWithProxy;
+        private Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline _pipelineWithProxy;
 
         private static readonly global::System.Object _singletonLock = new global::System.Object();
 
@@ -31,13 +31,13 @@ namespace Sample.API
         public global::System.Net.WebProxy _webProxy = new global::System.Net.WebProxy();
 
         /// <summary>The instance of the Client API</summary>
-        public Sample.API.MicrosoftAzureFleet ClientAPI { get; set; }
+        public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.MicrosoftAzureFleet ClientAPI { get; set; }
 
         /// <summary>A delegate that gets called for each signalled event</summary>
         public EventListenerDelegate EventListener { get; set; }
 
         /// <summary>the singleton of this module class</summary>
-        public static Sample.API.Module Instance { get { if (_instance == null) { lock (_singletonLock) { if (_instance == null) { _instance = new Module(); }}} return _instance; } }
+        public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module Instance { get { if (_instance == null) { lock (_singletonLock) { if (_instance == null) { _instance = new Module(); }}} return _instance; } }
 
         /// <summary>The Name of this module</summary>
         public string Name => @"Fleet";
@@ -45,12 +45,12 @@ namespace Sample.API
         /// <param name="invocationInfo">The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</param>
         /// <param name="pipeline">The HttpPipeline for the request</param>
 
-        partial void AfterCreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, ref Sample.API.Runtime.HttpPipeline pipeline);
+        partial void AfterCreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, ref Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline pipeline);
 
         /// <param name="invocationInfo">The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</param>
         /// <param name="pipeline">The HttpPipeline for the request</param>
 
-        partial void BeforeCreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, ref Sample.API.Runtime.HttpPipeline pipeline);
+        partial void BeforeCreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, ref Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline pipeline);
 
         partial void CustomInit();
 
@@ -58,10 +58,10 @@ namespace Sample.API
         /// <param name="invocationInfo">The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</param>
         /// <param name="parameterSetName">the cmdlet's parameterset name.</param>
         /// <param name="extensibleParameters">a dict for extensible parameters</param>
-        /// <returns>An instance of Sample.API.Runtime.HttpPipeline for the remote call.</returns>
-        public Sample.API.Runtime.HttpPipeline CreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, string parameterSetName = null, global::System.Collections.Generic.IDictionary<string,object> extensibleParameters = null)
+        /// <returns>An instance of Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline for the remote call.</returns>
+        public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline CreatePipeline(global::System.Management.Automation.InvocationInfo invocationInfo, string parameterSetName = null, global::System.Collections.Generic.IDictionary<string,object> extensibleParameters = null)
         {
-            Sample.API.Runtime.HttpPipeline pipeline = null;
+            Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline pipeline = null;
             BeforeCreatePipeline(invocationInfo, ref pipeline);
             pipeline = (pipeline ?? (_useProxy ? _pipelineWithProxy : _pipeline)).Clone();
             AfterCreatePipeline(invocationInfo, ref pipeline);
@@ -87,10 +87,10 @@ namespace Sample.API
         private Module()
         {
             // constructor
-            ClientAPI = new Sample.API.MicrosoftAzureFleet();
+            ClientAPI = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.MicrosoftAzureFleet();
             _handler.Proxy = _webProxy;
-            _pipeline = new Sample.API.Runtime.HttpPipeline(new Sample.API.Runtime.HttpClientFactory(new global::System.Net.Http.HttpClient()));
-            _pipelineWithProxy = new Sample.API.Runtime.HttpPipeline(new Sample.API.Runtime.HttpClientFactory(new global::System.Net.Http.HttpClient(_handler)));
+            _pipeline = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline(new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpClientFactory(new global::System.Net.Http.HttpClient()));
+            _pipelineWithProxy = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpPipeline(new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.HttpClientFactory(new global::System.Net.Http.HttpClient(_handler)));
         }
 
         /// <param name="proxy">The HTTP Proxy to use.</param>

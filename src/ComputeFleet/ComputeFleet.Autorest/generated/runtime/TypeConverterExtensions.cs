@@ -7,7 +7,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Sample.API.Runtime.PowerShell
+namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
 {
     internal static class TypeConverterExtensions
     {

@@ -15,49 +15,49 @@ List the operations for the provider
 {{ Add code here }}
 
 .Outputs
-Sample.API.Models.IOperation
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation
 .Link
 https://learn.microsoft.com/powershell/module/fleet/get-operation
 #>
 function Get-Operation {
-[OutputType([Sample.API.Models.IOperation])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -75,8 +75,8 @@ begin {
             List = 'Fleet.private\Get-Operation_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)

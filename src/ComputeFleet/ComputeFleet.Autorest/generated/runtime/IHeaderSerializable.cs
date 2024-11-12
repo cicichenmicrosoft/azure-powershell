@@ -5,7 +5,7 @@
 
 using System;
 
-namespace Sample.API.Runtime
+namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime
 {
     public interface IHeaderSerializable
     {

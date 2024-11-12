@@ -92,7 +92,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Sample.API.Models.IVirtualMachineScaleSet
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet
 
 ## NOTES
 

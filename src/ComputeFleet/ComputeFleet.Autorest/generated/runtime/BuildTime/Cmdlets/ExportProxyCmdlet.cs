@@ -7,12 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Management.Automation;
 using System.Text;
-using static Sample.API.Runtime.PowerShell.PsHelpers;
-using static Sample.API.Runtime.PowerShell.MarkdownRenderer;
-using static Sample.API.Runtime.PowerShell.PsProxyTypeExtensions;
+using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell.PsHelpers;
+using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell.MarkdownRenderer;
+using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell.PsProxyTypeExtensions;
 using System.Collections.Generic;
 
-namespace Sample.API.Runtime.PowerShell
+namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
 {
     [Cmdlet(VerbsData.Export, "ProxyCmdlet", DefaultParameterSetName = "Docs")]
     [DoNotExport]

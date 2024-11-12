@@ -3,7 +3,7 @@
 
 namespace Sample.API
 {
-    using static Sample.API.Runtime.Extensions;
+    using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
     /// Low-level API implementation for the Microsoft.AzureFleet service.
@@ -19,13 +19,13 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsCreateOrUpdate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleet body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task FleetsCreateOrUpdate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -43,18 +43,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Put, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Put, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsCreateOrUpdate_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -66,13 +66,13 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsCreateOrUpdateViaIdentity(global::System.String viaIdentity, Sample.API.Models.IFleet body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task FleetsCreateOrUpdateViaIdentity(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -102,18 +102,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Put, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Put, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsCreateOrUpdate_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -122,14 +122,14 @@ namespace Sample.API
         /// <summary>update a Fleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">Resource create parameters.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsCreateOrUpdateViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Models.IFleet body, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsCreateOrUpdateViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -159,18 +159,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Put, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Put, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsCreateOrUpdateWithResult_Call (request, eventListener,sender);
             }
@@ -181,14 +181,14 @@ namespace Sample.API
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
         /// <param name="body">Resource create parameters.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsCreateOrUpdateWithResult(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleet body, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsCreateOrUpdateWithResult(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -206,18 +206,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Put, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Put, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsCreateOrUpdateWithResult_Call (request, eventListener,sender);
             }
@@ -225,13 +225,13 @@ namespace Sample.API
 
         /// <summary>Actual wire call for <see cref= "FleetsCreateOrUpdateWithResult" /> method.</summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsCreateOrUpdateWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsCreateOrUpdateWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -239,10 +239,10 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     // this operation supports x-ms-long-running-operation
                     var _originalUri = request.RequestUri.AbsoluteUri;
                     // declared final-state-via: azure-async-operation
@@ -252,7 +252,7 @@ namespace Sample.API
                     while (request.Method == System.Net.Http.HttpMethod.Put && _response.StatusCode == global::System.Net.HttpStatusCode.OK || _response.StatusCode == global::System.Net.HttpStatusCode.Created || _response.StatusCode == global::System.Net.HttpStatusCode.Accepted )
                     {
                         // delay before making the next polling request
-                        await eventListener.Signal(Sample.API.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                         // while we wait, let's grab the headers and get ready to poll.
                         if (!System.String.IsNullOrEmpty(_response.GetFirstHeader(@"Azure-AsyncOperation"))) {
@@ -265,7 +265,7 @@ namespace Sample.API
                             operationLocation = _response.GetFirstHeader(@"Operation-Location");
                         }
                         var _uri = global::System.String.IsNullOrEmpty(asyncOperation) ? global::System.String.IsNullOrEmpty(location) ? global::System.String.IsNullOrEmpty(operationLocation) ? _originalUri : operationLocation : location : asyncOperation;
-                        request = request.CloneAndDispose(new global::System.Uri(_uri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_uri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // and let's look at the current response body and see if we have some information we can give back to the listener
                         var content = await _response.Content.ReadAsStringAsync();
@@ -275,16 +275,16 @@ namespace Sample.API
 
                         // make the polling call
                         _response = await sender.SendAsync(request, eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                           // if we got back an OK, take a peek inside and see if it's done
                           if( _response.StatusCode == global::System.Net.HttpStatusCode.OK)
                           {
                               var error = false;
                               try {
-                                  if( Sample.API.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Sample.API.Runtime.Json.JsonObject json)
+                                  if( Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonObject json)
                                   {
-                                      var state = json.Property("properties")?.PropertyT<Sample.API.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Sample.API.Runtime.Json.JsonString>("status");
+                                      var state = json.Property("properties")?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("status");
                                       if( state is null )
                                       {
                                           // the body doesn't contain any information that has the state of the LRO
@@ -313,7 +313,7 @@ namespace Sample.API
                                   // we really don't want to do anything special.
                               }
                               if (error) {
-                                  throw new Sample.API.Runtime.UndeclaredResponseException(_response);
+                                  throw new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.UndeclaredResponseException(_response);
                               }
                           }
 
@@ -324,38 +324,38 @@ namespace Sample.API
                         }
                         // we are done polling, do a request on final target?
                         // create a new request with the final uri
-                        request = request.CloneAndDispose(new global::System.Uri(_originalUri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_originalUri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // drop the old response
                         _response?.Dispose();
 
                         // make the final call
                         _response = await sender.SendAsync(request,  eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
                         break;
                     }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -368,7 +368,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -380,12 +380,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsCreateOrUpdate_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsCreateOrUpdate_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -393,10 +393,10 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                     // this operation supports x-ms-long-running-operation
                     var _originalUri = request.RequestUri.AbsoluteUri;
                     // declared final-state-via: azure-async-operation
@@ -406,7 +406,7 @@ namespace Sample.API
                     while (request.Method == System.Net.Http.HttpMethod.Put && _response.StatusCode == global::System.Net.HttpStatusCode.OK || _response.StatusCode == global::System.Net.HttpStatusCode.Created || _response.StatusCode == global::System.Net.HttpStatusCode.Accepted )
                     {
                         // delay before making the next polling request
-                        await eventListener.Signal(Sample.API.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                         // while we wait, let's grab the headers and get ready to poll.
                         if (!System.String.IsNullOrEmpty(_response.GetFirstHeader(@"Azure-AsyncOperation"))) {
@@ -419,7 +419,7 @@ namespace Sample.API
                             operationLocation = _response.GetFirstHeader(@"Operation-Location");
                         }
                         var _uri = global::System.String.IsNullOrEmpty(asyncOperation) ? global::System.String.IsNullOrEmpty(location) ? global::System.String.IsNullOrEmpty(operationLocation) ? _originalUri : operationLocation : location : asyncOperation;
-                        request = request.CloneAndDispose(new global::System.Uri(_uri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_uri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // and let's look at the current response body and see if we have some information we can give back to the listener
                         var content = await _response.Content.ReadAsStringAsync();
@@ -429,16 +429,16 @@ namespace Sample.API
 
                         // make the polling call
                         _response = await sender.SendAsync(request, eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                           // if we got back an OK, take a peek inside and see if it's done
                           if( _response.StatusCode == global::System.Net.HttpStatusCode.OK)
                           {
                               var error = false;
                               try {
-                                  if( Sample.API.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Sample.API.Runtime.Json.JsonObject json)
+                                  if( Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonObject json)
                                   {
-                                      var state = json.Property("properties")?.PropertyT<Sample.API.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Sample.API.Runtime.Json.JsonString>("status");
+                                      var state = json.Property("properties")?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("status");
                                       if( state is null )
                                       {
                                           // the body doesn't contain any information that has the state of the LRO
@@ -467,7 +467,7 @@ namespace Sample.API
                                   // we really don't want to do anything special.
                               }
                               if (error) {
-                                  throw new Sample.API.Runtime.UndeclaredResponseException(_response);
+                                  throw new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.UndeclaredResponseException(_response);
                               }
                           }
 
@@ -478,31 +478,31 @@ namespace Sample.API
                         }
                         // we are done polling, do a request on final target?
                         // create a new request with the final uri
-                        request = request.CloneAndDispose(new global::System.Uri(_originalUri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_originalUri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // drop the old response
                         _response?.Dispose();
 
                         // make the final call
                         _response = await sender.SendAsync(request,  eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                         break;
                     }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -510,7 +510,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -525,11 +525,11 @@ namespace Sample.API
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
         /// <param name="body">Resource create parameters.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsCreateOrUpdate_Validate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleet body, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsCreateOrUpdate_Validate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -553,12 +553,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsDelete(string subscriptionId, string resourceGroupName, string fleetName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsDelete(string subscriptionId, string resourceGroupName, string fleetName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -576,14 +576,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Delete, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Delete, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsDelete_Call (request, onNoContent,onOk,onDefault,eventListener,sender);
             }
@@ -595,12 +595,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsDeleteViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsDeleteViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -630,14 +630,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Delete, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Delete, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsDelete_Call (request, onNoContent,onOk,onDefault,eventListener,sender);
             }
@@ -649,12 +649,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsDelete_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsDelete_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onNoContent, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -662,10 +662,10 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                     // this operation supports x-ms-long-running-operation
                     var _originalUri = request.RequestUri.AbsoluteUri;
                     // declared final-state-via: location
@@ -676,7 +676,7 @@ namespace Sample.API
                     while (request.Method == System.Net.Http.HttpMethod.Put && _response.StatusCode == global::System.Net.HttpStatusCode.OK || _response.StatusCode == global::System.Net.HttpStatusCode.Created || _response.StatusCode == global::System.Net.HttpStatusCode.Accepted )
                     {
                         // delay before making the next polling request
-                        await eventListener.Signal(Sample.API.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                         // while we wait, let's grab the headers and get ready to poll.
                         if (!System.String.IsNullOrEmpty(_response.GetFirstHeader(@"Azure-AsyncOperation"))) {
@@ -689,7 +689,7 @@ namespace Sample.API
                             operationLocation = _response.GetFirstHeader(@"Operation-Location");
                         }
                         var _uri = global::System.String.IsNullOrEmpty(asyncOperation) ? global::System.String.IsNullOrEmpty(location) ? global::System.String.IsNullOrEmpty(operationLocation) ? _originalUri : operationLocation : location : asyncOperation;
-                        request = request.CloneAndDispose(new global::System.Uri(_uri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_uri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // and let's look at the current response body and see if we have some information we can give back to the listener
                         var content = await _response.Content.ReadAsStringAsync();
@@ -699,16 +699,16 @@ namespace Sample.API
 
                         // make the polling call
                         _response = await sender.SendAsync(request, eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                           // if we got back an OK, take a peek inside and see if it's done
                           if( _response.StatusCode == global::System.Net.HttpStatusCode.OK)
                           {
                               var error = false;
                               try {
-                                  if( Sample.API.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Sample.API.Runtime.Json.JsonObject json)
+                                  if( Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonObject json)
                                   {
-                                      var state = json.Property("properties")?.PropertyT<Sample.API.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Sample.API.Runtime.Json.JsonString>("status");
+                                      var state = json.Property("properties")?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("status");
                                       if( state is null )
                                       {
                                           // the body doesn't contain any information that has the state of the LRO
@@ -737,7 +737,7 @@ namespace Sample.API
                                   // we really don't want to do anything special.
                               }
                               if (error) {
-                                  throw new Sample.API.Runtime.UndeclaredResponseException(_response);
+                                  throw new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.UndeclaredResponseException(_response);
                               }
                           }
 
@@ -748,37 +748,37 @@ namespace Sample.API
                         }
                         // we are done polling, do a request on final target?
                         // create a new request with the final uri
-                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // drop the old response
                         _response?.Dispose();
 
                         // make the final call
                         _response = await sender.SendAsync(request,  eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                         break;
                     }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                             await onOk(_response);
                             break;
                         }
                         case global::System.Net.HttpStatusCode.NoContent:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                             await onNoContent(_response);
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -786,7 +786,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -800,11 +800,11 @@ namespace Sample.API
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsDelete_Validate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsDelete_Validate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -825,12 +825,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsGet(string subscriptionId, string resourceGroupName, string fleetName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsGet(string subscriptionId, string resourceGroupName, string fleetName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -848,14 +848,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsGet_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -866,12 +866,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsGetViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsGetViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -901,14 +901,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsGet_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -916,13 +916,13 @@ namespace Sample.API
 
         /// <summary>Get a Fleet</summary>
         /// <param name="viaIdentity"></param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsGetViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsGetViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -952,14 +952,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsGetWithResult_Call (request, eventListener,sender);
             }
@@ -969,13 +969,13 @@ namespace Sample.API
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsGetWithResult(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsGetWithResult(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -993,14 +993,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsGetWithResult_Call (request, eventListener,sender);
             }
@@ -1008,13 +1008,13 @@ namespace Sample.API
 
         /// <summary>Actual wire call for <see cref= "FleetsGetWithResult" /> method.</summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsGetWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsGetWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1022,31 +1022,31 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -1059,7 +1059,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1071,12 +1071,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsGet_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsGet_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1084,24 +1084,24 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -1109,7 +1109,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1123,11 +1123,11 @@ namespace Sample.API
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsGet_Validate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsGet_Validate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -1147,12 +1147,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListByResourceGroup(string subscriptionId, string resourceGroupName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListByResourceGroup(string subscriptionId, string resourceGroupName, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1169,14 +1169,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListByResourceGroup_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1187,12 +1187,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListByResourceGroupViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListByResourceGroupViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1220,14 +1220,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListByResourceGroup_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1235,13 +1235,13 @@ namespace Sample.API
 
         /// <summary>List Fleet resources by resource group</summary>
         /// <param name="viaIdentity"></param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListByResourceGroupViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListByResourceGroupViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1269,14 +1269,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListByResourceGroupWithResult_Call (request, eventListener,sender);
             }
@@ -1285,13 +1285,13 @@ namespace Sample.API
         /// <summary>List Fleet resources by resource group</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListByResourceGroupWithResult(string subscriptionId, string resourceGroupName, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListByResourceGroupWithResult(string subscriptionId, string resourceGroupName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1308,14 +1308,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListByResourceGroupWithResult_Call (request, eventListener,sender);
             }
@@ -1325,13 +1325,13 @@ namespace Sample.API
         /// Actual wire call for <see cref= "FleetsListByResourceGroupWithResult" /> method.
         /// </summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListByResourceGroupWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListByResourceGroupWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1339,31 +1339,31 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.FleetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -1376,7 +1376,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1388,12 +1388,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListByResourceGroup_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsListByResourceGroup_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1401,24 +1401,24 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.FleetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -1426,7 +1426,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1439,11 +1439,11 @@ namespace Sample.API
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListByResourceGroup_Validate(string subscriptionId, string resourceGroupName, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsListByResourceGroup_Validate(string subscriptionId, string resourceGroupName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -1460,12 +1460,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListBySubscription(string subscriptionId, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListBySubscription(string subscriptionId, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1480,14 +1480,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListBySubscription_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1498,12 +1498,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListBySubscriptionViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListBySubscriptionViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1528,14 +1528,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListBySubscription_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1543,13 +1543,13 @@ namespace Sample.API
 
         /// <summary>List Fleet resources by subscription ID</summary>
         /// <param name="viaIdentity"></param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListBySubscriptionViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListBySubscriptionViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1574,14 +1574,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListBySubscriptionWithResult_Call (request, eventListener,sender);
             }
@@ -1589,13 +1589,13 @@ namespace Sample.API
 
         /// <summary>List Fleet resources by subscription ID</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListBySubscriptionWithResult(string subscriptionId, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListBySubscriptionWithResult(string subscriptionId, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1610,14 +1610,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListBySubscriptionWithResult_Call (request, eventListener,sender);
             }
@@ -1625,13 +1625,13 @@ namespace Sample.API
 
         /// <summary>Actual wire call for <see cref= "FleetsListBySubscriptionWithResult" /> method.</summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>" /> that will be complete when handling
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>" /> that will be complete when handling
         /// of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult> FleetsListBySubscriptionWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult> FleetsListBySubscriptionWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1639,31 +1639,31 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.FleetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -1676,7 +1676,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1688,12 +1688,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListBySubscription_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsListBySubscription_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1701,24 +1701,24 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.FleetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -1726,7 +1726,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -1738,11 +1738,11 @@ namespace Sample.API
         /// validation events back.
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListBySubscription_Validate(string subscriptionId, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsListBySubscription_Validate(string subscriptionId, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -1758,12 +1758,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets(string subscriptionId, string resourceGroupName, string name, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets(string subscriptionId, string resourceGroupName, string name, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1782,14 +1782,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListVirtualMachineScaleSets_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1800,12 +1800,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSetsViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSetsViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1836,14 +1836,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsListVirtualMachineScaleSets_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -1851,13 +1851,13 @@ namespace Sample.API
 
         /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
         /// <param name="viaIdentity"></param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>" /> that will be
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>" /> that will be
         /// complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1888,14 +1888,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListVirtualMachineScaleSetsWithResult_Call (request, eventListener,sender);
             }
@@ -1905,13 +1905,13 @@ namespace Sample.API
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="name">The name of the Fleet</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>" /> that will be
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>" /> that will be
         /// complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsWithResult(string subscriptionId, string resourceGroupName, string name, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsWithResult(string subscriptionId, string resourceGroupName, string name, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -1930,14 +1930,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsListVirtualMachineScaleSetsWithResult_Call (request, eventListener,sender);
             }
@@ -1947,13 +1947,13 @@ namespace Sample.API
         /// Actual wire call for <see cref= "FleetsListVirtualMachineScaleSetsWithResult" /> method.
         /// </summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>" /> that will be
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>" /> that will be
         /// complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult> FleetsListVirtualMachineScaleSetsWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -1961,31 +1961,31 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.VirtualMachineScaleSetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -1998,7 +1998,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2010,12 +2010,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSetListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -2023,24 +2023,24 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.VirtualMachineScaleSetListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -2048,7 +2048,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2062,11 +2062,11 @@ namespace Sample.API
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="name">The name of the Fleet</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets_Validate(string subscriptionId, string resourceGroupName, string name, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsListVirtualMachineScaleSets_Validate(string subscriptionId, string resourceGroupName, string name, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -2088,13 +2088,13 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsUpdate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleetUpdate body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task FleetsUpdate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2112,18 +2112,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Patch, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Patch, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsUpdate_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -2135,13 +2135,13 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task FleetsUpdateViaIdentity(global::System.String viaIdentity, Sample.API.Models.IFleetUpdate body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task FleetsUpdateViaIdentity(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate body, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2171,18 +2171,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Patch, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Patch, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.FleetsUpdate_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -2191,14 +2191,14 @@ namespace Sample.API
         /// <summary>update a Fleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">The resource properties to be updated.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsUpdateViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Models.IFleetUpdate body, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsUpdateViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2228,18 +2228,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Patch, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Patch, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsUpdateWithResult_Call (request, eventListener,sender);
             }
@@ -2250,14 +2250,14 @@ namespace Sample.API
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
         /// <param name="body">The resource properties to be updated.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
-        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Sample.API.Runtime.SerializationMode"/>.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="serializationMode">Allows the caller to choose the depth of the serialization. See <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode"/>.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsUpdateWithResult(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleetUpdate body, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender, Sample.API.Runtime.SerializationMode serializationMode = Sample.API.Runtime.SerializationMode.IncludeCreate|Sample.API.Runtime.SerializationMode.IncludeUpdate)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsUpdateWithResult(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode serializationMode = Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeCreate|Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeUpdate)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2275,18 +2275,18 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Patch, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Patch, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // set body content
                 request.Content = new global::System.Net.Http.StringContent(null != body ? body.ToJson(null, serializationMode).ToString() : @"{}", global::System.Text.Encoding.UTF8);
                 request.Content.Headers.ContentType = global::System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
-                await eventListener.Signal(Sample.API.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BodyContentSet); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.FleetsUpdateWithResult_Call (request, eventListener,sender);
             }
@@ -2294,13 +2294,13 @@ namespace Sample.API
 
         /// <summary>Actual wire call for <see cref= "FleetsUpdateWithResult" /> method.</summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>" /> that will be complete when handling of
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>" /> that will be complete when handling of
         /// the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IFleet> FleetsUpdateWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> FleetsUpdateWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -2308,10 +2308,10 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     // this operation supports x-ms-long-running-operation
                     var _originalUri = request.RequestUri.AbsoluteUri;
                     // declared final-state-via: location
@@ -2322,7 +2322,7 @@ namespace Sample.API
                     while (request.Method == System.Net.Http.HttpMethod.Put && _response.StatusCode == global::System.Net.HttpStatusCode.OK || _response.StatusCode == global::System.Net.HttpStatusCode.Created || _response.StatusCode == global::System.Net.HttpStatusCode.Accepted )
                     {
                         // delay before making the next polling request
-                        await eventListener.Signal(Sample.API.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                         // while we wait, let's grab the headers and get ready to poll.
                         if (!System.String.IsNullOrEmpty(_response.GetFirstHeader(@"Azure-AsyncOperation"))) {
@@ -2335,7 +2335,7 @@ namespace Sample.API
                             operationLocation = _response.GetFirstHeader(@"Operation-Location");
                         }
                         var _uri = global::System.String.IsNullOrEmpty(asyncOperation) ? global::System.String.IsNullOrEmpty(location) ? global::System.String.IsNullOrEmpty(operationLocation) ? _originalUri : operationLocation : location : asyncOperation;
-                        request = request.CloneAndDispose(new global::System.Uri(_uri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_uri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // and let's look at the current response body and see if we have some information we can give back to the listener
                         var content = await _response.Content.ReadAsStringAsync();
@@ -2345,16 +2345,16 @@ namespace Sample.API
 
                         // make the polling call
                         _response = await sender.SendAsync(request, eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                           // if we got back an OK, take a peek inside and see if it's done
                           if( _response.StatusCode == global::System.Net.HttpStatusCode.OK)
                           {
                               var error = false;
                               try {
-                                  if( Sample.API.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Sample.API.Runtime.Json.JsonObject json)
+                                  if( Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonObject json)
                                   {
-                                      var state = json.Property("properties")?.PropertyT<Sample.API.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Sample.API.Runtime.Json.JsonString>("status");
+                                      var state = json.Property("properties")?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("status");
                                       if( state is null )
                                       {
                                           // the body doesn't contain any information that has the state of the LRO
@@ -2383,7 +2383,7 @@ namespace Sample.API
                                   // we really don't want to do anything special.
                               }
                               if (error) {
-                                  throw new Sample.API.Runtime.UndeclaredResponseException(_response);
+                                  throw new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.UndeclaredResponseException(_response);
                               }
                           }
 
@@ -2394,38 +2394,38 @@ namespace Sample.API
                         }
                         // we are done polling, do a request on final target?
                         // create a new request with the final uri
-                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // drop the old response
                         _response?.Dispose();
 
                         // make the final call
                         _response = await sender.SendAsync(request,  eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
                         break;
                     }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -2438,7 +2438,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2450,12 +2450,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsUpdate_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task FleetsUpdate_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -2463,10 +2463,10 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 0); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                     // this operation supports x-ms-long-running-operation
                     var _originalUri = request.RequestUri.AbsoluteUri;
                     // declared final-state-via: location
@@ -2477,7 +2477,7 @@ namespace Sample.API
                     while (request.Method == System.Net.Http.HttpMethod.Put && _response.StatusCode == global::System.Net.HttpStatusCode.OK || _response.StatusCode == global::System.Net.HttpStatusCode.Created || _response.StatusCode == global::System.Net.HttpStatusCode.Accepted )
                     {
                         // delay before making the next polling request
-                        await eventListener.Signal(Sample.API.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.DelayBeforePolling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                         // while we wait, let's grab the headers and get ready to poll.
                         if (!System.String.IsNullOrEmpty(_response.GetFirstHeader(@"Azure-AsyncOperation"))) {
@@ -2490,7 +2490,7 @@ namespace Sample.API
                             operationLocation = _response.GetFirstHeader(@"Operation-Location");
                         }
                         var _uri = global::System.String.IsNullOrEmpty(asyncOperation) ? global::System.String.IsNullOrEmpty(location) ? global::System.String.IsNullOrEmpty(operationLocation) ? _originalUri : operationLocation : location : asyncOperation;
-                        request = request.CloneAndDispose(new global::System.Uri(_uri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_uri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // and let's look at the current response body and see if we have some information we can give back to the listener
                         var content = await _response.Content.ReadAsStringAsync();
@@ -2500,16 +2500,16 @@ namespace Sample.API
 
                         // make the polling call
                         _response = await sender.SendAsync(request, eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                           // if we got back an OK, take a peek inside and see if it's done
                           if( _response.StatusCode == global::System.Net.HttpStatusCode.OK)
                           {
                               var error = false;
                               try {
-                                  if( Sample.API.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Sample.API.Runtime.Json.JsonObject json)
+                                  if( Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(await _response.Content.ReadAsStringAsync()) is Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonObject json)
                                   {
-                                      var state = json.Property("properties")?.PropertyT<Sample.API.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Sample.API.Runtime.Json.JsonString>("status");
+                                      var state = json.Property("properties")?.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("provisioningState") ?? json.PropertyT<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonString>("status");
                                       if( state is null )
                                       {
                                           // the body doesn't contain any information that has the state of the LRO
@@ -2538,7 +2538,7 @@ namespace Sample.API
                                   // we really don't want to do anything special.
                               }
                               if (error) {
-                                  throw new Sample.API.Runtime.UndeclaredResponseException(_response);
+                                  throw new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.UndeclaredResponseException(_response);
                               }
                           }
 
@@ -2549,31 +2549,31 @@ namespace Sample.API
                         }
                         // we are done polling, do a request on final target?
                         // create a new request with the final uri
-                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Sample.API.Runtime.Method.Get);
+                        request = request.CloneAndDispose(new global::System.Uri(_finalUri), Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get);
 
                         // drop the old response
                         _response?.Dispose();
 
                         // make the final call
                         _response = await sender.SendAsync(request,  eventListener);
-                        await eventListener.Signal(Sample.API.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                        await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Polling, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
                         break;
                     }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.Fleet.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -2581,7 +2581,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2596,11 +2596,11 @@ namespace Sample.API
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="fleetName">The name of the Compute Fleet</param>
         /// <param name="body">The resource properties to be updated.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task FleetsUpdate_Validate(string subscriptionId, string resourceGroupName, string fleetName, Sample.API.Models.IFleetUpdate body, Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task FleetsUpdate_Validate(string subscriptionId, string resourceGroupName, string fleetName, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate body, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {
@@ -2620,12 +2620,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task OperationsList(global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task OperationsList(global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2638,14 +2638,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.OperationsList_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -2656,12 +2656,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task OperationsListViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task OperationsListViaIdentity(global::System.String viaIdentity, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2683,14 +2683,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return; }
                 // make the call
                 await this.OperationsList_Call (request, onOk,onDefault,eventListener,sender);
             }
@@ -2698,13 +2698,13 @@ namespace Sample.API
 
         /// <summary>List the operations for the provider</summary>
         /// <param name="viaIdentity"></param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>" /> that will be complete when
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>" /> that will be complete when
         /// handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult> OperationsListViaIdentityWithResult(global::System.String viaIdentity, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult> OperationsListViaIdentityWithResult(global::System.String viaIdentity, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2726,27 +2726,27 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.OperationsListWithResult_Call (request, eventListener,sender);
             }
         }
 
         /// <summary>List the operations for the provider</summary>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>" /> that will be complete when
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>" /> that will be complete when
         /// handling of the response is completed.
         /// </returns>
-        public async global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult> OperationsListWithResult(Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        public async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult> OperationsListWithResult(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             var apiVersion = @"2024-11-01";
             // Constant Parameters
@@ -2759,14 +2759,14 @@ namespace Sample.API
                         + "api-version=" + global::System.Uri.EscapeDataString(apiVersion)
                         ,"\\?&*$|&*$|(\\?)&+|(&)&+","$1$2");
 
-                await eventListener.Signal(Sample.API.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.URLCreated, pathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
                 // generate request object
                 var _url = new global::System.Uri($"https://management.azure.com{pathAndQuery}");
-                var request =  new global::System.Net.Http.HttpRequestMessage(Sample.API.Runtime.Method.Get, _url);
-                await eventListener.Signal(Sample.API.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                var request =  new global::System.Net.Http.HttpRequestMessage(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Method.Get, _url);
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.RequestCreated, request.RequestUri.PathAndQuery); if( eventListener.Token.IsCancellationRequested ) { return null; }
 
-                await eventListener.Signal(Sample.API.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.HeaderParametersAdded); if( eventListener.Token.IsCancellationRequested ) { return null; }
                 // make the call
                 return await this.OperationsListWithResult_Call (request, eventListener,sender);
             }
@@ -2774,13 +2774,13 @@ namespace Sample.API
 
         /// <summary>Actual wire call for <see cref= "OperationsListWithResult" /> method.</summary>
         /// <param name="request">the prepared HttpRequestMessage to send.</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
-        /// A <see cref="global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>" /> that will be complete when
+        /// A <see cref="global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>" /> that will be complete when
         /// handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult> OperationsListWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult> OperationsListWithResult_Call(global::System.Net.Http.HttpRequestMessage request, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -2788,31 +2788,31 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return null; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.OperationListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             return await _result;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) );
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) );
                             // Error Response : default
                             var code = (await _result)?.Code;
                             var message = (await _result)?.Message;
                             if ((null == code || null == message))
                             {
                                 // Unrecognized Response. Create an error record based on what we have.
-                                var ex = new Sample.API.Runtime.RestException<Sample.API.Models.IErrorResponse>(_response, await _result);
+                                var ex = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.RestException<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>(_response, await _result);
                                 throw ex;
                             }
                             else
@@ -2825,7 +2825,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2837,12 +2837,12 @@ namespace Sample.API
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
-        /// <param name="sender">an instance of an Sample.API.Runtime.ISendAsync pipeline to use to make the request.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task OperationsList_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Sample.API.Models.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Sample.API.Runtime.IEventListener eventListener, Sample.API.Runtime.ISendAsync sender)
+        internal async global::System.Threading.Tasks.Task OperationsList_Call(global::System.Net.Http.HttpRequestMessage request, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperationListResult>, global::System.Threading.Tasks.Task> onOk, global::System.Func<global::System.Net.Http.HttpResponseMessage, global::System.Threading.Tasks.Task<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IErrorResponse>, global::System.Threading.Tasks.Task> onDefault, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync sender)
         {
             using( NoSynchronizationContext )
             {
@@ -2850,24 +2850,24 @@ namespace Sample.API
                 try
                 {
                     var sendTask = sender.SendAsync(request, eventListener);
-                    await eventListener.Signal(Sample.API.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeCall, request); if( eventListener.Token.IsCancellationRequested ) { return; }
                     _response = await sendTask;
-                    await eventListener.Signal(Sample.API.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                    await eventListener.Signal(Sample.API.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.ResponseCreated, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Progress, "intentional placeholder", 100); if( eventListener.Token.IsCancellationRequested ) { return; }
                     var _contentType = _response.Content.Headers.ContentType?.MediaType;
 
                     switch ( _response.StatusCode )
                     {
                         case global::System.Net.HttpStatusCode.OK:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.OperationListResult.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                         default:
                         {
-                            await eventListener.Signal(Sample.API.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Sample.API.Models.ErrorResponse.FromJson(Sample.API.Runtime.Json.JsonNode.Parse(body.Result)) ));
+                            await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
+                            await onDefault(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorResponse.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) ));
                             break;
                         }
                     }
@@ -2875,7 +2875,7 @@ namespace Sample.API
                 finally
                 {
                     // finally statements
-                    await eventListener.Signal(Sample.API.Runtime.Events.Finally, request, _response);
+                    await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.Finally, request, _response);
                     _response?.Dispose();
                     request?.Dispose();
                 }
@@ -2886,11 +2886,11 @@ namespace Sample.API
         /// Validation method for <see cref="OperationsList" /> method. Call this like the actual call, but you will get validation
         /// events back.
         /// </summary>
-        /// <param name="eventListener">an <see cref="Sample.API.Runtime.IEventListener" /> instance that will receive events.</param>
+        /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
         /// </returns>
-        internal async global::System.Threading.Tasks.Task OperationsList_Validate(Sample.API.Runtime.IEventListener eventListener)
+        internal async global::System.Threading.Tasks.Task OperationsList_Validate(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener eventListener)
         {
             using( NoSynchronizationContext )
             {

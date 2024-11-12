@@ -15,69 +15,69 @@ List VirtualMachineScaleSet resources by Fleet
 {{ Add code here }}
 
 .Outputs
-Sample.API.Models.IVirtualMachineScaleSet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet
 .Link
 https://learn.microsoft.com/powershell/module/fleet/get-fleetvirtualmachinescaleset
 #>
 function Get-FleetVirtualMachineScaleSet {
-[OutputType([Sample.API.Models.IVirtualMachineScaleSet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Fleet
     ${Name},
 
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
     ${ResourceGroupName},
 
     [Parameter(Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -95,8 +95,8 @@ begin {
             List = 'Fleet.private\Get-FleetVirtualMachineScaleSet_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -138,9 +138,9 @@ Get a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
@@ -155,18 +155,18 @@ INPUTOBJECT <IFleetIdentity>: Identity Parameter
 https://learn.microsoft.com/powershell/module/fleet/get-fleet
 #>
 function Get-Fleet {
-[OutputType([Sample.API.Models.IFleet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Parameter(ParameterSetName='List1', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
@@ -175,53 +175,53 @@ param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Parameter(ParameterSetName='List', Mandatory)]
     [Parameter(ParameterSetName='List1', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
     [Parameter(ParameterSetName='GetViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -242,8 +242,8 @@ begin {
             List1 = 'Fleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -285,49 +285,49 @@ List the operations for the provider
 {{ Add code here }}
 
 .Outputs
-Sample.API.Models.IOperation
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation
 .Link
 https://learn.microsoft.com/powershell/module/fleet/get-operation
 #>
 function Get-Operation {
-[OutputType([Sample.API.Models.IOperation])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -345,8 +345,8 @@ begin {
             List = 'Fleet.private\Get-Operation_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -388,11 +388,11 @@ create a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
@@ -993,19 +993,19 @@ VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute Fleet
 https://learn.microsoft.com/powershell/module/fleet/new-fleet
 #>
 function New-Fleet {
-[OutputType([Sample.API.Models.IFleet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='CreateExpanded', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
     [Parameter(ParameterSetName='Create', Mandatory)]
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Create', Mandatory)]
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
@@ -1013,7 +1013,7 @@ param(
 
     [Parameter(ParameterSetName='Create', Mandatory)]
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
@@ -1021,21 +1021,21 @@ param(
 
     [Parameter(ParameterSetName='CreateViaIdentity', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter(ParameterSetName='Create', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='CreateViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IFleet]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet]
     # An Compute Fleet resource
     ${Resource},
 
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded', Mandatory)]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The geo-location where the resource lives
     ${Location},
@@ -1043,58 +1043,58 @@ param(
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.ILocationProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile[]]
     # The list of location profiles.
     ${AdditionalLocationProfileLocationProfiles},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables hibernation capability on the VM.
     ${AdditionalVirtualMachineCapabilityHibernationEnabled},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS.Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
     ${AdditionalVirtualMachineCapabilityUltraSsdEnabled},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IBaseVirtualMachineProfile]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile]
     # Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
     ${ComputeProfileBaseVirtualMachineProfile},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.
     ${ComputeProfileComputeApiVersion},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Specifies the number of fault domains to use when creating the underlying VMSS.A fault domain is a logical group of hardware within an Azure datacenter.VMs in the same fault domain share a common power source and network switch.If not specified, defaults to 1, which represents "Max Spreading" (using as many fault domains as possible).This property cannot be updated.
     ${ComputeProfilePlatformFaultDomainCount},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
     ${IdentityType},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.IUserAssignedIdentities]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IUserAssignedIdentities]))]
     [System.Collections.Hashtable]
     # The set of user assigned identities associated with the resource.
     # The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
@@ -1103,14 +1103,14 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A user defined name of the 3rd Party Artifact that is being procured.
     ${PlanName},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The 3rd Party artifact that is being procured.
     # E.g.
@@ -1120,14 +1120,14 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
     ${PlanPromotionCode},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The publisher of the 3rd Party Artifact that is being bought.
     # E.g.
@@ -1136,22 +1136,22 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The version of the desired product/artifact.
     ${PlanVersion},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Regular VMs.
     ${RegularPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -1159,7 +1159,7 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -1167,15 +1167,15 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Spot VMs.
     ${SpotPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -1183,29 +1183,29 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("Delete", "Deallocate")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Delete", "Deallocate")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Eviction Policy to follow when evicting Spot VMs.
     ${SpotPriorityProfileEvictionPolicy},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # Flag to enable/disable continuous goal seeking for the desired capacity and restoration of evicted Spot VMs.If maintain is enabled, AzureFleetRP will use all VM sizes in vmSizesProfile to create new VMs (if VMs are evicted deleted)or update existing VMs with new VM sizes (if VMs are evicted deallocated or failed to allocate due to capacity constraint) in order to achieve the desired capacity.Maintain is enabled by default.
     ${SpotPriorityProfileMaintain},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Single]
     # Price per hour of each Spot VM will never exceed this.
     ${SpotPriorityProfileMaxPricePerVM},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -1213,82 +1213,82 @@ param(
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.ITrackedResourceTags]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ITrackedResourceTags]))]
     [System.Collections.Hashtable]
     # Resource tags.
     ${Tags},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMAttributes]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes]
     # Attribute based Fleet.
     ${VMAttributes},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMSizeProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]]
     # List of VM sizes supported for Compute Fleet
     ${VMSizesProfile},
 
     [Parameter(ParameterSetName='CreateExpanded')]
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String[]]
     # Zones in which the Compute Fleet is available
     ${Zones},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command as a job
     ${AsJob},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command asynchronously
     ${NoWait},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -1309,8 +1309,8 @@ begin {
             CreateViaIdentityExpanded = 'Fleet.private\New-Fleet_CreateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -1352,7 +1352,7 @@ Delete a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
 System.Boolean
 .Notes
@@ -1373,84 +1373,84 @@ function Remove-Fleet {
 [CmdletBinding(DefaultParameterSetName='Delete', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
     [Parameter(ParameterSetName='Delete', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Delete', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
     ${ResourceGroupName},
 
     [Parameter(ParameterSetName='Delete', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
     [Parameter(ParameterSetName='DeleteViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command as a job
     ${AsJob},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command asynchronously
     ${NoWait},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Returns true when the command succeeds
     ${PassThru},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -1469,8 +1469,8 @@ begin {
             DeleteViaIdentity = 'Fleet.private\Remove-Fleet_DeleteViaIdentity';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -1512,11 +1512,11 @@ update a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
@@ -2117,19 +2117,19 @@ VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute Fleet
 https://learn.microsoft.com/powershell/module/fleet/set-fleet
 #>
 function Set-Fleet {
-[OutputType([Sample.API.Models.IFleet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='UpdateExpanded', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
@@ -2137,7 +2137,7 @@ param(
 
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
@@ -2145,21 +2145,21 @@ param(
 
     [Parameter(ParameterSetName='UpdateViaIdentity', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter(ParameterSetName='Update', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='UpdateViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IFleet]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet]
     # An Compute Fleet resource
     ${Resource},
 
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded', Mandatory)]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The geo-location where the resource lives
     ${Location},
@@ -2167,58 +2167,58 @@ param(
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.ILocationProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile[]]
     # The list of location profiles.
     ${AdditionalLocationProfileLocationProfiles},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables hibernation capability on the VM.
     ${AdditionalVirtualMachineCapabilityHibernationEnabled},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS.Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
     ${AdditionalVirtualMachineCapabilityUltraSsdEnabled},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IBaseVirtualMachineProfile]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile]
     # Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
     ${ComputeProfileBaseVirtualMachineProfile},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.
     ${ComputeProfileComputeApiVersion},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Specifies the number of fault domains to use when creating the underlying VMSS.A fault domain is a logical group of hardware within an Azure datacenter.VMs in the same fault domain share a common power source and network switch.If not specified, defaults to 1, which represents "Max Spreading" (using as many fault domains as possible).This property cannot be updated.
     ${ComputeProfilePlatformFaultDomainCount},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
     ${IdentityType},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.IUserAssignedIdentities]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IUserAssignedIdentities]))]
     [System.Collections.Hashtable]
     # The set of user assigned identities associated with the resource.
     # The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
@@ -2227,14 +2227,14 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A user defined name of the 3rd Party Artifact that is being procured.
     ${PlanName},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The 3rd Party artifact that is being procured.
     # E.g.
@@ -2244,14 +2244,14 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
     ${PlanPromotionCode},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The publisher of the 3rd Party Artifact that is being bought.
     # E.g.
@@ -2260,22 +2260,22 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The version of the desired product/artifact.
     ${PlanVersion},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Regular VMs.
     ${RegularPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -2283,7 +2283,7 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -2291,15 +2291,15 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Spot VMs.
     ${SpotPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -2307,29 +2307,29 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("Delete", "Deallocate")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Delete", "Deallocate")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Eviction Policy to follow when evicting Spot VMs.
     ${SpotPriorityProfileEvictionPolicy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # Flag to enable/disable continuous goal seeking for the desired capacity and restoration of evicted Spot VMs.If maintain is enabled, AzureFleetRP will use all VM sizes in vmSizesProfile to create new VMs (if VMs are evicted deleted)or update existing VMs with new VM sizes (if VMs are evicted deallocated or failed to allocate due to capacity constraint) in order to achieve the desired capacity.Maintain is enabled by default.
     ${SpotPriorityProfileMaintain},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Single]
     # Price per hour of each Spot VM will never exceed this.
     ${SpotPriorityProfileMaxPricePerVM},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -2337,82 +2337,82 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.ITrackedResourceTags]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ITrackedResourceTags]))]
     [System.Collections.Hashtable]
     # Resource tags.
     ${Tags},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMAttributes]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes]
     # Attribute based Fleet.
     ${VMAttributes},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMSizeProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]]
     # List of VM sizes supported for Compute Fleet
     ${VMSizesProfile},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String[]]
     # Zones in which the Compute Fleet is available
     ${Zones},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command as a job
     ${AsJob},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command asynchronously
     ${NoWait},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -2433,8 +2433,8 @@ begin {
             UpdateViaIdentityExpanded = 'Fleet.private\Set-Fleet_UpdateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)
@@ -2476,11 +2476,11 @@ update a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Inputs
-Sample.API.Models.IFleetUpdate
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate
 .Outputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
@@ -3078,19 +3078,19 @@ VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute Fleet
 https://learn.microsoft.com/powershell/module/fleet/update-fleet
 #>
 function Update-Fleet {
-[OutputType([Sample.API.Models.IFleet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='UpdateExpanded', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
@@ -3098,7 +3098,7 @@ param(
 
     [Parameter(ParameterSetName='Update', Mandatory)]
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
@@ -3106,87 +3106,87 @@ param(
 
     [Parameter(ParameterSetName='UpdateViaIdentity', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter(ParameterSetName='Update', Mandatory, ValueFromPipeline)]
     [Parameter(ParameterSetName='UpdateViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IFleetUpdate]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate]
     # Fleet Update Model
     ${Properties},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.ILocationProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile[]]
     # The list of location profiles.
     ${AdditionalLocationProfileLocationProfiles},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables hibernation capability on the VM.
     ${AdditionalVirtualMachineCapabilityHibernationEnabled},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS.Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
     ${AdditionalVirtualMachineCapabilityUltraSsdEnabled},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IBaseVirtualMachineProfile]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile]
     # Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
     ${ComputeProfileBaseVirtualMachineProfile},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.
     ${ComputeProfileComputeApiVersion},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Specifies the number of fault domains to use when creating the underlying VMSS.A fault domain is a logical group of hardware within an Azure datacenter.VMs in the same fault domain share a common power source and network switch.If not specified, defaults to 1, which represents "Max Spreading" (using as many fault domains as possible).This property cannot be updated.
     ${ComputeProfilePlatformFaultDomainCount},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("None", "SystemAssigned", "UserAssigned", "SystemAssigned,UserAssigned")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The type of managed identity assigned to this resource.
     ${IdentityType},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.IManagedServiceIdentityUpdateUserAssignedIdentities]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IManagedServiceIdentityUpdateUserAssignedIdentities]))]
     [System.Collections.Hashtable]
     # The identities assigned to this resource by the user.
     ${IdentityUserAssignedIdentities},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A user defined name of the 3rd Party Artifact that is being procured.
     ${PlanName},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The 3rd Party artifact that is being procured.
     # E.g.
@@ -3196,14 +3196,14 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
     ${PlanPromotionCode},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The publisher of the 3rd Party Artifact that is being bought.
     # E.g.
@@ -3212,22 +3212,22 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # The version of the desired product/artifact.
     ${PlanVersion},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("LowestPrice", "Prioritized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Regular VMs.
     ${RegularPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -3235,7 +3235,7 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -3243,15 +3243,15 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("PriceCapacityOptimized", "LowestPrice", "CapacityOptimized")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Allocation strategy to follow when determining the VM sizes distribution for Spot VMs.
     ${SpotPriorityProfileAllocationStrategy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Total capacity to achieve.
     # It is currently in terms of number of VMs.
@@ -3259,29 +3259,29 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.PSArgumentCompleterAttribute("Delete", "Deallocate")]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Delete", "Deallocate")]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
     # Eviction Policy to follow when evicting Spot VMs.
     ${SpotPriorityProfileEvictionPolicy},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Management.Automation.SwitchParameter]
     # Flag to enable/disable continuous goal seeking for the desired capacity and restoration of evicted Spot VMs.If maintain is enabled, AzureFleetRP will use all VM sizes in vmSizesProfile to create new VMs (if VMs are evicted deleted)or update existing VMs with new VM sizes (if VMs are evicted deallocated or failed to allocate due to capacity constraint) in order to achieve the desired capacity.Maintain is enabled by default.
     ${SpotPriorityProfileMaintain},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Single]
     # Price per hour of each Spot VM will never exceed this.
     ${SpotPriorityProfileMaxPricePerVM},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.Int32]
     # Minimum capacity to achieve which cannot be updated.
     # If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
@@ -3289,74 +3289,74 @@ param(
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Runtime.Info(PossibleTypes=([Sample.API.Models.IFleetUpdateTags]))]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(PossibleTypes=([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags]))]
     [System.Collections.Hashtable]
     # Resource tags.
     ${Tags},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMAttributes]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes]
     # Attribute based Fleet.
     ${VMAttributes},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [AllowEmptyCollection()]
-    [Sample.API.Category('Body')]
-    [Sample.API.Models.IVMSizeProfile[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]]
     # List of VM sizes supported for Compute Fleet
     ${VMSizesProfile},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command as a job
     ${AsJob},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Run the command asynchronously
     ${NoWait},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -3377,8 +3377,8 @@ begin {
             UpdateViaIdentityExpanded = 'Fleet.private\Update-Fleet_UpdateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)

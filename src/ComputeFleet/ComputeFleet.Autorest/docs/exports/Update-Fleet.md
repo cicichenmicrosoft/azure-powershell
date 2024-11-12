@@ -82,7 +82,7 @@ update a Fleet
 The list of location profiles.
 
 ```yaml
-Type: Sample.API.Models.ILocationProfile[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile[]
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
 
 ```yaml
-Type: Sample.API.Models.IBaseVirtualMachineProfile
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 Identity Parameter
 
 ```yaml
-Type: Sample.API.Models.IFleetIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 Parameter Sets: UpdateViaIdentity, UpdateViaIdentityExpanded
 Aliases:
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 Fleet Update Model
 
 ```yaml
-Type: Sample.API.Models.IFleetUpdate
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate
 Parameter Sets: Update, UpdateViaIdentity
 Aliases:
 
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 Attribute based Fleet.
 
 ```yaml
-Type: Sample.API.Models.IVMAttributes
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
@@ -558,7 +558,7 @@ Accept wildcard characters: False
 List of VM sizes supported for Compute Fleet
 
 ```yaml
-Type: Sample.API.Models.IVMSizeProfile[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
@@ -605,13 +605,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Sample.API.Models.IFleetIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 
-### Sample.API.Models.IFleetUpdate
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate
 
 ## OUTPUTS
 
-### Sample.API.Models.IFleet
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 
 ## NOTES
 

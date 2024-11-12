@@ -44,7 +44,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Sample.API.Models.IOperation
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation
 
 ## NOTES
 

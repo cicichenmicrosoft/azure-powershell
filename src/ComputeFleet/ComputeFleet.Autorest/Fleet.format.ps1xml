@@ -2,9 +2,9 @@
 <Configuration>
   <ViewDefinitions>
     <View>
-      <Name>Sample.API.Models.AdditionalCapabilities</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalCapabilities</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.AdditionalCapabilities#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalCapabilities#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -30,9 +30,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.AdditionalUnattendContent</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalUnattendContent</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.AdditionalUnattendContent#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalUnattendContent#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -64,9 +64,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ApiEntityReference</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiEntityReference</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ApiEntityReference#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiEntityReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -86,9 +86,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ApiError</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiError</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ApiError#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiError#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -120,9 +120,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ApiErrorBase</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiErrorBase</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ApiErrorBase#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiErrorBase#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -154,9 +154,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.BasePriorityProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BasePriorityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.BasePriorityProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BasePriorityProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -182,9 +182,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.BaseVirtualMachineProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BaseVirtualMachineProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.BaseVirtualMachineProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BaseVirtualMachineProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -216,9 +216,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.BootDiagnostics</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BootDiagnostics</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.BootDiagnostics#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BootDiagnostics#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -244,9 +244,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -272,9 +272,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ComputeProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ComputeProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -300,9 +300,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.DiffDiskSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiffDiskSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.DiffDiskSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiffDiskSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -328,9 +328,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.DiskEncryptionSetParameters</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiskEncryptionSetParameters</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.DiskEncryptionSetParameters#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiskEncryptionSetParameters#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -350,9 +350,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.EncryptionIdentity</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.EncryptionIdentity</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.EncryptionIdentity#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.EncryptionIdentity#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -372,9 +372,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ErrorAdditionalInfo</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorAdditionalInfo</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ErrorAdditionalInfo#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorAdditionalInfo#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -394,9 +394,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ErrorDetail</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorDetail</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ErrorDetail#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorDetail#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -428,9 +428,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.Fleet</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.Fleet#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -510,9 +510,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetIdentity</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetIdentity</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetIdentity#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetIdentity#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -550,9 +550,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetListResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetListResult#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -572,9 +572,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -606,9 +606,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetsDeleteAcceptedResponseHeaders</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsDeleteAcceptedResponseHeaders</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetsDeleteAcceptedResponseHeaders#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsDeleteAcceptedResponseHeaders#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -634,9 +634,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetsUpdateAcceptedResponseHeaders</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsUpdateAcceptedResponseHeaders</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetsUpdateAcceptedResponseHeaders#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsUpdateAcceptedResponseHeaders#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -662,9 +662,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.FleetUpdateTags</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdateTags</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.FleetUpdateTags#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdateTags#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -684,9 +684,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ImageReference</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ImageReference</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ImageReference#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ImageReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -748,9 +748,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.InnerError</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.InnerError</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.InnerError#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.InnerError#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -776,9 +776,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.KeyVaultSecretReference</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.KeyVaultSecretReference</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.KeyVaultSecretReference#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.KeyVaultSecretReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -798,9 +798,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.LinuxConfiguration</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.LinuxConfiguration#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -832,9 +832,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.LinuxPatchSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxPatchSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.LinuxPatchSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxPatchSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -860,9 +860,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.LinuxVMGuestPatchAutomaticByPlatformSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxVMGuestPatchAutomaticByPlatformSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.LinuxVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -888,9 +888,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.LocationProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LocationProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.LocationProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LocationProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -910,9 +910,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ManagedServiceIdentity</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentity</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ManagedServiceIdentity#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentity#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -944,9 +944,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ManagedServiceIdentityUpdate</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentityUpdate</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ManagedServiceIdentityUpdate#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentityUpdate#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -966,9 +966,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.Operation</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Operation</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.Operation#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Operation#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1006,9 +1006,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.OperationDisplay</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationDisplay</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.OperationDisplay#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationDisplay#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1046,9 +1046,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.OperationListResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.OperationListResult#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1068,9 +1068,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.OSImageNotificationProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OSImageNotificationProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.OSImageNotificationProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OSImageNotificationProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1096,9 +1096,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.PatchSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PatchSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.PatchSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PatchSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1130,9 +1130,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.Plan</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Plan</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.Plan#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Plan#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1176,9 +1176,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ProxyAgentSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ProxyAgentSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ProxyAgentSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ProxyAgentSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1210,9 +1210,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.PublicIPAddressSku</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PublicIPAddressSku</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.PublicIPAddressSku#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PublicIPAddressSku#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1238,9 +1238,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.RegularPriorityProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.RegularPriorityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.RegularPriorityProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.RegularPriorityProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1272,9 +1272,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.Resource</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Resource</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.Resource#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Resource#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1306,9 +1306,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ResourcePlanUpdate</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ResourcePlanUpdate</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ResourcePlanUpdate#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ResourcePlanUpdate#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1352,9 +1352,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SecurityPostureReference</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityPostureReference</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SecurityPostureReference#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityPostureReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1380,9 +1380,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SecurityProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SecurityProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1408,9 +1408,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.ServiceArtifactReference</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ServiceArtifactReference</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.ServiceArtifactReference#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ServiceArtifactReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1430,9 +1430,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SpotPriorityProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SpotPriorityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SpotPriorityProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SpotPriorityProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1482,9 +1482,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SshPublicKey</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SshPublicKey</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SshPublicKey#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SshPublicKey#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1510,9 +1510,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SubResource</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResource</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SubResource#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResource#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1532,9 +1532,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SubResourceReadOnly</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResourceReadOnly</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SubResourceReadOnly#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResourceReadOnly#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1554,9 +1554,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.SystemData</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SystemData</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.SystemData#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SystemData#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1606,9 +1606,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.TerminateNotificationProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TerminateNotificationProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.TerminateNotificationProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TerminateNotificationProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1634,9 +1634,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.TrackedResource</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResource</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.TrackedResource#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResource#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1710,9 +1710,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.TrackedResourceTags</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResourceTags</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.TrackedResourceTags#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResourceTags#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1732,9 +1732,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.UefiSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UefiSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.UefiSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UefiSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1760,9 +1760,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.UserAssignedIdentity</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UserAssignedIdentity</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.UserAssignedIdentity#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UserAssignedIdentity#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1788,9 +1788,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VaultCertificate</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VaultCertificate</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VaultCertificate#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VaultCertificate#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1816,9 +1816,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualHardDisk</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualHardDisk</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualHardDisk#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualHardDisk#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1838,9 +1838,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSet</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSet</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSet#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSet#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1878,9 +1878,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetDataDisk</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetDataDisk</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetDataDisk#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetDataDisk#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1948,9 +1948,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetExtension</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtension</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetExtension#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtension#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -1982,9 +1982,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetExtensionProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetExtensionProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2004,9 +2004,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetExtensionProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetExtensionProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2068,9 +2068,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetIPConfiguration</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetIPConfiguration#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2090,9 +2090,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetIPConfigurationProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfigurationProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetIPConfigurationProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfigurationProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2118,9 +2118,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetIPTag</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPTag</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetIPTag#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPTag#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2146,9 +2146,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetListResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetListResult#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2168,9 +2168,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetManagedDiskParameters</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetManagedDiskParameters</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetManagedDiskParameters#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetManagedDiskParameters#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2190,9 +2190,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetNetworkConfiguration</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetNetworkConfiguration#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2212,9 +2212,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetNetworkConfigurationProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfigurationProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetNetworkConfigurationProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfigurationProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2276,9 +2276,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetNetworkProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetNetworkProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2298,9 +2298,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetOSDisk</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSDisk</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetOSDisk#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSDisk#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2356,9 +2356,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetOSProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetOSProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2396,9 +2396,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfiguration</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfiguration#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2418,9 +2418,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2446,9 +2446,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfigurationProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetPublicIPAddressConfigurationProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2480,9 +2480,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VirtualMachineScaleSetStorageProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetStorageProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VirtualMachineScaleSetStorageProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetStorageProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2502,9 +2502,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMAttributeMinMaxDouble</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxDouble</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMAttributeMinMaxDouble#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxDouble#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2530,9 +2530,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMAttributeMinMaxInteger</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxInteger</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMAttributeMinMaxInteger#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxInteger#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2558,9 +2558,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMAttributes</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributes</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMAttributes#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributes#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2598,9 +2598,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMDiskSecurityProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMDiskSecurityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMDiskSecurityProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMDiskSecurityProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2620,9 +2620,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMGalleryApplication</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMGalleryApplication</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMGalleryApplication#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMGalleryApplication#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2672,9 +2672,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMSizeProfile</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMSizeProfile#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2700,9 +2700,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.VMSizeProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.VMSizeProperties#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2728,9 +2728,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.WindowsConfiguration</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.WindowsConfiguration#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2768,9 +2768,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.WindowsVMGuestPatchAutomaticByPlatformSettings</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsVMGuestPatchAutomaticByPlatformSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.WindowsVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -2796,9 +2796,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Sample.API.Models.WinRmListener</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WinRmListener</Name>
       <ViewSelectedBy>
-        <TypeName>Sample.API.Models.WinRmListener#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WinRmListener#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>

@@ -15,9 +15,9 @@ Get a Fleet
 {{ Add code here }}
 
 .Inputs
-Sample.API.Models.IFleetIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
-Sample.API.Models.IFleet
+Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
@@ -32,18 +32,18 @@ INPUTOBJECT <IFleetIdentity>: Identity Parameter
 https://learn.microsoft.com/powershell/module/fleet/get-fleet
 #>
 function Get-Fleet {
-[OutputType([Sample.API.Models.IFleet])]
+[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='ListBySubscription', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the Compute Fleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
@@ -52,53 +52,53 @@ param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Parameter(ParameterSetName='ListBySubscription', Mandatory)]
     [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
-    [Sample.API.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
     [Parameter(ParameterSetName='GetViaIdentity', Mandatory, ValueFromPipeline)]
-    [Sample.API.Category('Path')]
-    [Sample.API.Models.IFleetIdentity]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Wait for .NET debugger to attach
     ${Break},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be appended to the front of the pipeline
     ${HttpPipelineAppend},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
-    [Sample.API.Runtime.SendAsyncStep[]]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Uri]
     # The URI for the proxy server to use
     ${Proxy},
 
     [Parameter(DontShow)]
     [ValidateNotNull()]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.PSCredential]
     # Credentials for a proxy server to use for the remote call
     ${ProxyCredential},
 
     [Parameter(DontShow)]
-    [Sample.API.Category('Runtime')]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
     [System.Management.Automation.SwitchParameter]
     # Use the default credentials for the proxy
     ${ProxyUseDefaultCredentials}
@@ -119,8 +119,8 @@ begin {
             ListByResourceGroup = 'Fleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
-        [Sample.API.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
+        [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessPreviewMessageAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
         $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand(($mapping[$parameterSet]), [System.Management.Automation.CommandTypes]::Cmdlet)
         $scriptCmd = {& $wrappedCmd @PSBoundParameters}
         $steppablePipeline = $scriptCmd.GetSteppablePipeline($MyInvocation.CommandOrigin)

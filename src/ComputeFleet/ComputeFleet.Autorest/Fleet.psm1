@@ -3,7 +3,7 @@
   $null = Import-Module -Name (Join-Path $PSScriptRoot './bin/Fleet.private.dll')
 
   # Get the private module's instance
-  $instance = [Sample.API.Module]::Instance
+  $instance = [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module]::Instance
 
   # Load the custom module
   $customModulePath = Join-Path $PSScriptRoot './custom/Fleet.custom.psm1'
