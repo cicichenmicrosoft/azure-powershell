@@ -1,21 +1,15 @@
 # region Generated 
   # Load the private module dll
-  $null = Import-Module -Name (Join-Path $PSScriptRoot './bin/ComputeFleet.private.dll')
+  $null = Import-Module -PassThru -Name (Join-Path $PSScriptRoot '..\bin\Az.ComputeFleet.private.dll')
 
   # Get the private module's instance
   $instance = [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module]::Instance
-
-  # Load the custom module
-  $customModulePath = Join-Path $PSScriptRoot './custom/ComputeFleet.custom.psm1'
-  if(Test-Path $customModulePath) {
-    $null = Import-Module -Name $customModulePath
-  }
 
   # Export nothing to clear implicit exports
   Export-ModuleMember
 
   # Export proxy cmdlet scripts
-  $exportsPath = Join-Path $PSScriptRoot './exports'
+  $exportsPath = $PSScriptRoot
   $directories = Get-ChildItem -Directory -Path $exportsPath
   $profileDirectory = $null
   if($instance.ProfileName) {
@@ -41,8 +35,4 @@
     $cmdletNames = Get-ScriptCmdlet -ScriptFolder $exportsPath
     Export-ModuleMember -Function $cmdletNames -Alias (Get-ScriptCmdlet -ScriptFolder $exportsPath -AsAlias)
   }
-
-  # Finalize initialization of this module
-  $instance.Init();
-  Write-Information "Loaded Module '$($instance.Name)'"
 # endregion

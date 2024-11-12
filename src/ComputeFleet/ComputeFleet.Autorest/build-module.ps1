@@ -89,7 +89,7 @@ if(-not $Debugger) {
   $null = Remove-Item -Recurse -ErrorAction SilentlyContinue -Path (Join-Path $binFolder 'Debug'), (Join-Path $binFolder 'Release')
 }
 
-$dll = Join-Path $PSScriptRoot 'bin\ComputeFleet.private.dll'
+$dll = Join-Path $PSScriptRoot 'bin\Az.ComputeFleet.private.dll'
 if(-not (Test-Path $dll)) {
   Write-Error "Unable to find output assembly in '$binFolder'."
 }
@@ -98,7 +98,7 @@ if(-not (Test-Path $dll)) {
 $null = Import-Module -Name $dll
 
 $modulePaths = $dll
-$customPsm1 = Join-Path $PSScriptRoot 'custom\ComputeFleet.custom.psm1'
+$customPsm1 = Join-Path $PSScriptRoot 'custom\Az.ComputeFleet.custom.psm1'
 if(Test-Path $customPsm1) {
   $modulePaths = @($dll, $customPsm1)
 }
@@ -115,7 +115,7 @@ if(Test-Path $internalFolder) {
 }
 $null = New-Item -ItemType Directory -Force -Path $internalFolder
 
-$psd1 = Join-Path $PSScriptRoot './ComputeFleet.psd1'
+$psd1 = Join-Path $PSScriptRoot './Az.ComputeFleet.psd1'
 $guid = Get-ModuleGuid -Psd1Path $psd1
 $moduleName = 'ComputeFleet'
 $examplesFolder = Join-Path $PSScriptRoot 'examples'
@@ -148,7 +148,7 @@ if($NoDocs) {
 }
 
 Write-Host -ForegroundColor Green 'Creating format.ps1xml...'
-$formatPs1xml = Join-Path $PSScriptRoot './ComputeFleet.format.ps1xml'
+$formatPs1xml = Join-Path $PSScriptRoot './Az.ComputeFleet.format.ps1xml'
 Export-FormatPs1xml -FilePath $formatPs1xml
 
 Write-Host -ForegroundColor Green 'Creating psd1...'

@@ -1,16 +1,16 @@
 ---
-Module Name: ComputeFleet
+Module Name: Az.ComputeFleet
 Module Guid: d911fabc-d107-439b-a98e-f0d3289c7b0b
-Download Help Link: https://learn.microsoft.com/powershell/module/computefleet
+Download Help Link: https://learn.microsoft.com/powershell/module/az.computefleet
 Help Version: 1.0.0.0
 Locale: en-US
 ---
 
-# ComputeFleet Module
+# Az.ComputeFleet Module
 ## Description
 
 
-## ComputeFleet Cmdlets
+## Az.ComputeFleet Cmdlets
 ### [Get-AzComputeFleet](Get-AzComputeFleet.md)
 Get a ComputeFleet
 

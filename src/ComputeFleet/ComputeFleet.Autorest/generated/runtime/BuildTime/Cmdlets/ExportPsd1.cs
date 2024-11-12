@@ -71,7 +71,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
                 var sb = new StringBuilder();
                 sb.AppendLine("@{");
                 sb.AppendLine($@"{GuidStart} = '{ModuleGuid}'");
-                sb.AppendLine($@"{Indent}RootModule = '{"./ComputeFleet.psm1"}'");
+                sb.AppendLine($@"{Indent}RootModule = '{"./Az.ComputeFleet.psm1"}'");
                 sb.AppendLine($@"{Indent}ModuleVersion = '{version}'");
                 sb.AppendLine($@"{Indent}CompatiblePSEditions = 'Core', 'Desktop'");
                 sb.AppendLine($@"{Indent}Author = '{""}'");
@@ -94,7 +94,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
                 }
                 else
                 {
-                    sb.AppendLine($@"{Indent}RequiredAssemblies = '{"./bin/ComputeFleet.private.dll"}'");
+                    sb.AppendLine($@"{Indent}RequiredAssemblies = '{"./bin/Az.ComputeFleet.private.dll"}'");
                 }
 
                 // NestedModules
@@ -113,7 +113,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell
                     var customFormatPs1xmlFiles = Directory.GetFiles(CustomFolder)
                         .Where(f => f.EndsWith(".format.ps1xml"))
                         .Select(f => $"{CustomFolderRelative}/{Path.GetFileName(f)}");
-                    var formatList = customFormatPs1xmlFiles.Prepend("./ComputeFleet.format.ps1xml").ToPsList();
+                    var formatList = customFormatPs1xmlFiles.Prepend("./Az.ComputeFleet.format.ps1xml").ToPsList();
                     sb.AppendLine($@"{Indent}FormatsToProcess = {formatList}");
                 }
 

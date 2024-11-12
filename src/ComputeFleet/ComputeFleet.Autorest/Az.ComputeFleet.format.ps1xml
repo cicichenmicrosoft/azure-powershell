@@ -2,33 +2,27 @@
 <Configuration>
   <ViewDefinitions>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetIdentity</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalCapabilities</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetIdentity</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalCapabilities#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>OrganizationName</Label>
+            <Label>HibernationEnabled</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>ResourceGroupName</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>SubscriptionId</Label>
+            <Label>UltraSsdEnabled</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>OrganizationName</PropertyName>
+                <PropertyName>HibernationEnabled</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>ResourceGroupName</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>SubscriptionId</PropertyName>
+                <PropertyName>UltraSsdEnabled</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -36,63 +30,33 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalUnattendContent</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementProperties</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.AdditionalUnattendContent#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>Accepted</Label>
+            <Label>ComponentName</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>LicenseTextLink</Label>
+            <Label>PassName</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>Plan</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>PrivacyPolicyLink</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>Product</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>Publisher</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>RetrieveDatetime</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>Signature</Label>
+            <Label>SettingName</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>Accepted</PropertyName>
+                <PropertyName>ComponentName</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>LicenseTextLink</PropertyName>
+                <PropertyName>PassName</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>Plan</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>PrivacyPolicyLink</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>Product</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>Publisher</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>RetrieveDatetime</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>Signature</PropertyName>
+                <PropertyName>SettingName</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -100,21 +64,21 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementResource</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiEntityReference</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementResource</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiEntityReference#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>Name</Label>
+            <Label>Id</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>Name</PropertyName>
+                <PropertyName>Id</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -122,31 +86,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementResourceListResponse</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiError</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ComputeFleetAgreementResourceListResponse</TypeName>
-      </ViewSelectedBy>
-      <TableControl>
-        <TableHeaders>
-          <TableColumnHeader>
-            <Label>NextLink</Label>
-          </TableColumnHeader>
-        </TableHeaders>
-        <TableRowEntries>
-          <TableRowEntry>
-            <TableColumnItems>
-              <TableColumnItem>
-                <PropertyName>NextLink</PropertyName>
-              </TableColumnItem>
-            </TableColumnItems>
-          </TableRowEntry>
-        </TableRowEntries>
-      </TableControl>
-    </View>
-    <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ErrorResponseBody</Name>
-      <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.ErrorResponseBody</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiError#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -178,45 +120,33 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OfferDetail</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiErrorBase</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OfferDetail</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ApiErrorBase#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>PlanId</Label>
+            <Label>Code</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>PlanName</Label>
+            <Label>Message</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>PublisherId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>Status</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>TermUnit</Label>
+            <Label>Target</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>PlanId</PropertyName>
+                <PropertyName>Code</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>PlanName</PropertyName>
+                <PropertyName>Message</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>PublisherId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>Status</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>TermUnit</PropertyName>
+                <PropertyName>Target</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -224,9 +154,861 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationDisplay</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BasePriorityProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationDisplay</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BasePriorityProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Capacity</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MinCapacity</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Capacity</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MinCapacity</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BaseVirtualMachineProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BaseVirtualMachineProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>LicenseType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TimeCreated</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserData</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>LicenseType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TimeCreated</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserData</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BootDiagnostics</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.BootDiagnostics#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Enabled</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StorageUri</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Enabled</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StorageUri</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComponentsQjfoe3SchemasManagedserviceidentityupdatePropertiesUserassignedidentitiesAdditionalproperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ClientId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PrincipalId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ClientId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PrincipalId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ComputeApiVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PlatformFaultDomainCount</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ComputeApiVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PlatformFaultDomainCount</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiffDiskSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiffDiskSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Option</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Placement</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Option</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Placement</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiskEncryptionSetParameters</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.DiskEncryptionSetParameters#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.EncryptionIdentity</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.EncryptionIdentity#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>UserAssignedIdentityResourceId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>UserAssignedIdentityResourceId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorAdditionalInfo</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorAdditionalInfo#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorDetail</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ErrorDetail#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Code</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Message</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Target</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Code</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Message</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Target</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Location</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedByType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedByType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RetryAfter</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Location</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedByType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedByType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RetryAfter</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetIdentity</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetIdentity#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>FleetName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ResourceGroupName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SubscriptionId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>FleetName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ResourceGroupName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SubscriptionId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetListResult#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NextLink</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NextLink</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetProperties</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetProperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ProvisioningState</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TimeCreated</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UniqueId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ProvisioningState</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TimeCreated</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UniqueId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsDeleteAcceptedResponseHeaders</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsDeleteAcceptedResponseHeaders#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Location</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RetryAfter</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Location</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RetryAfter</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsUpdateAcceptedResponseHeaders</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetsUpdateAcceptedResponseHeaders#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Location</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RetryAfter</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Location</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RetryAfter</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdateTags</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdateTags#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Item</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Item</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ImageReference</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ImageReference#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CommunityGalleryImageId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ExactVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Offer</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Publisher</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SharedGalleryImageId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Sku</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Version</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CommunityGalleryImageId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ExactVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Offer</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Publisher</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SharedGalleryImageId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Sku</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Version</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.InnerError</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.InnerError#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ErrorDetail</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ExceptionType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ErrorDetail</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ExceptionType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.KeyVaultSecretReference</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.KeyVaultSecretReference#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>SecretUrl</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>SecretUrl</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxConfiguration</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxConfiguration#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>DisablePasswordAuthentication</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableVMAgentPlatformUpdates</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ProvisionVMAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>DisablePasswordAuthentication</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableVMAgentPlatformUpdates</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ProvisionVMAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxPatchSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxPatchSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AssessmentMode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PatchMode</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AssessmentMode</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PatchMode</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxVMGuestPatchAutomaticByPlatformSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LinuxVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>BypassPlatformSafetyChecksOnUserSchedule</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RebootSetting</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>BypassPlatformSafetyChecksOnUserSchedule</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RebootSetting</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LocationProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.LocationProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Location</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Location</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentity</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentity#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>PrincipalId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TenantId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>PrincipalId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TenantId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentityUpdate</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ManagedServiceIdentityUpdate#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Operation</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Operation#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ActionType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IsDataAction</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Origin</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ActionType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IsDataAction</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Origin</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationDisplay</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationDisplay#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -264,9 +1046,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationListResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationListResult</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OperationListResult#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -286,27 +1068,27 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OSImageNotificationProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OperationResult</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.OSImageNotificationProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>IsDataAction</Label>
+            <Label>Enable</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>Name</Label>
+            <Label>NotBeforeTimeout</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>IsDataAction</PropertyName>
+                <PropertyName>Enable</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>Name</PropertyName>
+                <PropertyName>NotBeforeTimeout</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -314,15 +1096,984 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResource</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PatchSettings</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResource</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PatchSettings#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
+          <TableColumnHeader>
+            <Label>AssessmentMode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableHotpatching</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PatchMode</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AssessmentMode</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableHotpatching</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PatchMode</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Plan</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Plan#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Product</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PromotionCode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Publisher</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Version</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Product</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PromotionCode</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Publisher</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Version</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ProxyAgentSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ProxyAgentSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Enabled</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>KeyIncarnationId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Mode</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Enabled</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>KeyIncarnationId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Mode</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PublicIPAddressSku</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.PublicIPAddressSku#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tier</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tier</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.RegularPriorityProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.RegularPriorityProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AllocationStrategy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Capacity</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MinCapacity</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AllocationStrategy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Capacity</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MinCapacity</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Resource</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Resource#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ResourcePlanUpdate</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ResourcePlanUpdate#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Product</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PromotionCode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Publisher</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Version</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Product</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PromotionCode</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Publisher</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Version</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityPostureReference</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityPostureReference#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IsOverridable</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IsOverridable</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SecurityProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EncryptionAtHost</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SecurityType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EncryptionAtHost</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SecurityType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ServiceArtifactReference</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ServiceArtifactReference#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SpotPriorityProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SpotPriorityProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AllocationStrategy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Capacity</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EvictionPolicy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Maintain</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxPricePerVM</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MinCapacity</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AllocationStrategy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Capacity</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EvictionPolicy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Maintain</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxPricePerVM</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MinCapacity</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SshPublicKey</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SshPublicKey#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>KeyData</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Path</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>KeyData</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Path</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResource</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResource#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResourceReadOnly</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SubResourceReadOnly#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SystemData</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.SystemData#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CreatedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CreatedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CreatedByType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>LastModifiedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>LastModifiedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>LastModifiedByType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CreatedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CreatedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CreatedByType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>LastModifiedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>LastModifiedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>LastModifiedByType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TerminateNotificationProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TerminateNotificationProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Enable</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NotBeforeTimeout</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Enable</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NotBeforeTimeout</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResource</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResource#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataCreatedByType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedAt</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedBy</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SystemDataLastModifiedByType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
           <TableColumnHeader>
             <Label>Location</Label>
           </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataCreatedByType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedAt</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedBy</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SystemDataLastModifiedByType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Location</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResourceTags</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.TrackedResourceTags#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Item</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Item</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UefiSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UefiSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>SecureBootEnabled</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>VTpmEnabled</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>SecureBootEnabled</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>VTpmEnabled</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UserAssignedIdentity</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.UserAssignedIdentity#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ClientId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PrincipalId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ClientId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PrincipalId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VaultCertificate</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VaultCertificate#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CertificateStore</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CertificateUrl</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CertificateStore</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CertificateUrl</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualHardDisk</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualHardDisk#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Uri</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Uri</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSet</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSet#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationStatus</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationStatus</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetDataDisk</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetDataDisk#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Caching</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CreateOption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DeleteOption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DiskIopsReadWrite</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DiskMBpsReadWrite</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DiskSizeGb</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Lun</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>WriteAcceleratorEnabled</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Caching</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CreateOption</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DeleteOption</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DiskIopsReadWrite</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DiskMBpsReadWrite</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DiskSizeGb</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Lun</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>WriteAcceleratorEnabled</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtension</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtension#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ExtensionsTimeBudget</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ExtensionsTimeBudget</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProperties</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetExtensionProperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AutoUpgradeMinorVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableAutomaticUpgrade</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ForceUpdateTag</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ProvisioningState</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Publisher</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SuppressFailures</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Type</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TypeHandlerVersion</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AutoUpgradeMinorVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableAutomaticUpgrade</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ForceUpdateTag</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ProvisioningState</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Publisher</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SuppressFailures</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Type</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TypeHandlerVersion</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfiguration</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfiguration#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
           <TableColumnHeader>
             <Label>Name</Label>
           </TableColumnHeader>
@@ -330,9 +2081,6 @@
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
-              <TableColumnItem>
-                <PropertyName>Location</PropertyName>
-              </TableColumnItem>
               <TableColumnItem>
                 <PropertyName>Name</PropertyName>
               </TableColumnItem>
@@ -342,9 +2090,65 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceListResult</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfigurationProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceListResult</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPConfigurationProperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Primary</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PrivateIPAddressVersion</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Primary</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PrivateIPAddressVersion</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPTag</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetIPTag#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>IPTagType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tag</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>IPTagType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tag</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetListResult#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -364,39 +2168,21 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceProperties</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetManagedDiskParameters</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceProperties</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetManagedDiskParameters#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>CreatedTime</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OrganizationId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>ProvisioningState</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>SsoUrl</Label>
+            <Label>StorageAccountType</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>CreatedTime</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OrganizationId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>ProvisioningState</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>SsoUrl</PropertyName>
+                <PropertyName>StorageAccountType</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -404,93 +2190,21 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesAutoGenerated</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesAutoGenerated</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>CreatedTime</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailPlanId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailPlanName</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailPublisherId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailStatus</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OfferDetailTermUnit</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>OrganizationId</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>ProvisioningState</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>SsoUrl</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>UserDetailEmailAddress</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>UserDetailFirstName</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>UserDetailLastName</Label>
+            <Label>Name</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>CreatedTime</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailPlanId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailPlanName</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailPublisherId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailStatus</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OfferDetailTermUnit</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>OrganizationId</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>ProvisioningState</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>SsoUrl</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>UserDetailEmailAddress</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>UserDetailFirstName</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>UserDetailLastName</PropertyName>
+                <PropertyName>Name</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -498,45 +2212,63 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesOfferDetail</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfigurationProperties</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesOfferDetail</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkConfigurationProperties#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>PlanId</Label>
+            <Label>AuxiliaryMode</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>PlanName</Label>
+            <Label>AuxiliarySku</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>PublisherId</Label>
+            <Label>DeleteOption</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>Status</Label>
+            <Label>DisableTcpStateTracking</Label>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>TermUnit</Label>
+            <Label>EnableAcceleratedNetworking</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableFpga</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableIPForwarding</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Primary</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>PlanId</PropertyName>
+                <PropertyName>AuxiliaryMode</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>PlanName</PropertyName>
+                <PropertyName>AuxiliarySku</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>PublisherId</PropertyName>
+                <PropertyName>DeleteOption</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>Status</PropertyName>
+                <PropertyName>DisableTcpStateTracking</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>TermUnit</PropertyName>
+                <PropertyName>EnableAcceleratedNetworking</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableFpga</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableIPForwarding</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Primary</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -544,33 +2276,21 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesUserDetail</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourcePropertiesUserDetail</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetNetworkProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>EmailAddress</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>FirstName</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>LastName</Label>
+            <Label>NetworkApiVersion</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>EmailAddress</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>FirstName</PropertyName>
-              </TableColumnItem>
-              <TableColumnItem>
-                <PropertyName>LastName</PropertyName>
+                <PropertyName>NetworkApiVersion</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -578,21 +2298,57 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceTags</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSDisk</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceTags</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSDisk#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>Item</Label>
+            <Label>Caching</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CreateOption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DeleteOption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DiskSizeGb</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OSType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>WriteAcceleratorEnabled</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>Item</PropertyName>
+                <PropertyName>Caching</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CreateOption</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DeleteOption</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DiskSizeGb</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OSType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>WriteAcceleratorEnabled</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -600,21 +2356,39 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceUpdateTags</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSProfile</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.OrganizationResourceUpdateTags</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetOSProfile#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>Item</Label>
+            <Label>AdminUsername</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>AllowExtensionOperations</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ComputerNamePrefix</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RequireGuestProvisionSignal</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>Item</PropertyName>
+                <PropertyName>AdminUsername</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>AllowExtensionOperations</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ComputerNamePrefix</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RequireGuestProvisionSignal</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
@@ -622,33 +2396,427 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.UserDetail</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfiguration</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.UserDetail</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfiguration#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
           <TableColumnHeader>
-            <Label>EmailAddress</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>FirstName</Label>
-          </TableColumnHeader>
-          <TableColumnHeader>
-            <Label>LastName</Label>
+            <Label>Name</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
             <TableColumnItems>
               <TableColumnItem>
-                <PropertyName>EmailAddress</PropertyName>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>DomainNameLabel</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DomainNameLabelScope</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>DomainNameLabel</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>FirstName</PropertyName>
+                <PropertyName>DomainNameLabelScope</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationProperties</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetPublicIPAddressConfigurationProperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>DeleteOption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IdleTimeoutInMinutes</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PublicIPAddressVersion</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>DeleteOption</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>LastName</PropertyName>
+                <PropertyName>IdleTimeoutInMinutes</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PublicIPAddressVersion</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetStorageProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VirtualMachineScaleSetStorageProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>DiskControllerType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>DiskControllerType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxDouble</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxDouble#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Max</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Min</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Max</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Min</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxInteger</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributeMinMaxInteger#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Max</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Min</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Max</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Min</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributes</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMAttributes#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AcceleratorSupport</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>BurstableSupport</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>LocalStorageSupport</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RdmaSupport</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AcceleratorSupport</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>BurstableSupport</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>LocalStorageSupport</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RdmaSupport</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMDiskSecurityProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMDiskSecurityProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>SecurityEncryptionType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>SecurityEncryptionType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMGalleryApplication</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMGalleryApplication#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConfigurationReference</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableAutomaticUpgrade</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Order</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PackageReferenceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TreatFailureAsDeploymentFailure</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConfigurationReference</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableAutomaticUpgrade</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Order</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PackageReferenceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TreatFailureAsDeploymentFailure</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProfile</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProfile#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Rank</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Rank</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProperties</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.VMSizeProperties#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>VCpUsAvailable</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>VCpUsPerCore</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>VCpUsAvailable</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>VCpUsPerCore</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsConfiguration</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsConfiguration#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EnableAutomaticUpdates</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EnableVMAgentPlatformUpdates</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ProvisionVMAgent</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TimeZone</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EnableAutomaticUpdates</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EnableVMAgentPlatformUpdates</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ProvisionVMAgent</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TimeZone</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsVMGuestPatchAutomaticByPlatformSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WindowsVMGuestPatchAutomaticByPlatformSettings#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>BypassPlatformSafetyChecksOnUserSchedule</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RebootSetting</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>BypassPlatformSafetyChecksOnUserSchedule</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RebootSetting</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WinRmListener</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.WinRmListener#Multiple</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CertificateUrl</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Protocol</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CertificateUrl</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Protocol</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>

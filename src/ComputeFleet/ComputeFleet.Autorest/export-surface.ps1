@@ -12,7 +12,7 @@ if(-not $NotIsolated) {
   return
 }
 
-$dll = Join-Path $PSScriptRoot 'bin\ComputeFleet.private.dll'
+$dll = Join-Path $PSScriptRoot 'bin\Az.ComputeFleet.private.dll'
 if(-not (Test-Path $dll)) {
   Write-Error "Unable to find output assembly in '$binFolder'."
 }

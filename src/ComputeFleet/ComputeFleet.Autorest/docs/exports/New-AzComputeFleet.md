@@ -1,6 +1,6 @@
 ---
 external help file:
-Module Name: ComputeFleet
+Module Name: Az.ComputeFleet
 online version: https://learn.microsoft.com/powershell/module/computefleet/new-azcomputefleet
 schema: 2.0.0
 ---
