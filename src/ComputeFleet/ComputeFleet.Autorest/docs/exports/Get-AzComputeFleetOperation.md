@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: ComputeFleet
-online version: https://learn.microsoft.com/powershell/module/computefleet/get-operation
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetoperation
 schema: 2.0.0
 ---
 
-# Get-Operation
+# Get-AzComputeFleetOperation
 
 ## SYNOPSIS
 List the operations for the provider
@@ -13,7 +13,7 @@ List the operations for the provider
 ## SYNTAX
 
 ```
-Get-Operation [<CommonParameters>]
+Get-AzComputeFleetOperation [<CommonParameters>]
 ```
 
 ## DESCRIPTION

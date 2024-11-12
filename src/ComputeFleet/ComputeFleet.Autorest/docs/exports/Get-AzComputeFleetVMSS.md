@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: ComputeFleet
-online version: https://learn.microsoft.com/powershell/module/computefleet/get-fleetvirtualmachinescaleset
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetvmss
 schema: 2.0.0
 ---
 
-# Get-FleetVirtualMachineScaleSet
+# Get-AzComputeFleetVMSS
 
 ## SYNOPSIS
 List VirtualMachineScaleSet resources by ComputeFleet
@@ -13,7 +13,7 @@ List VirtualMachineScaleSet resources by ComputeFleet
 ## SYNTAX
 
 ```
-Get-FleetVirtualMachineScaleSet -Name <String> -ResourceGroupName <String> -SubscriptionId <String>
+Get-AzComputeFleetVMSS -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
  [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ List VirtualMachineScaleSet resources by ComputeFleet
 
 ## PARAMETERS
 
-### -Name
+### -FleetName
 The name of the ComputeFleet
 
 ```yaml

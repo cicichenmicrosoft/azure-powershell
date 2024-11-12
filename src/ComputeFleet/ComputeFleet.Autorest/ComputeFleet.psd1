@@ -11,7 +11,7 @@
   DotNetFrameworkVersion = '4.7.2'
   RequiredAssemblies = './bin/ComputeFleet.private.dll'
   FormatsToProcess = './ComputeFleet.format.ps1xml'
-  FunctionsToExport = 'Get-ComputeFleet', 'Get-FleetVirtualMachineScaleSet', 'Get-Operation', 'New-ComputeFleet', 'Remove-ComputeFleet', 'Update-ComputeFleet'
+  FunctionsToExport = 'Get-AzComputeFleet', 'Get-AzComputeFleetVMSS', 'Get-AzComputeFleetOperation', 'New-AzComputeFleet', 'Remove-AzComputeFleet', 'Update-AzComputeFleet'
   PrivateData = @{
     PSData = @{
       Tags = ''

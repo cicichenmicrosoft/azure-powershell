@@ -6,12 +6,12 @@
   },
   "commands": [
     {
-      "name": "Get-ComputeFleet",
+      "name": "Get-AzComputeFleet",
       "description": "Get a ComputeFleet",
       "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}",
       "help": {
         "learnMore": {
-          "url": "https://learn.microsoft.com/powershell/module/computefleet/get-computefleet"
+          "url": "https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleet"
         },
         "parameterSets": [
           {
@@ -44,12 +44,12 @@
       ]
     },
     {
-      "name": "Remove-ComputeFleet",
+      "name": "Remove-AzComputeFleet",
       "description": "Delete a ComputeFleet",
       "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}",
       "help": {
         "learnMore": {
-          "url": "https://learn.microsoft.com/powershell/module/computefleet/remove-computefleet"
+          "url": "https://learn.microsoft.com/powershell/module/computefleet/remove-azcomputefleet"
         },
         "parameterSets": [
           {

@@ -1,31 +1,40 @@
 ---
 external help file:
 Module Name: ComputeFleet
-online version: https://learn.microsoft.com/powershell/module/computefleet/remove-computefleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleet
 schema: 2.0.0
 ---
 
-# Remove-ComputeFleet
+# Get-AzComputeFleet
 
 ## SYNOPSIS
-Delete a ComputeFleet
+Get a ComputeFleet
 
 ## SYNTAX
 
-### Delete (Default)
+### List (Default)
 ```
-Remove-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> [-AsJob] [-NoWait]
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Get-AzComputeFleet -SubscriptionId <String> [<CommonParameters>]
 ```
 
-### DeleteViaIdentity
+### Get
 ```
-Remove-ComputeFleet -InputObject <IFleetIdentity> [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
+Get-AzComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
  [<CommonParameters>]
 ```
 
+### GetViaIdentity
+```
+Get-AzComputeFleet -InputObject <IFleetIdentity> [<CommonParameters>]
+```
+
+### List1
+```
+Get-AzComputeFleet -ResourceGroupName <String> -SubscriptionId <String> [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Delete a ComputeFleet
+Get a ComputeFleet
 
 ## EXAMPLES
 
@@ -45,27 +54,12 @@ Delete a ComputeFleet
 
 ## PARAMETERS
 
-### -AsJob
-Run the command as a job
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FleetName
 The name of the Compute ComputeFleet
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -80,7 +74,7 @@ Identity Parameter
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
-Parameter Sets: DeleteViaIdentity
+Parameter Sets: GetViaIdentity
 Aliases:
 
 Required: True
@@ -90,43 +84,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -NoWait
-Run the command asynchronously
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get, List1
 Aliases:
 
 Required: True
@@ -142,41 +106,10 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get, List, List1
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -192,7 +125,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 
 ## NOTES
 

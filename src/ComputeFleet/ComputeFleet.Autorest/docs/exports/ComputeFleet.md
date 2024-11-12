@@ -11,21 +11,21 @@ Locale: en-US
 
 
 ## ComputeFleet Cmdlets
-### [Get-ComputeFleet](Get-ComputeFleet.md)
+### [Get-AzComputeFleet](Get-AzComputeFleet.md)
 Get a ComputeFleet
 
-### [Get-FleetVirtualMachineScaleSet](Get-FleetVirtualMachineScaleSet.md)
-List VirtualMachineScaleSet resources by ComputeFleet
-
-### [Get-Operation](Get-Operation.md)
+### [Get-AzComputeFleetOperation](Get-AzComputeFleetOperation.md)
 List the operations for the provider
 
-### [New-ComputeFleet](New-ComputeFleet.md)
+### [Get-AzComputeFleetVMSS](Get-AzComputeFleetVMSS.md)
+List VirtualMachineScaleSet resources by ComputeFleet
+
+### [New-AzComputeFleet](New-AzComputeFleet.md)
 create a ComputeFleet
 
-### [Remove-ComputeFleet](Remove-ComputeFleet.md)
+### [Remove-AzComputeFleet](Remove-AzComputeFleet.md)
 Delete a ComputeFleet
 
-### [Update-ComputeFleet](Update-ComputeFleet.md)
+### [Update-AzComputeFleet](Update-AzComputeFleet.md)
 update a ComputeFleet
 

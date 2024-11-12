@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: ComputeFleet
-online version: https://learn.microsoft.com/powershell/module/computefleet/new-computefleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/new-azcomputefleet
 schema: 2.0.0
 ---
 
-# New-ComputeFleet
+# New-AzComputeFleet
 
 ## SYNOPSIS
 create a ComputeFleet
@@ -14,7 +14,7 @@ create a ComputeFleet
 
 ### CreateExpanded (Default)
 ```
-New-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> -Location <String>
+New-AzComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> -Location <String>
  [-AdditionalLocationProfileLocationProfiles <ILocationProfile[]>]
  [-AdditionalVirtualMachineCapabilityHibernationEnabled] [-AdditionalVirtualMachineCapabilityUltraSsdEnabled]
  [-ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]
@@ -32,19 +32,19 @@ New-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId
 
 ### Create
 ```
-New-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> -Resource <IFleet> [-AsJob]
- [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+New-AzComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> -Resource <IFleet>
+ [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
 ```
-New-ComputeFleet -InputObject <IFleetIdentity> -Resource <IFleet> [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+New-AzComputeFleet -InputObject <IFleetIdentity> -Resource <IFleet> [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
 ```
-New-ComputeFleet -InputObject <IFleetIdentity> -Location <String>
+New-AzComputeFleet -InputObject <IFleetIdentity> -Location <String>
  [-AdditionalLocationProfileLocationProfiles <ILocationProfile[]>]
  [-AdditionalVirtualMachineCapabilityHibernationEnabled] [-AdditionalVirtualMachineCapabilityUltraSsdEnabled]
  [-ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]

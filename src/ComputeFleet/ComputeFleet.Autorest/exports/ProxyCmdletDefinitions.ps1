@@ -152,7 +152,7 @@ INPUTOBJECT <IFleetIdentity>: Identity Parameter
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 .Link
-https://learn.microsoft.com/powershell/module/computefleet/get-computefleet
+https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleet
 #>
 function Get-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]

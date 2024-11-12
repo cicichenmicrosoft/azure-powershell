@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: ComputeFleet
-online version: https://learn.microsoft.com/powershell/module/computefleet/update-computefleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/update-azcomputefleet
 schema: 2.0.0
 ---
 
-# Update-ComputeFleet
+# Update-AzComputeFleet
 
 ## SYNOPSIS
 update a ComputeFleet
@@ -14,7 +14,7 @@ update a ComputeFleet
 
 ### UpdateExpanded (Default)
 ```
-Update-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
+Update-AzComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
  [-AdditionalLocationProfileLocationProfiles <ILocationProfile[]>]
  [-AdditionalVirtualMachineCapabilityHibernationEnabled] [-AdditionalVirtualMachineCapabilityUltraSsdEnabled]
  [-ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]
@@ -31,19 +31,20 @@ Update-ComputeFleet -FleetName <String> -ResourceGroupName <String> -Subscriptio
 
 ### Update
 ```
-Update-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
+Update-AzComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String>
  -Properties <IFleetUpdate> [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
 ```
-Update-ComputeFleet -InputObject <IFleetIdentity> -Properties <IFleetUpdate> [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Update-AzComputeFleet -InputObject <IFleetIdentity> -Properties <IFleetUpdate> [-AsJob] [-NoWait] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-ComputeFleet -InputObject <IFleetIdentity> [-AdditionalLocationProfileLocationProfiles <ILocationProfile[]>]
+Update-AzComputeFleet -InputObject <IFleetIdentity>
+ [-AdditionalLocationProfileLocationProfiles <ILocationProfile[]>]
  [-AdditionalVirtualMachineCapabilityHibernationEnabled] [-AdditionalVirtualMachineCapabilityUltraSsdEnabled]
  [-ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]
  [-ComputeProfileComputeApiVersion <String>] [-ComputeProfilePlatformFaultDomainCount <Int32>]
