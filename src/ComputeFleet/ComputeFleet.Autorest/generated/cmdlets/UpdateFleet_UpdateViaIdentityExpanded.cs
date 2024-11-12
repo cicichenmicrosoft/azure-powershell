@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>update a Fleet</summary>
+    /// <summary>update a ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] Update=>PATCH:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsData.Update, @"Fleet_UpdateViaIdentityExpanded", SupportsShouldProcess = true)]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"update a Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"update a ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}", ApiVersion = "2024-11-01")]
     public partial class UpdateFleet_UpdateViaIdentityExpanded : global::System.Management.Automation.PSCmdlet,
@@ -35,7 +35,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         /// <summary>A buffer to record first returned object in response.</summary>
         private object _firstResponse = null;
 
-        /// <summary>Fleet Update Model</summary>
+        /// <summary>ComputeFleet Update Model</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate _propertiesBody = new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdate();
 
         /// <summary>
@@ -113,14 +113,14 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
 
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The
-        /// default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
-        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.")]
+        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute ComputeFleet.")]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Body)]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
-        Description = @"Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.",
+        Description = @"Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute ComputeFleet.",
         SerializedName = @"computeApiVersion",
         PossibleTypes = new [] { typeof(string) })]
         public string ComputeProfileComputeApiVersion { get => _propertiesBody.ComputeProfileComputeApiVersion ?? null; set => _propertiesBody.ComputeProfileComputeApiVersion = value; }
@@ -416,25 +416,25 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags) })]
         public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags Tags { get => _propertiesBody.Tags ?? null /* object */; set => _propertiesBody.Tags = value; }
 
-        /// <summary>Attribute based Fleet.</summary>
-        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "Attribute based Fleet.")]
+        /// <summary>Attribute based ComputeFleet.</summary>
+        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "Attribute based ComputeFleet.")]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Body)]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
-        Description = @"Attribute based Fleet.",
+        Description = @"Attribute based ComputeFleet.",
         SerializedName = @"vmAttributes",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes) })]
         public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes VMAttributes { get => _propertiesBody.VMAttributes ?? null /* object */; set => _propertiesBody.VMAttributes = value; }
 
-        /// <summary>List of VM sizes supported for Compute Fleet</summary>
+        /// <summary>List of VM sizes supported for Compute ComputeFleet</summary>
         [global::System.Management.Automation.AllowEmptyCollection]
-        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "List of VM sizes supported for Compute Fleet")]
+        [global::System.Management.Automation.Parameter(Mandatory = false, HelpMessage = "List of VM sizes supported for Compute ComputeFleet")]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Body)]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
-        Description = @"List of VM sizes supported for Compute Fleet",
+        Description = @"List of VM sizes supported for Compute ComputeFleet",
         SerializedName = @"vmSizesProfile",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile) })]
         public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[] VMSizesProfile { get => _propertiesBody.VMSizesProfile?.ToArray() ?? null /* fixedArrayOf */; set => _propertiesBody.VMSizesProfile = (value != null ? new System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile>(value) : null); }

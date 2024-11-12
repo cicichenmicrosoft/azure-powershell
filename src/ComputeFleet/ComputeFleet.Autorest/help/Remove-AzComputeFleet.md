@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzComputeFleet
 
 ## SYNOPSIS
-Delete Fleet resource
+Delete ComputeFleet resource
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-AzComputeFleet -InputObject <IFleetIdentity> [-AsJob] [-Break] [-HttpPipe
 ```
 
 ## DESCRIPTION
-Delete Fleet resource
+Delete ComputeFleet resource
 
 ## EXAMPLES
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FleetName
-Fleet name
+ComputeFleet name
 
 ```yaml
 Type: System.String

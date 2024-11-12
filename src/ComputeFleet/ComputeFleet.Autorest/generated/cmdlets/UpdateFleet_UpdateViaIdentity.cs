@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>update a Fleet</summary>
+    /// <summary>update a ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] Update=>PATCH:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsData.Update, @"Fleet_UpdateViaIdentity", SupportsShouldProcess = true)]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"update a Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"update a ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}", ApiVersion = "2024-11-01")]
     public partial class UpdateFleet_UpdateViaIdentity : global::System.Management.Automation.PSCmdlet,
@@ -107,12 +107,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         /// <summary>Backing field for <see cref="Properties" /> property.</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate _properties;
 
-        /// <summary>Fleet Update Model</summary>
-        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "Fleet Update Model", ValueFromPipeline = true)]
+        /// <summary>ComputeFleet Update Model</summary>
+        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "ComputeFleet Update Model", ValueFromPipeline = true)]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = true,
         ReadOnly = false,
-        Description = @"Fleet Update Model",
+        Description = @"ComputeFleet Update Model",
         SerializedName = @"properties",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Body)]

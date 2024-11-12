@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
     /// <summary>
-    /// A PowerShell PSTypeConverter to support converting to an instance of <see cref="Fleet" />
+    /// A PowerShell PSTypeConverter to support converting to an instance of <see cref="ComputeFleet" />
     /// </summary>
     public partial class FleetTypeConverter : global::System.Management.Automation.PSTypeConverter
     {
@@ -24,12 +24,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         public override bool CanConvertFrom(object sourceValue, global::System.Type destinationType) => CanConvertFrom(sourceValue);
 
         /// <summary>
-        /// Determines if the converter can convert the <paramref name="sourceValue"/> parameter to the <see cref="Fleet"/> type.
+        /// Determines if the converter can convert the <paramref name="sourceValue"/> parameter to the <see cref="ComputeFleet"/> type.
         /// </summary>
-        /// <param name="sourceValue">the <see cref="System.Object" /> instance to check if it can be converted to the <see cref="Fleet"
+        /// <param name="sourceValue">the <see cref="System.Object" /> instance to check if it can be converted to the <see cref="ComputeFleet"
         /// /> type.</param>
         /// <returns>
-        /// <c>true</c> if the instance could be converted to a <see cref="Fleet" /> type, otherwise <c>false</c>
+        /// <c>true</c> if the instance could be converted to a <see cref="ComputeFleet" /> type, otherwise <c>false</c>
         /// </returns>
         public static bool CanConvertFrom(dynamic sourceValue)
         {
@@ -92,16 +92,16 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <param name="formatProvider">not used by this TypeConverter.</param>
         /// <param name="ignoreCase">when set to <c>true</c>, will ignore the case when converting.</param>
         /// <returns>
-        /// an instance of <see cref="Fleet" />, or <c>null</c> if there is no suitable conversion.
+        /// an instance of <see cref="ComputeFleet" />, or <c>null</c> if there is no suitable conversion.
         /// </returns>
         public override object ConvertFrom(object sourceValue, global::System.Type destinationType, global::System.IFormatProvider formatProvider, bool ignoreCase) => ConvertFrom(sourceValue);
 
         /// <summary>
-        /// Converts the <paramref name="sourceValue" /> parameter into an instance of <see cref="Fleet" />
+        /// Converts the <paramref name="sourceValue" /> parameter into an instance of <see cref="ComputeFleet" />
         /// </summary>
-        /// <param name="sourceValue">the value to convert into an instance of <see cref="Fleet" />.</param>
+        /// <param name="sourceValue">the value to convert into an instance of <see cref="ComputeFleet" />.</param>
         /// <returns>
-        /// an instance of <see cref="Fleet" />, or <c>null</c> if there is no suitable conversion.
+        /// an instance of <see cref="ComputeFleet" />, or <c>null</c> if there is no suitable conversion.
         /// </returns>
         public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet ConvertFrom(dynamic sourceValue)
         {
@@ -116,7 +116,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
             }
             try
             {
-                return Fleet.FromJsonString(typeof(string) == sourceValue.GetType() ? sourceValue : sourceValue.ToJsonString());;
+                return ComputeFleet.FromJsonString(typeof(string) == sourceValue.GetType() ? sourceValue : sourceValue.ToJsonString());;
             }
             catch
             {
@@ -124,11 +124,11 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
             }
             if (typeof(global::System.Management.Automation.PSObject).IsAssignableFrom(type))
             {
-                return Fleet.DeserializeFromPSObject(sourceValue);
+                return ComputeFleet.DeserializeFromPSObject(sourceValue);
             }
             if (typeof(global::System.Collections.IDictionary).IsAssignableFrom(type))
             {
-                return Fleet.DeserializeFromDictionary(sourceValue);
+                return ComputeFleet.DeserializeFromDictionary(sourceValue);
             }
             return null;
         }

@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     /// </summary>
     public partial class AdditionalLocationsProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IAdditionalLocationsProfile,
@@ -26,7 +26,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     public partial interface IAdditionalLocationsProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -43,7 +43,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile> LocationProfiles { get; set; }
 
     }
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     internal partial interface IAdditionalLocationsProfileInternal
 
     {

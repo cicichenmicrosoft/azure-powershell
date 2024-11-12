@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
+    /// <summary>List VirtualMachineScaleSet resources by ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] ListVirtualMachineScaleSets=>GET:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{name}/virtualMachineScaleSets"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsCommon.Get, @"FleetVirtualMachineScaleSet_List")]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"List VirtualMachineScaleSet resources by Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"List VirtualMachineScaleSet resources by ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{name}/virtualMachineScaleSets", ApiVersion = "2024-11-01")]
     public partial class GetFleetVirtualMachineScaleSet_List : global::System.Management.Automation.PSCmdlet,
@@ -87,12 +87,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         /// <summary>Backing field for <see cref="Name" /> property.</summary>
         private string _name;
 
-        /// <summary>The name of the Fleet</summary>
-        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "The name of the Fleet")]
+        /// <summary>The name of the ComputeFleet</summary>
+        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "The name of the ComputeFleet")]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = true,
         ReadOnly = false,
-        Description = @"The name of the Fleet",
+        Description = @"The name of the ComputeFleet",
         SerializedName = @"name",
         PossibleTypes = new [] { typeof(string) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Path)]

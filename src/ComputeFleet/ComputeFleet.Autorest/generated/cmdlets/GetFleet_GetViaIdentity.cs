@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>Get a Fleet</summary>
+    /// <summary>Get a ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] Get=>GET:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsCommon.Get, @"Fleet_GetViaIdentity")]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"Get a Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"Get a ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}", ApiVersion = "2024-11-01")]
     public partial class GetFleet_GetViaIdentity : global::System.Management.Automation.PSCmdlet,

@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>The response of a Fleet list operation.</summary>
+    /// <summary>The response of a ComputeFleet list operation.</summary>
     public partial class FleetListResult :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResult,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetListResultInternal
@@ -21,7 +21,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>Backing field for <see cref="Value" /> property.</summary>
         private System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> _value;
 
-        /// <summary>The Fleet items on this page</summary>
+        /// <summary>The ComputeFleet items on this page</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> Value { get => this._value; set => this._value = value; }
 
@@ -31,7 +31,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// The response of a Fleet list operation.
+    /// The response of a ComputeFleet list operation.
     public partial interface IFleetListResult :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -46,26 +46,26 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         SerializedName = @"nextLink",
         PossibleTypes = new [] { typeof(string) })]
         string NextLink { get; set; }
-        /// <summary>The Fleet items on this page</summary>
+        /// <summary>The ComputeFleet items on this page</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = true,
         ReadOnly = false,
         Read = true,
         Create = true,
         Update = true,
-        Description = @"The Fleet items on this page",
+        Description = @"The ComputeFleet items on this page",
         SerializedName = @"value",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet) })]
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> Value { get; set; }
 
     }
-    /// The response of a Fleet list operation.
+    /// The response of a ComputeFleet list operation.
     internal partial interface IFleetListResultInternal
 
     {
         /// <summary>The link to the next page of items</summary>
         string NextLink { get; set; }
-        /// <summary>The Fleet items on this page</summary>
+        /// <summary>The ComputeFleet items on this page</summary>
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet> Value { get; set; }
 
     }

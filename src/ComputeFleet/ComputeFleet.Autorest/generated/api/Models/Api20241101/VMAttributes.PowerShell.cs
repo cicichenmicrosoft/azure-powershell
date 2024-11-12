@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
     /// <summary>
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     /// </summary>
     [System.ComponentModel.TypeConverter(typeof(VMAttributesTypeConverter))]
     public partial class VMAttributes
@@ -426,7 +426,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
             AfterDeserializePSObject(content);
         }
     }
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     [System.ComponentModel.TypeConverter(typeof(VMAttributesTypeConverter))]
     public partial interface IVMAttributes
 

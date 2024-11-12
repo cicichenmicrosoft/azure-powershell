@@ -6,9 +6,9 @@
 
 <#
 .Synopsis
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 .Description
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -17,17 +17,17 @@ List VirtualMachineScaleSet resources by Fleet
 .Outputs
 Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-fleetvirtualmachinescaleset
+https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetvmss
 #>
-function Get-FleetVirtualMachineScaleSet {
+function Get-AzComputeFleetVMSS {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Fleet
-    ${Name},
+    # The name of the ComputeFleet
+    ${FleetName},
 
     [Parameter(Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
@@ -92,7 +92,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'Fleet.private\Get-FleetVirtualMachineScaleSet_List';
+            List = 'ComputeFleet.private\Get-FleetVirtualMachineScaleSet_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -129,9 +129,9 @@ end {
 
 <#
 .Synopsis
-Get a Fleet
+Get a ComputeFleet
 .Description
-Get a Fleet
+Get a ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -147,21 +147,21 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 INPUTOBJECT <IFleetIdentity>: Identity Parameter
-  [FleetName <String>]: The name of the Compute Fleet
-  [Name <String>]: The name of the Fleet
+  [FleetName <String>]: The name of the Compute ComputeFleet
+  [Name <String>]: The name of the ComputeFleet
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-fleet
+https://learn.microsoft.com/powershell/module/computefleet/get-computefleet
 #>
-function Get-Fleet {
+function Get-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Compute Fleet
+    # The name of the Compute ComputeFleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
@@ -236,10 +236,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Get = 'Fleet.private\Get-Fleet_Get';
-            GetViaIdentity = 'Fleet.private\Get-Fleet_GetViaIdentity';
-            List = 'Fleet.private\Get-Fleet_List';
-            List1 = 'Fleet.private\Get-Fleet_List1';
+            Get = 'ComputeFleet.private\Get-Fleet_Get';
+            GetViaIdentity = 'ComputeFleet.private\Get-Fleet_GetViaIdentity';
+            List = 'ComputeFleet.private\Get-Fleet_List';
+            List1 = 'ComputeFleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -287,9 +287,9 @@ List the operations for the provider
 .Outputs
 Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-operation
+https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetoperation
 #>
-function Get-Operation {
+function Get-AzComputeFleetOperation {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
@@ -342,7 +342,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'Fleet.private\Get-Operation_List';
+            List = 'ComputeFleet.private\Get-Operation_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -379,9 +379,9 @@ end {
 
 <#
 .Synopsis
-create a Fleet
+create a ComputeFleet
 .Description
-create a Fleet
+create a ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -725,12 +725,12 @@ COMPUTEPROFILEBASEVIRTUALMACHINEPROFILE <IBaseVirtualMachineProfile>: Base Virtu
   [VMSizePropertyVcpUsPerCore <Int32?>]: Specifies the vCPU to physical core ratio. When this property is not specified         in the request body the default behavior is set to the value of vCPUsPerCore         for the VM Size exposed in api response of [List all available virtual machine         sizes in a         region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).         **Setting this property to 1 also means that hyper-threading is disabled.**
 
 INPUTOBJECT <IFleetIdentity>: Identity Parameter
-  [FleetName <String>]: The name of the Compute Fleet
-  [Name <String>]: The name of the Fleet
+  [FleetName <String>]: The name of the Compute ComputeFleet
+  [Name <String>]: The name of the ComputeFleet
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 
-RESOURCE <IFleet>: An Compute Fleet resource
+RESOURCE <IFleet>: An Compute ComputeFleet resource
   Location <String>: The geo-location where the resource lives
   [Tags <ITrackedResourceTags>]: Resource tags.
     [(Any) <String>]: This indicates any property can be added to this object.
@@ -900,7 +900,7 @@ RESOURCE <IFleet>: An Compute Fleet resource
   [AdditionalVirtualMachineCapabilityHibernationEnabled <Boolean?>]: The flag that enables or disables hibernation capability on the VM.
   [AdditionalVirtualMachineCapabilityUltraSsdEnabled <Boolean?>]: The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS.         Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
   [ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]: Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
-  [ComputeProfileComputeApiVersion <String>]: Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.         The default value will be the latest supported computeApiVersion by Compute Fleet.
+  [ComputeProfileComputeApiVersion <String>]: Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.         The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
   [ComputeProfilePlatformFaultDomainCount <Int32?>]: Specifies the number of fault domains to use when creating the underlying VMSS.         A fault domain is a logical group of hardware within an Azure datacenter.         VMs in the same fault domain share a common power source and network switch.         If not specified, defaults to 1, which represents "Max Spreading" (using as many fault domains as possible).         This property cannot be updated.
   [IdentityType <String>]: Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
   [IdentityUserAssignedIdentities <IUserAssignedIdentities>]: The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
@@ -920,22 +920,22 @@ RESOURCE <IFleet>: An Compute Fleet resource
   [SpotPriorityProfileMaintain <Boolean?>]: Flag to enable/disable continuous goal seeking for the desired capacity and restoration of evicted Spot VMs.         If maintain is enabled, AzureFleetRP will use all VM sizes in vmSizesProfile to create new VMs (if VMs are evicted deleted)         or update existing VMs with new VM sizes (if VMs are evicted deallocated or failed to allocate due to capacity constraint) in order to achieve the desired capacity.         Maintain is enabled by default.
   [SpotPriorityProfileMaxPricePerVM <Single?>]: Price per hour of each Spot VM will never exceed this.
   [SpotPriorityProfileMinCapacity <Int32?>]: Minimum capacity to achieve which cannot be updated. If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
-  [VMAttributes <IVMAttributes>]: Attribute based Fleet.
+  [VMAttributes <IVMAttributes>]: Attribute based ComputeFleet.
     [AcceleratorCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [AcceleratorCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [AcceleratorManufacturers <List<String>>]: The accelerator manufacturers specified as a list.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
-    [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+    [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
     [AcceleratorTypes <List<String>>]: The accelerator types specified as a list. acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
     [ArchitectureTypes <List<String>>]: The VM architecture types specified as a list. Optional parameter.
-    [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+    [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
     [CpuManufacturers <List<String>>]: The VM CPU manufacturers specified as a list. Optional parameter.
     [DataDiskCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [DataDiskCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-    [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+    [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
     [LocalStorageDiskTypes <List<String>>]: The local storage disk types specified as a list. LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute.         If localStorageSupport is "Excluded", this VMAttribute can not be used.
     [LocalStorageInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
     [LocalStorageInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
-    [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build Fleet or not.         Included - Default if not specified as most Azure VMs support local storage.
+    [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.         Included - Default if not specified as most Azure VMs support local storage.
     [MemoryInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
     [MemoryInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
     [MemoryInGiBPerVcpuMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
@@ -946,31 +946,31 @@ RESOURCE <IFleet>: An Compute Fleet resource
     [NetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [RdmaNetworkInterfaceCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [RdmaNetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-    [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+    [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
     [VCpuCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [VCpuCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [VMCategories <List<String>>]: The VM category specified as a list. Optional parameter.
-  [VMSizesProfile <List<IVMSizeProfile>>]: List of VM sizes supported for Compute Fleet
+  [VMSizesProfile <List<IVMSizeProfile>>]: List of VM sizes supported for Compute ComputeFleet
     Name <String>: The Sku name (e.g. 'Standard_DS1_v2')
     [Rank <Int32?>]: The rank of the VM size. This is used with 'RegularPriorityAllocationStrategy.Prioritized'         The lower the number, the higher the priority. Starting with 0.
-  [Zones <List<String>>]: Zones in which the Compute Fleet is available
+  [Zones <List<String>>]: Zones in which the Compute ComputeFleet is available
 
-VMATTRIBUTES <IVMAttributes>: Attribute based Fleet.
+VMATTRIBUTES <IVMAttributes>: Attribute based ComputeFleet.
   [AcceleratorCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [AcceleratorCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [AcceleratorManufacturers <List<String>>]: The accelerator manufacturers specified as a list.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
-  [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+  [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
   [AcceleratorTypes <List<String>>]: The accelerator types specified as a list. acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
   [ArchitectureTypes <List<String>>]: The VM architecture types specified as a list. Optional parameter.
-  [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+  [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
   [CpuManufacturers <List<String>>]: The VM CPU manufacturers specified as a list. Optional parameter.
   [DataDiskCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [DataDiskCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-  [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+  [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
   [LocalStorageDiskTypes <List<String>>]: The local storage disk types specified as a list. LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute.         If localStorageSupport is "Excluded", this VMAttribute can not be used.
   [LocalStorageInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
   [LocalStorageInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
-  [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build Fleet or not.         Included - Default if not specified as most Azure VMs support local storage.
+  [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.         Included - Default if not specified as most Azure VMs support local storage.
   [MemoryInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
   [MemoryInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
   [MemoryInGiBPerVcpuMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
@@ -981,18 +981,18 @@ VMATTRIBUTES <IVMAttributes>: Attribute based Fleet.
   [NetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [RdmaNetworkInterfaceCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [RdmaNetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-  [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+  [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
   [VCpuCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [VCpuCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [VMCategories <List<String>>]: The VM category specified as a list. Optional parameter.
 
-VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute Fleet
+VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute ComputeFleet
   Name <String>: The Sku name (e.g. 'Standard_DS1_v2')
   [Rank <Int32?>]: The rank of the VM size. This is used with 'RegularPriorityAllocationStrategy.Prioritized'         The lower the number, the higher the priority. Starting with 0.
 .Link
-https://learn.microsoft.com/powershell/module/fleet/new-fleet
+https://learn.microsoft.com/powershell/module/computefleet/new-azcomputefleet
 #>
-function New-Fleet {
+function New-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='CreateExpanded', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
@@ -1000,7 +1000,7 @@ param(
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Compute Fleet
+    # The name of the Compute ComputeFleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Create', Mandatory)]
@@ -1030,7 +1030,7 @@ param(
     [Parameter(ParameterSetName='CreateViaIdentity', Mandatory, ValueFromPipeline)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet]
-    # An Compute Fleet resource
+    # An Compute ComputeFleet resource
     ${Resource},
 
     [Parameter(ParameterSetName='CreateExpanded', Mandatory)]
@@ -1073,7 +1073,7 @@ param(
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
-    # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.
+    # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
     ${ComputeProfileComputeApiVersion},
 
     [Parameter(ParameterSetName='CreateExpanded')]
@@ -1223,7 +1223,7 @@ param(
     [Parameter(ParameterSetName='CreateViaIdentityExpanded')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes]
-    # Attribute based Fleet.
+    # Attribute based ComputeFleet.
     ${VMAttributes},
 
     [Parameter(ParameterSetName='CreateExpanded')]
@@ -1231,7 +1231,7 @@ param(
     [AllowEmptyCollection()]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]]
-    # List of VM sizes supported for Compute Fleet
+    # List of VM sizes supported for Compute ComputeFleet
     ${VMSizesProfile},
 
     [Parameter(ParameterSetName='CreateExpanded')]
@@ -1239,7 +1239,7 @@ param(
     [AllowEmptyCollection()]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String[]]
-    # Zones in which the Compute Fleet is available
+    # Zones in which the Compute ComputeFleet is available
     ${Zones},
 
     [Parameter()]
@@ -1303,10 +1303,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Create = 'Fleet.private\New-Fleet_Create';
-            CreateExpanded = 'Fleet.private\New-Fleet_CreateExpanded';
-            CreateViaIdentity = 'Fleet.private\New-Fleet_CreateViaIdentity';
-            CreateViaIdentityExpanded = 'Fleet.private\New-Fleet_CreateViaIdentityExpanded';
+            Create = 'ComputeFleet.private\New-Fleet_Create';
+            CreateExpanded = 'ComputeFleet.private\New-Fleet_CreateExpanded';
+            CreateViaIdentity = 'ComputeFleet.private\New-Fleet_CreateViaIdentity';
+            CreateViaIdentityExpanded = 'ComputeFleet.private\New-Fleet_CreateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -1343,9 +1343,9 @@ end {
 
 <#
 .Synopsis
-Delete a Fleet
+Delete a ComputeFleet
 .Description
-Delete a Fleet
+Delete a ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -1361,21 +1361,21 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 INPUTOBJECT <IFleetIdentity>: Identity Parameter
-  [FleetName <String>]: The name of the Compute Fleet
-  [Name <String>]: The name of the Fleet
+  [FleetName <String>]: The name of the Compute ComputeFleet
+  [Name <String>]: The name of the ComputeFleet
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 .Link
-https://learn.microsoft.com/powershell/module/fleet/remove-fleet
+https://learn.microsoft.com/powershell/module/computefleet/remove-azcomputefleet
 #>
-function Remove-Fleet {
+function Remove-AzComputeFleet {
 [OutputType([System.Boolean])]
 [CmdletBinding(DefaultParameterSetName='Delete', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
     [Parameter(ParameterSetName='Delete', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Compute Fleet
+    # The name of the Compute ComputeFleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Delete', Mandatory)]
@@ -1465,8 +1465,8 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Delete = 'Fleet.private\Remove-Fleet_Delete';
-            DeleteViaIdentity = 'Fleet.private\Remove-Fleet_DeleteViaIdentity';
+            Delete = 'ComputeFleet.private\Remove-Fleet_Delete';
+            DeleteViaIdentity = 'ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -1503,9 +1503,9 @@ end {
 
 <#
 .Synopsis
-update a Fleet
+update a ComputeFleet
 .Description
-update a Fleet
+update a ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -1849,12 +1849,12 @@ COMPUTEPROFILEBASEVIRTUALMACHINEPROFILE <IBaseVirtualMachineProfile>: Base Virtu
   [VMSizePropertyVcpUsPerCore <Int32?>]: Specifies the vCPU to physical core ratio. When this property is not specified         in the request body the default behavior is set to the value of vCPUsPerCore         for the VM Size exposed in api response of [List all available virtual machine         sizes in a         region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).         **Setting this property to 1 also means that hyper-threading is disabled.**
 
 INPUTOBJECT <IFleetIdentity>: Identity Parameter
-  [FleetName <String>]: The name of the Compute Fleet
-  [Name <String>]: The name of the Fleet
+  [FleetName <String>]: The name of the Compute ComputeFleet
+  [Name <String>]: The name of the ComputeFleet
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 
-PROPERTIES <IFleetUpdate>: Fleet Update Model
+PROPERTIES <IFleetUpdate>: ComputeFleet Update Model
   [AdditionalLocationProfileLocationProfiles <List<ILocationProfile>>]: The list of location profiles.
     Location <String>: The ARM location name of the additional region. If LocationProfile is specified, then location is required.
     [VirtualMachineProfileOverride <IBaseVirtualMachineProfile>]: An override for computeProfile.baseVirtualMachineProfile specific to this region.         This override is merged with the base virtual machine profile to define the final virtual machine profile for the resources deployed in this location.
@@ -2021,7 +2021,7 @@ PROPERTIES <IFleetUpdate>: Fleet Update Model
   [AdditionalVirtualMachineCapabilityHibernationEnabled <Boolean?>]: The flag that enables or disables hibernation capability on the VM.
   [AdditionalVirtualMachineCapabilityUltraSsdEnabled <Boolean?>]: The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS.         Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
   [ComputeProfileBaseVirtualMachineProfile <IBaseVirtualMachineProfile>]: Base Virtual Machine Profile Properties to be specified according to "specification/compute/resource-manager/Microsoft.Compute/ComputeRP/stable/{computeApiVersion}/virtualMachineScaleSet.json#/definitions/VirtualMachineScaleSetVMProfile"
-  [ComputeProfileComputeApiVersion <String>]: Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.         The default value will be the latest supported computeApiVersion by Compute Fleet.
+  [ComputeProfileComputeApiVersion <String>]: Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.         The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
   [ComputeProfilePlatformFaultDomainCount <Int32?>]: Specifies the number of fault domains to use when creating the underlying VMSS.         A fault domain is a logical group of hardware within an Azure datacenter.         VMs in the same fault domain share a common power source and network switch.         If not specified, defaults to 1, which represents "Max Spreading" (using as many fault domains as possible).         This property cannot be updated.
   [IdentityType <String>]: The type of managed identity assigned to this resource.
   [IdentityUserAssignedIdentities <IManagedServiceIdentityUpdateUserAssignedIdentities>]: The identities assigned to this resource by the user.
@@ -2042,22 +2042,22 @@ PROPERTIES <IFleetUpdate>: Fleet Update Model
   [SpotPriorityProfileMinCapacity <Int32?>]: Minimum capacity to achieve which cannot be updated. If we will not be able to "guarantee" minimum capacity, we will reject the request in the sync path itself.
   [Tags <IFleetUpdateTags>]: Resource tags.
     [(Any) <String>]: This indicates any property can be added to this object.
-  [VMAttributes <IVMAttributes>]: Attribute based Fleet.
+  [VMAttributes <IVMAttributes>]: Attribute based ComputeFleet.
     [AcceleratorCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [AcceleratorCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [AcceleratorManufacturers <List<String>>]: The accelerator manufacturers specified as a list.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
-    [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+    [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
     [AcceleratorTypes <List<String>>]: The accelerator types specified as a list. acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
     [ArchitectureTypes <List<String>>]: The VM architecture types specified as a list. Optional parameter.
-    [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+    [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
     [CpuManufacturers <List<String>>]: The VM CPU manufacturers specified as a list. Optional parameter.
     [DataDiskCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [DataDiskCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-    [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+    [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
     [LocalStorageDiskTypes <List<String>>]: The local storage disk types specified as a list. LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute.         If localStorageSupport is "Excluded", this VMAttribute can not be used.
     [LocalStorageInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
     [LocalStorageInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
-    [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build Fleet or not.         Included - Default if not specified as most Azure VMs support local storage.
+    [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.         Included - Default if not specified as most Azure VMs support local storage.
     [MemoryInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
     [MemoryInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
     [MemoryInGiBPerVcpuMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
@@ -2068,30 +2068,30 @@ PROPERTIES <IFleetUpdate>: Fleet Update Model
     [NetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [RdmaNetworkInterfaceCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [RdmaNetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-    [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+    [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
     [VCpuCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
     [VCpuCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
     [VMCategories <List<String>>]: The VM category specified as a list. Optional parameter.
-  [VMSizesProfile <List<IVMSizeProfile>>]: List of VM sizes supported for Compute Fleet
+  [VMSizesProfile <List<IVMSizeProfile>>]: List of VM sizes supported for Compute ComputeFleet
     Name <String>: The Sku name (e.g. 'Standard_DS1_v2')
     [Rank <Int32?>]: The rank of the VM size. This is used with 'RegularPriorityAllocationStrategy.Prioritized'         The lower the number, the higher the priority. Starting with 0.
 
-VMATTRIBUTES <IVMAttributes>: Attribute based Fleet.
+VMATTRIBUTES <IVMAttributes>: Attribute based ComputeFleet.
   [AcceleratorCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [AcceleratorCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [AcceleratorManufacturers <List<String>>]: The accelerator manufacturers specified as a list.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
-  [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+  [AcceleratorSupport <String>]: Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.         acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
   [AcceleratorTypes <List<String>>]: The accelerator types specified as a list. acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.         If acceleratorSupport is "Excluded", this VMAttribute can not be used.
   [ArchitectureTypes <List<String>>]: The VM architecture types specified as a list. Optional parameter.
-  [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+  [BurstableSupport <String>]: Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
   [CpuManufacturers <List<String>>]: The VM CPU manufacturers specified as a list. Optional parameter.
   [DataDiskCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [DataDiskCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-  [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+  [ExcludedVMSizes <List<String>>]: Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
   [LocalStorageDiskTypes <List<String>>]: The local storage disk types specified as a list. LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute.         If localStorageSupport is "Excluded", this VMAttribute can not be used.
   [LocalStorageInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
   [LocalStorageInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
-  [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build Fleet or not.         Included - Default if not specified as most Azure VMs support local storage.
+  [LocalStorageSupport <String>]: Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.         Included - Default if not specified as most Azure VMs support local storage.
   [MemoryInGiBMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
   [MemoryInGiBMin <Double?>]: Minimum value. default 0. Double.MinValue()
   [MemoryInGiBPerVcpuMax <Double?>]: Maximum value. Double.MaxValue(1.7976931348623157E+308)
@@ -2102,18 +2102,18 @@ VMATTRIBUTES <IVMAttributes>: Attribute based Fleet.
   [NetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [RdmaNetworkInterfaceCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [RdmaNetworkInterfaceCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
-  [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+  [RdmaSupport <String>]: Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
   [VCpuCountMax <Int32?>]: Max VMSize from CRS, Max = 4294967295 (uint.MaxValue) if not specified.
   [VCpuCountMin <Int32?>]: Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.
   [VMCategories <List<String>>]: The VM category specified as a list. Optional parameter.
 
-VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute Fleet
+VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute ComputeFleet
   Name <String>: The Sku name (e.g. 'Standard_DS1_v2')
   [Rank <Int32?>]: The rank of the VM size. This is used with 'RegularPriorityAllocationStrategy.Prioritized'         The lower the number, the higher the priority. Starting with 0.
 .Link
-https://learn.microsoft.com/powershell/module/fleet/update-fleet
+https://learn.microsoft.com/powershell/module/computefleet/update-azcomputefleet
 #>
-function Update-Fleet {
+function Update-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
 [CmdletBinding(DefaultParameterSetName='UpdateExpanded', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
@@ -2121,7 +2121,7 @@ param(
     [Parameter(ParameterSetName='UpdateExpanded', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Compute Fleet
+    # The name of the Compute ComputeFleet
     ${FleetName},
 
     [Parameter(ParameterSetName='Update', Mandatory)]
@@ -2151,7 +2151,7 @@ param(
     [Parameter(ParameterSetName='UpdateViaIdentity', Mandatory, ValueFromPipeline)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate]
-    # Fleet Update Model
+    # ComputeFleet Update Model
     ${Properties},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
@@ -2187,7 +2187,7 @@ param(
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [System.String]
-    # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet.
+    # Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
     ${ComputeProfileComputeApiVersion},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
@@ -2335,7 +2335,7 @@ param(
     [Parameter(ParameterSetName='UpdateViaIdentityExpanded')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes]
-    # Attribute based Fleet.
+    # Attribute based ComputeFleet.
     ${VMAttributes},
 
     [Parameter(ParameterSetName='UpdateExpanded')]
@@ -2343,7 +2343,7 @@ param(
     [AllowEmptyCollection()]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Body')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile[]]
-    # List of VM sizes supported for Compute Fleet
+    # List of VM sizes supported for Compute ComputeFleet
     ${VMSizesProfile},
 
     [Parameter()]
@@ -2407,10 +2407,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Update = 'Fleet.private\Update-Fleet_Update';
-            UpdateExpanded = 'Fleet.private\Update-Fleet_UpdateExpanded';
-            UpdateViaIdentity = 'Fleet.private\Update-Fleet_UpdateViaIdentity';
-            UpdateViaIdentityExpanded = 'Fleet.private\Update-Fleet_UpdateViaIdentityExpanded';
+            Update = 'ComputeFleet.private\Update-Fleet_Update';
+            UpdateExpanded = 'ComputeFleet.private\Update-Fleet_UpdateExpanded';
+            UpdateViaIdentity = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentity';
+            UpdateViaIdentityExpanded = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

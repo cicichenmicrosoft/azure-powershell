@@ -428,9 +428,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet</Name>
+      <Name>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet</Name>
       <ViewSelectedBy>
-        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet#Multiple</TypeName>
+        <TypeName>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet#Multiple</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>

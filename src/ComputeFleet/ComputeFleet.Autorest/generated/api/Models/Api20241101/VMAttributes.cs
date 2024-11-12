@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     /// </summary>
     public partial class VMAttributes :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes,
@@ -47,7 +47,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private string _acceleratorSupport;
 
         /// <summary>
-        /// Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.
         /// acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.
         /// If acceleratorSupport is "Excluded", this VMAttribute can not be used.
         /// </summary>
@@ -75,7 +75,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private string _burstableSupport;
 
         /// <summary>
-        /// Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public string BurstableSupport { get => this._burstableSupport; set => this._burstableSupport = value; }
@@ -108,7 +108,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private System.Collections.Generic.List<string> _excludedVMSizes;
 
         /// <summary>
-        /// Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+        /// Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public System.Collections.Generic.List<string> ExcludedVMSizes { get => this._excludedVMSizes; set => this._excludedVMSizes = value; }
@@ -146,7 +146,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private string _localStorageSupport;
 
         /// <summary>
-        /// Specifies whether the VMSize supporting local storage should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.
         /// Included - Default if not specified as most Azure VMs support local storage.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
@@ -246,7 +246,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private string _rdmaSupport;
 
         /// <summary>
-        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public string RdmaSupport { get => this._rdmaSupport; set => this._rdmaSupport = value; }
@@ -309,7 +309,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     public partial interface IVMAttributes :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -354,7 +354,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("AMD", "Nvidia", "Xilinx")]
         System.Collections.Generic.List<string> AcceleratorManufacturers { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.
         /// acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.
         /// If acceleratorSupport is "Excluded", this VMAttribute can not be used.
         /// </summary>
@@ -364,7 +364,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.
+        Description = @"Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.
         acceleratorSupport should be set to ""Included"" or ""Required"" to use this VMAttribute.
         If acceleratorSupport is ""Excluded"", this VMAttribute can not be used.",
         SerializedName = @"acceleratorSupport",
@@ -400,7 +400,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("ARM64", "X64")]
         System.Collections.Generic.List<string> ArchitectureTypes { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
@@ -408,7 +408,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.",
+        Description = @"Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.",
         SerializedName = @"burstableSupport",
         PossibleTypes = new [] { typeof(string) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Excluded", "Included", "Required")]
@@ -448,7 +448,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         PossibleTypes = new [] { typeof(int) })]
         int? DataDiskCountMin { get; set; }
         /// <summary>
-        /// Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+        /// Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
@@ -456,7 +456,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Specifies which VMSizes should be excluded while building Fleet. Optional parameter.",
+        Description = @"Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.",
         SerializedName = @"excludedVMSizes",
         PossibleTypes = new [] { typeof(string) })]
         System.Collections.Generic.List<string> ExcludedVMSizes { get; set; }
@@ -500,7 +500,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         PossibleTypes = new [] { typeof(double) })]
         double? LocalStorageInGiBMin { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting local storage should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.
         /// Included - Default if not specified as most Azure VMs support local storage.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
@@ -509,7 +509,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Specifies whether the VMSize supporting local storage should be used to build Fleet or not.
+        Description = @"Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.
         Included - Default if not specified as most Azure VMs support local storage.",
         SerializedName = @"localStorageSupport",
         PossibleTypes = new [] { typeof(string) })]
@@ -626,7 +626,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         PossibleTypes = new [] { typeof(int) })]
         int? RdmaNetworkInterfaceCountMin { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
@@ -634,7 +634,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.",
+        Description = @"Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.",
         SerializedName = @"rdmaSupport",
         PossibleTypes = new [] { typeof(string) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Excluded", "Included", "Required")]
@@ -675,7 +675,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         System.Collections.Generic.List<string> VMCategories { get; set; }
 
     }
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     internal partial interface IVMAttributesInternal
 
     {
@@ -697,7 +697,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("AMD", "Nvidia", "Xilinx")]
         System.Collections.Generic.List<string> AcceleratorManufacturers { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting accelerator should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting accelerator should be used to build ComputeFleet or not.
         /// acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute.
         /// If acceleratorSupport is "Excluded", this VMAttribute can not be used.
         /// </summary>
@@ -713,7 +713,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("ARM64", "X64")]
         System.Collections.Generic.List<string> ArchitectureTypes { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting burstable capability should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting burstable capability should be used to build ComputeFleet or not.
         /// </summary>
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Excluded", "Included", "Required")]
         string BurstableSupport { get; set; }
@@ -729,7 +729,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.</summary>
         int? DataDiskCountMin { get; set; }
         /// <summary>
-        /// Specifies which VMSizes should be excluded while building Fleet. Optional parameter.
+        /// Specifies which VMSizes should be excluded while building ComputeFleet. Optional parameter.
         /// </summary>
         System.Collections.Generic.List<string> ExcludedVMSizes { get; set; }
         /// <summary>
@@ -749,7 +749,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>Minimum value. default 0. Double.MinValue()</summary>
         double? LocalStorageInGiBMin { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting local storage should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting local storage should be used to build ComputeFleet or not.
         /// Included - Default if not specified as most Azure VMs support local storage.
         /// </summary>
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Excluded", "Included", "Required")]
@@ -800,7 +800,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>Min VMSize from CRS, Min = 0 (uint.MinValue) if not specified.</summary>
         int? RdmaNetworkInterfaceCountMin { get; set; }
         /// <summary>
-        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build Fleet or not.
+        /// Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build ComputeFleet or not.
         /// </summary>
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Excluded", "Included", "Required")]
         string RdmaSupport { get; set; }

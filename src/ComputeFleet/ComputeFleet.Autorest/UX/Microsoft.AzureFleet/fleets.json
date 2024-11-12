@@ -2,16 +2,16 @@
   "resourceType": "fleets",
   "apiVersion": "2024-11-01",
   "learnMore": {
-    "url": "https://learn.microsoft.com/powershell/module/fleet"
+    "url": "https://learn.microsoft.com/powershell/module/computefleet"
   },
   "commands": [
     {
-      "name": "Get-Fleet",
-      "description": "Get a Fleet",
+      "name": "Get-ComputeFleet",
+      "description": "Get a ComputeFleet",
       "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}",
       "help": {
         "learnMore": {
-          "url": "https://learn.microsoft.com/powershell/module/fleet/get-fleet"
+          "url": "https://learn.microsoft.com/powershell/module/computefleet/get-computefleet"
         },
         "parameterSets": [
           {
@@ -25,7 +25,7 @@
       },
       "examples": [
         {
-          "description": "Get a Fleet",
+          "description": "Get a ComputeFleet",
           "parameters": [
             {
               "name": "-FleetName",
@@ -44,12 +44,12 @@
       ]
     },
     {
-      "name": "Remove-Fleet",
-      "description": "Delete a Fleet",
+      "name": "Remove-ComputeFleet",
+      "description": "Delete a ComputeFleet",
       "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}",
       "help": {
         "learnMore": {
-          "url": "https://learn.microsoft.com/powershell/module/fleet/remove-fleet"
+          "url": "https://learn.microsoft.com/powershell/module/computefleet/remove-computefleet"
         },
         "parameterSets": [
           {
@@ -63,7 +63,7 @@
       },
       "examples": [
         {
-          "description": "Delete a Fleet",
+          "description": "Delete a ComputeFleet",
           "parameters": [
             {
               "name": "-FleetName",

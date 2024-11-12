@@ -6,9 +6,9 @@
 
 <#
 .Synopsis
-Get a Fleet
+Delete a ComputeFleet
 .Description
-Get a Fleet
+Delete a ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -17,52 +17,55 @@ Get a Fleet
 .Inputs
 Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 .Outputs
-Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
+System.Boolean
 .Notes
 COMPLEX PARAMETER PROPERTIES
 
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 INPUTOBJECT <IFleetIdentity>: Identity Parameter
-  [FleetName <String>]: The name of the Compute Fleet
-  [Name <String>]: The name of the Fleet
+  [FleetName <String>]: The name of the Compute ComputeFleet
+  [Name <String>]: The name of the ComputeFleet
   [ResourceGroupName <String>]: The name of the resource group. The name is case insensitive.
   [SubscriptionId <String>]: The ID of the target subscription. The value must be an UUID.
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-fleet
+https://learn.microsoft.com/powershell/module/computefleet/remove-azcomputefleet
 #>
-function Get-Fleet {
-[OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
-[CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
+function Remove-AzComputeFleet {
+[OutputType([System.Boolean])]
+[CmdletBinding(DefaultParameterSetName='Delete', PositionalBinding=$false, SupportsShouldProcess, ConfirmImpact='Medium')]
 param(
-    [Parameter(ParameterSetName='Get', Mandatory)]
+    [Parameter(ParameterSetName='Delete', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Compute Fleet
+    # The name of the Compute ComputeFleet
     ${FleetName},
 
-    [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='Delete', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
     # The name is case insensitive.
     ${ResourceGroupName},
 
-    [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='Delete', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
     # The value must be an UUID.
     ${SubscriptionId},
 
-    [Parameter(ParameterSetName='GetViaIdentity', Mandatory, ValueFromPipeline)]
+    [Parameter(ParameterSetName='DeleteViaIdentity', Mandatory, ValueFromPipeline)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity]
     # Identity Parameter
     ${InputObject},
+
+    [Parameter()]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [System.Management.Automation.SwitchParameter]
+    # Run the command as a job
+    ${AsJob},
 
     [Parameter(DontShow)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
@@ -83,6 +86,18 @@ param(
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SendAsyncStep[]]
     # SendAsync Pipeline Steps to be prepended to the front of the pipeline
     ${HttpPipelinePrepend},
+
+    [Parameter()]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [System.Management.Automation.SwitchParameter]
+    # Run the command asynchronously
+    ${NoWait},
+
+    [Parameter()]
+    [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
+    [System.Management.Automation.SwitchParameter]
+    # Returns true when the command succeeds
+    ${PassThru},
 
     [Parameter(DontShow)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Runtime')]
@@ -113,10 +128,8 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Get = 'Fleet.private\Get-Fleet_Get';
-            GetViaIdentity = 'Fleet.private\Get-Fleet_GetViaIdentity';
-            List = 'Fleet.private\Get-Fleet_List';
-            List1 = 'Fleet.private\Get-Fleet_List1';
+            Delete = 'ComputeFleet.private\Remove-Fleet_Delete';
+            DeleteViaIdentity = 'ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

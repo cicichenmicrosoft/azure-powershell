@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>create a Fleet</summary>
+    /// <summary>create a ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] CreateOrUpdate=>PUT:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsCommon.New, @"Fleet_CreateViaIdentity", SupportsShouldProcess = true)]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"create a Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"create a ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}", ApiVersion = "2024-11-01")]
     public partial class NewFleet_CreateViaIdentity : global::System.Management.Automation.PSCmdlet,
@@ -123,12 +123,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         /// <summary>Backing field for <see cref="Resource" /> property.</summary>
         private Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet _resource;
 
-        /// <summary>An Compute Fleet resource</summary>
-        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "An Compute Fleet resource", ValueFromPipeline = true)]
+        /// <summary>An Compute ComputeFleet resource</summary>
+        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "An Compute ComputeFleet resource", ValueFromPipeline = true)]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = true,
         ReadOnly = false,
-        Description = @"An Compute Fleet resource",
+        Description = @"An Compute ComputeFleet resource",
         SerializedName = @"resource",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Body)]

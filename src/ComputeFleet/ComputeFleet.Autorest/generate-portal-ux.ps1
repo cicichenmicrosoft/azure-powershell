@@ -15,7 +15,7 @@ if(-not $NotIsolated) {
   return
 }
 
-$moduleName = 'Fleet'
+$moduleName = 'ComputeFleet'
 $rootModuleName = ''
 if ($rootModuleName -eq "")
 {

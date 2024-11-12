@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
     /// <summary>
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     /// </summary>
     [System.ComponentModel.TypeConverter(typeof(LocationProfileTypeConverter))]
@@ -139,7 +139,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     [System.ComponentModel.TypeConverter(typeof(LocationProfileTypeConverter))]
     public partial interface ILocationProfile

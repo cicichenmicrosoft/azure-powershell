@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
     /// <summary>
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     /// </summary>
     [System.ComponentModel.TypeConverter(typeof(AdditionalLocationsProfileTypeConverter))]
     public partial class AdditionalLocationsProfile
@@ -130,7 +130,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     [System.ComponentModel.TypeConverter(typeof(AdditionalLocationsProfileTypeConverter))]
     public partial interface IAdditionalLocationsProfile
 

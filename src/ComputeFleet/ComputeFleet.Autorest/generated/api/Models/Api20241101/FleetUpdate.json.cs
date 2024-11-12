@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Fleet Update Model</summary>
+    /// <summary>ComputeFleet Update Model</summary>
     public partial class FleetUpdate
     {
 

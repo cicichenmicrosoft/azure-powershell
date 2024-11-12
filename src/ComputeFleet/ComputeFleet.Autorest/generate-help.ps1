@@ -30,13 +30,13 @@ if(Test-Path $docsFolder) {
 $null = New-Item -ItemType Directory -Force -Path $docsFolder -ErrorAction SilentlyContinue
 $examplesFolder = Join-Path $PSScriptRoot 'examples'
 
-$modulePsd1 = Get-Item -Path (Join-Path $PSScriptRoot './Fleet.psd1')
+$modulePsd1 = Get-Item -Path (Join-Path $PSScriptRoot './ComputeFleet.psd1')
 $modulePath = $modulePsd1.FullName
 $moduleName = $modulePsd1.BaseName
 
 # Load DLL to use build-time cmdlets
 Import-Module -Name $modulePath
-Import-Module -Name (Join-Path $PSScriptRoot './bin/Fleet.private.dll')
+Import-Module -Name (Join-Path $PSScriptRoot './bin/ComputeFleet.private.dll')
 $instance = [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module]::Instance
 # Module info is shared per profile
 $moduleInfo = Get-Module -Name $moduleName

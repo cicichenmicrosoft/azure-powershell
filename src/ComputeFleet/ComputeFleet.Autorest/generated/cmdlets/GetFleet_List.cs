@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>List Fleet resources by subscription ID</summary>
+    /// <summary>List ComputeFleet resources by subscription ID</summary>
     /// <remarks>
     /// [OpenAPI] ListBySubscription=>GET:"/subscriptions/{subscriptionId}/providers/Microsoft.AzureFleet/fleets"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsCommon.Get, @"Fleet_List")]
     [global::System.Management.Automation.OutputType(typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"List Fleet resources by subscription ID")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"List ComputeFleet resources by subscription ID")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/providers/Microsoft.AzureFleet/fleets", ApiVersion = "2024-11-01")]
     public partial class GetFleet_List : global::System.Management.Automation.PSCmdlet,

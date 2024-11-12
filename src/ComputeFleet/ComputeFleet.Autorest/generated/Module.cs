@@ -40,7 +40,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module Instance { get { if (_instance == null) { lock (_singletonLock) { if (_instance == null) { _instance = new Module(); }}} return _instance; } }
 
         /// <summary>The Name of this module</summary>
-        public string Name => @"Fleet";
+        public string Name => @"ComputeFleet";
 
         /// <param name="invocationInfo">The <see cref="System.Management.Automation.InvocationInfo" /> from the cmdlet</param>
         /// <param name="pipeline">The HttpPipeline for the request</param>

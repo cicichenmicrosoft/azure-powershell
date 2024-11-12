@@ -6,9 +6,9 @@
 
 <#
 .Synopsis
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 .Description
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 .Example
 {{ Add code here }}
 .Example
@@ -17,17 +17,17 @@ List VirtualMachineScaleSet resources by Fleet
 .Outputs
 Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-fleetvirtualmachinescaleset
+https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetvmss
 #>
-function Get-FleetVirtualMachineScaleSet {
+function Get-AzComputeFleetVMSS {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVirtualMachineScaleSet])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
     [Parameter(Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
-    # The name of the Fleet
-    ${Name},
+    # The name of the ComputeFleet
+    ${FleetName},
 
     [Parameter(Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
@@ -92,7 +92,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'Fleet.private\Get-FleetVirtualMachineScaleSet_List';
+            List = 'ComputeFleet.private\Get-FleetVirtualMachineScaleSet_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

@@ -59,7 +59,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         private string _operationStatus;
 
         /// <summary>
-        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure Fleet
+        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure ComputeFleet
         /// resource.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
@@ -186,7 +186,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         PossibleTypes = new [] { typeof(string) })]
         string Name { get;  }
         /// <summary>
-        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure Fleet
+        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure ComputeFleet
         /// resource.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
@@ -195,7 +195,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Read = true,
         Create = false,
         Update = false,
-        Description = @"This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure Fleet resource.",
+        Description = @"This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure ComputeFleet resource.",
         SerializedName = @"operationStatus",
         PossibleTypes = new [] { typeof(string) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Succeeded", "Failed", "Canceled", "Creating", "Updating", "Deleting", "Migrating")]
@@ -250,7 +250,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>The name of the virtualMachineScaleSet</summary>
         string Name { get; set; }
         /// <summary>
-        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure Fleet
+        /// This represents the operationStatus of the VMSS in response to the last operation that was performed on it by Azure ComputeFleet
         /// resource.
         /// </summary>
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Succeeded", "Failed", "Canceled", "Creating", "Updating", "Deleting", "Migrating")]

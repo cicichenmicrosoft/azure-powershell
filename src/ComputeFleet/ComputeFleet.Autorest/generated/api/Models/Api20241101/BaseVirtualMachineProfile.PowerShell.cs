@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>Describes the base virtual machine profile for fleet</summary>
+    /// <summary>Describes the base virtual machine profile for computefleet</summary>
     [System.ComponentModel.TypeConverter(typeof(BaseVirtualMachineProfileTypeConverter))]
     public partial class BaseVirtualMachineProfile
     {
@@ -528,7 +528,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// Describes the base virtual machine profile for fleet
+    /// Describes the base virtual machine profile for computefleet
     [System.ComponentModel.TypeConverter(typeof(BaseVirtualMachineProfileTypeConverter))]
     public partial interface IBaseVirtualMachineProfile
 

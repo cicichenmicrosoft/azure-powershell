@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     /// </summary>
     public partial class LocationProfile

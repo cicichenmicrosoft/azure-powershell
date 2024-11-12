@@ -50,7 +50,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public string ComputeApiVersion { get => this._computeApiVersion; set => this._computeApiVersion = value; }
@@ -124,7 +124,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile BaseVirtualMachineProfile { get; set; }
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
@@ -133,7 +133,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Create = true,
         Update = true,
         Description = @"Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        The default value will be the latest supported computeApiVersion by Compute Fleet.",
+        The default value will be the latest supported computeApiVersion by Compute ComputeFleet.",
         SerializedName = @"computeApiVersion",
         PossibleTypes = new [] { typeof(string) })]
         string ComputeApiVersion { get; set; }
@@ -186,7 +186,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile BaseVirtualMachineProfile { get; set; }
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         string ComputeApiVersion { get; set; }
         /// <summary>

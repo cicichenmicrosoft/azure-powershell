@@ -13,14 +13,14 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>Backing field for <see cref="FleetName" /> property.</summary>
         private string _fleetName;
 
-        /// <summary>The name of the Compute Fleet</summary>
+        /// <summary>The name of the Compute ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public string FleetName { get => this._fleetName; set => this._fleetName = value; }
 
         /// <summary>Backing field for <see cref="Name" /> property.</summary>
         private string _name;
 
-        /// <summary>The name of the Fleet</summary>
+        /// <summary>The name of the ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public string Name { get => this._name; set => this._name = value; }
 
@@ -47,25 +47,25 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     public partial interface IFleetIdentity :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
-        /// <summary>The name of the Compute Fleet</summary>
+        /// <summary>The name of the Compute ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
         Read = true,
         Create = true,
         Update = true,
-        Description = @"The name of the Compute Fleet",
+        Description = @"The name of the Compute ComputeFleet",
         SerializedName = @"fleetName",
         PossibleTypes = new [] { typeof(string) })]
         string FleetName { get; set; }
-        /// <summary>The name of the Fleet</summary>
+        /// <summary>The name of the ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
         Read = true,
         Create = true,
         Update = true,
-        Description = @"The name of the Fleet",
+        Description = @"The name of the ComputeFleet",
         SerializedName = @"name",
         PossibleTypes = new [] { typeof(string) })]
         string Name { get; set; }
@@ -96,9 +96,9 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     internal partial interface IFleetIdentityInternal
 
     {
-        /// <summary>The name of the Compute Fleet</summary>
+        /// <summary>The name of the Compute ComputeFleet</summary>
         string FleetName { get; set; }
-        /// <summary>The name of the Fleet</summary>
+        /// <summary>The name of the ComputeFleet</summary>
         string Name { get; set; }
         /// <summary>The name of the resource group. The name is case insensitive.</summary>
         string ResourceGroupName { get; set; }

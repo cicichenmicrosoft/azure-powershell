@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>ApiError for Fleet</summary>
+    /// <summary>ApiError for ComputeFleet</summary>
     public partial class ApiError
     {
 

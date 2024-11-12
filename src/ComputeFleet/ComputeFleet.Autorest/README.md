@@ -1,6 +1,6 @@
 <!-- region Generated -->
-# Fleet
-This directory contains the PowerShell module for the Fleet service.
+# ComputeFleet
+This directory contains the PowerShell module for the ComputeFleet service.
 
 ---
 ## Info
@@ -14,7 +14,7 @@ This directory contains the PowerShell module for the Fleet service.
 This module was primarily generated via [AutoRest](https://github.com/Azure/autorest) using the [PowerShell](https://github.com/Azure/autorest.powershell) extension.
 
 ## Development
-For information on how to develop for `Fleet`, see [how-to.md](how-to.md).
+For information on how to develop for `ComputeFleet`, see [how-to.md](how-to.md).
 <!-- endregion -->
 
 ### AutoRest Configuration
@@ -23,12 +23,13 @@ For information on how to develop for `Fleet`, see [how-to.md](how-to.md).
 ``` yaml
 # lock the commit
 commit: 366aaa13cdd218b9adac716680e49473673410c8
-require:
-  - $(this-folder)/../../readme.azure.noprofile.md
+# lock the commit
 input-file:
-  - $(repo)/specification/quota/resource-manager/Microsoft.Quota/stable/2023-02-01/quota.json
+  - $(repo)/specification/azurefleet/resource-manager/Microsoft.AzureFleet/stable/2024-11-01/azurefleet.json
+try-require: 
+  - $(repo)/specification/azurefleet/resource-manager/readme.powershell.md
 
-title: Quota
+title: ComputeFleet
 module-version: 0.1.0
 
 identity-correction-for-post: true

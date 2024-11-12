@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     /// </summary>
     public partial class LocationProfile :
@@ -40,7 +40,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     public partial interface ILocationProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
@@ -76,7 +76,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile VirtualMachineProfileOverride { get; set; }
 
     }
-    /// Represents the profile for a single additional location in the Fleet. The location and the virtualMachineProfileOverride
+    /// Represents the profile for a single additional location in the ComputeFleet. The location and the virtualMachineProfileOverride
     /// (optional).
     internal partial interface ILocationProfileInternal
 

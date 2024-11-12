@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// Represents the configuration for additional locations where Fleet resources may be deployed.
+    /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
     /// </summary>
     public partial class AdditionalLocationsProfile
     {

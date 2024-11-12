@@ -1,11 +1,11 @@
-if(($null -eq $TestName) -or ($TestName -contains 'Get-Fleet'))
+if(($null -eq $TestName) -or ($TestName -contains 'Get-ComputeFleet'))
 {
   $loadEnvPath = Join-Path $PSScriptRoot 'loadEnv.ps1'
   if (-Not (Test-Path -Path $loadEnvPath)) {
       $loadEnvPath = Join-Path $PSScriptRoot '..\loadEnv.ps1'
   }
   . ($loadEnvPath)
-  $TestRecordingFile = Join-Path $PSScriptRoot 'Get-Fleet.Recording.json'
+  $TestRecordingFile = Join-Path $PSScriptRoot 'Get-ComputeFleet.Recording.json'
   $currentPath = $PSScriptRoot
   while(-not $mockingPath) {
       $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -14,7 +14,7 @@ if(($null -eq $TestName) -or ($TestName -contains 'Get-Fleet'))
   . ($mockingPath | Select-Object -First 1).FullName
 }
 
-Describe 'Get-Fleet' {
+Describe 'Get-ComputeFleet' {
     It 'List' -skip {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }

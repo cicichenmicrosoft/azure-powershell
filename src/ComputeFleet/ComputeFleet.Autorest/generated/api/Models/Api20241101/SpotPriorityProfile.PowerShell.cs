@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>Configuration Options for Spot instances in Compute Fleet.</summary>
+    /// <summary>Configuration Options for Spot instances in Compute ComputeFleet.</summary>
     [System.ComponentModel.TypeConverter(typeof(SpotPriorityProfileTypeConverter))]
     public partial class SpotPriorityProfile
     {
@@ -168,7 +168,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// Configuration Options for Spot instances in Compute Fleet.
+    /// Configuration Options for Spot instances in Compute ComputeFleet.
     [System.ComponentModel.TypeConverter(typeof(SpotPriorityProfileTypeConverter))]
     public partial interface ISpotPriorityProfile
 

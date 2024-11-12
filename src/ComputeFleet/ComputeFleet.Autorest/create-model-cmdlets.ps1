@@ -18,7 +18,7 @@ function CreateModelCmdlet {
     if (''.length -gt 0) {
         $ModuleName = ''
     } else {
-        $ModuleName = 'Fleet'
+        $ModuleName = 'ComputeFleet'
     }
     $CsFiles = Get-ChildItem -Path $ModelCsPath -Recurse -Filter *.cs
     $Content = ''

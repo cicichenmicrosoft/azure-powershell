@@ -8,13 +8,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Cmdlets;
     using System;
 
-    /// <summary>Delete a Fleet</summary>
+    /// <summary>Delete a ComputeFleet</summary>
     /// <remarks>
     /// [OpenAPI] Delete=>DELETE:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}"
     /// </remarks>
     [global::System.Management.Automation.Cmdlet(global::System.Management.Automation.VerbsCommon.Remove, @"Fleet_Delete", SupportsShouldProcess = true)]
     [global::System.Management.Automation.OutputType(typeof(bool))]
-    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"Delete a Fleet")]
+    [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Description(@"Delete a ComputeFleet")]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Generated]
     [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.HttpPath(Path = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureFleet/fleets/{fleetName}", ApiVersion = "2024-11-01")]
     public partial class RemoveFleet_Delete : global::System.Management.Automation.PSCmdlet,
@@ -63,12 +63,12 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Cmdlets
         /// <summary>Backing field for <see cref="FleetName" /> property.</summary>
         private string _fleetName;
 
-        /// <summary>The name of the Compute Fleet</summary>
-        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "The name of the Compute Fleet")]
+        /// <summary>The name of the Compute ComputeFleet</summary>
+        [global::System.Management.Automation.Parameter(Mandatory = true, HelpMessage = "The name of the Compute ComputeFleet")]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = true,
         ReadOnly = false,
-        Description = @"The name of the Compute Fleet",
+        Description = @"The name of the Compute ComputeFleet",
         SerializedName = @"fleetName",
         PossibleTypes = new [] { typeof(string) })]
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category(global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.ParameterCategory.Path)]

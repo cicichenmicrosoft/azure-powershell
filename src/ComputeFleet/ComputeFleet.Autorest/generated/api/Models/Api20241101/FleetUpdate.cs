@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Fleet Update Model</summary>
+    /// <summary>ComputeFleet Update Model</summary>
     public partial class FleetUpdate :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdate,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateInternal
@@ -36,7 +36,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Inlined)]
         public string ComputeProfileComputeApiVersion { get => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).ComputeProfileComputeApiVersion; set => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).ComputeProfileComputeApiVersion = value ?? null; }
@@ -201,19 +201,19 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Owned)]
         public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags Tags { get => (this._tags = this._tags ?? new Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.FleetUpdateTags()); set => this._tags = value; }
 
-        /// <summary>Specifies the time at which the Compute Fleet is created.</summary>
+        /// <summary>Specifies the time at which the Compute ComputeFleet is created.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Inlined)]
         public global::System.DateTime? TimeCreated { get => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).TimeCreated; }
 
-        /// <summary>Specifies the ID which uniquely identifies a Compute Fleet.</summary>
+        /// <summary>Specifies the ID which uniquely identifies a Compute ComputeFleet.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Inlined)]
         public string UniqueId { get => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).UniqueId; }
 
-        /// <summary>Attribute based Fleet.</summary>
+        /// <summary>Attribute based ComputeFleet.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Inlined)]
         public Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes VMAttributes { get => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).VMAttributes; set => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).VMAttributes = value ?? null /* model class */; }
 
-        /// <summary>List of VM sizes supported for Compute Fleet</summary>
+        /// <summary>List of VM sizes supported for Compute ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Origin(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PropertyOrigin.Inlined)]
         public System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile> VMSizesProfile { get => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).VMSizesProfile; set => ((Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetPropertiesInternal)Properties).VMSizesProfile = value ?? null /* arrayOf */; }
 
@@ -223,7 +223,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Fleet Update Model
+    /// ComputeFleet Update Model
     public partial interface IFleetUpdate :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -281,7 +281,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile ComputeProfileBaseVirtualMachineProfile { get; set; }
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
@@ -290,7 +290,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Create = true,
         Update = true,
         Description = @"Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        The default value will be the latest supported computeApiVersion by Compute Fleet.",
+        The default value will be the latest supported computeApiVersion by Compute ComputeFleet.",
         SerializedName = @"computeApiVersion",
         PossibleTypes = new [] { typeof(string) })]
         string ComputeProfileComputeApiVersion { get; set; }
@@ -542,60 +542,60 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         SerializedName = @"tags",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags) })]
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags Tags { get; set; }
-        /// <summary>Specifies the time at which the Compute Fleet is created.</summary>
+        /// <summary>Specifies the time at which the Compute ComputeFleet is created.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = true,
         Read = true,
         Create = false,
         Update = false,
-        Description = @"Specifies the time at which the Compute Fleet is created.",
+        Description = @"Specifies the time at which the Compute ComputeFleet is created.",
         SerializedName = @"timeCreated",
         PossibleTypes = new [] { typeof(global::System.DateTime) })]
         global::System.DateTime? TimeCreated { get;  }
-        /// <summary>Specifies the ID which uniquely identifies a Compute Fleet.</summary>
+        /// <summary>Specifies the ID which uniquely identifies a Compute ComputeFleet.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = true,
         Read = true,
         Create = false,
         Update = false,
-        Description = @"Specifies the ID which uniquely identifies a Compute Fleet.",
+        Description = @"Specifies the ID which uniquely identifies a Compute ComputeFleet.",
         SerializedName = @"uniqueId",
         PossibleTypes = new [] { typeof(string) })]
         string UniqueId { get;  }
-        /// <summary>Attribute based Fleet.</summary>
+        /// <summary>Attribute based ComputeFleet.</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
         Read = true,
         Create = true,
         Update = true,
-        Description = @"Attribute based Fleet.",
+        Description = @"Attribute based ComputeFleet.",
         SerializedName = @"vmAttributes",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes) })]
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes VMAttributes { get; set; }
-        /// <summary>List of VM sizes supported for Compute Fleet</summary>
+        /// <summary>List of VM sizes supported for Compute ComputeFleet</summary>
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Info(
         Required = false,
         ReadOnly = false,
         Read = true,
         Create = true,
         Update = true,
-        Description = @"List of VM sizes supported for Compute Fleet",
+        Description = @"List of VM sizes supported for Compute ComputeFleet",
         SerializedName = @"vmSizesProfile",
         PossibleTypes = new [] { typeof(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile) })]
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile> VMSizesProfile { get; set; }
 
     }
-    /// Fleet Update Model
+    /// ComputeFleet Update Model
     internal partial interface IFleetUpdateInternal
 
     {
         /// <summary>The list of location profiles.</summary>
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ILocationProfile> AdditionalLocationProfileLocationProfiles { get; set; }
         /// <summary>
-        /// Represents the configuration for additional locations where Fleet resources may be deployed.
+        /// Represents the configuration for additional locations where ComputeFleet resources may be deployed.
         /// </summary>
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IAdditionalLocationsProfile AdditionalLocationsProfile { get; set; }
         /// <summary>The flag that enables or disables hibernation capability on the VM.</summary>
@@ -622,7 +622,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile ComputeProfileBaseVirtualMachineProfile { get; set; }
         /// <summary>
         /// Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.
-        /// The default value will be the latest supported computeApiVersion by Compute Fleet.
+        /// The default value will be the latest supported computeApiVersion by Compute ComputeFleet.
         /// </summary>
         string ComputeProfileComputeApiVersion { get; set; }
         /// <summary>
@@ -662,7 +662,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <summary>The status of the last operation.</summary>
         [global::Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.PSArgumentCompleterAttribute("Succeeded", "Failed", "Canceled", "Creating", "Updating", "Deleting", "Migrating")]
         string ProvisioningState { get; set; }
-        /// <summary>Configuration Options for Regular instances in Compute Fleet.</summary>
+        /// <summary>Configuration Options for Regular instances in Compute ComputeFleet.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IRegularPriorityProfile RegularPriorityProfile { get; set; }
         /// <summary>
         /// Allocation strategy to follow when determining the VM sizes distribution for Regular VMs.
@@ -676,7 +676,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// the request in the sync path itself.
         /// </summary>
         int? RegularPriorityProfileMinCapacity { get; set; }
-        /// <summary>Configuration Options for Spot instances in Compute Fleet.</summary>
+        /// <summary>Configuration Options for Spot instances in Compute ComputeFleet.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ISpotPriorityProfile SpotPriorityProfile { get; set; }
         /// <summary>
         /// Allocation strategy to follow when determining the VM sizes distribution for Spot VMs.
@@ -705,13 +705,13 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         int? SpotPriorityProfileMinCapacity { get; set; }
         /// <summary>Resource tags.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetUpdateTags Tags { get; set; }
-        /// <summary>Specifies the time at which the Compute Fleet is created.</summary>
+        /// <summary>Specifies the time at which the Compute ComputeFleet is created.</summary>
         global::System.DateTime? TimeCreated { get; set; }
-        /// <summary>Specifies the ID which uniquely identifies a Compute Fleet.</summary>
+        /// <summary>Specifies the ID which uniquely identifies a Compute ComputeFleet.</summary>
         string UniqueId { get; set; }
-        /// <summary>Attribute based Fleet.</summary>
+        /// <summary>Attribute based ComputeFleet.</summary>
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMAttributes VMAttributes { get; set; }
-        /// <summary>List of VM sizes supported for Compute Fleet</summary>
+        /// <summary>List of VM sizes supported for Compute ComputeFleet</summary>
         System.Collections.Generic.List<Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IVMSizeProfile> VMSizesProfile { get; set; }
 
     }

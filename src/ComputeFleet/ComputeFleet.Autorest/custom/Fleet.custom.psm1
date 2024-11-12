@@ -1,9 +1,9 @@
 # region Generated 
   # Load the private module dll
-  $null = Import-Module -PassThru -Name (Join-Path $PSScriptRoot '..\bin\Fleet.private.dll')
+  $null = Import-Module -PassThru -Name (Join-Path $PSScriptRoot '..\bin\ComputeFleet.private.dll')
 
   # Load the internal module
-  $internalModulePath = Join-Path $PSScriptRoot '..\internal\Fleet.internal.psm1'
+  $internalModulePath = Join-Path $PSScriptRoot '..\internal\ComputeFleet.internal.psm1'
   if(Test-Path $internalModulePath) {
     $null = Import-Module -Name $internalModulePath
   }

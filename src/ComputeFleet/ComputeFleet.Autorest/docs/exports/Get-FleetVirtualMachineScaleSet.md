@@ -1,14 +1,14 @@
 ---
 external help file:
-Module Name: Fleet
-online version: https://learn.microsoft.com/powershell/module/fleet/get-fleetvirtualmachinescaleset
+Module Name: ComputeFleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-fleetvirtualmachinescaleset
 schema: 2.0.0
 ---
 
 # Get-FleetVirtualMachineScaleSet
 
 ## SYNOPSIS
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-FleetVirtualMachineScaleSet -Name <String> -ResourceGroupName <String> -Subs
 ```
 
 ## DESCRIPTION
-List VirtualMachineScaleSet resources by Fleet
+List VirtualMachineScaleSet resources by ComputeFleet
 
 ## EXAMPLES
 
@@ -39,7 +39,7 @@ List VirtualMachineScaleSet resources by Fleet
 ## PARAMETERS
 
 ### -Name
-The name of the Fleet
+The name of the ComputeFleet
 
 ```yaml
 Type: System.String

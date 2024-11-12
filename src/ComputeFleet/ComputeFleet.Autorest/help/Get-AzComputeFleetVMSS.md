@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -FleetName
-Fleet name
+ComputeFleet name
 
 ```yaml
 Type: System.String

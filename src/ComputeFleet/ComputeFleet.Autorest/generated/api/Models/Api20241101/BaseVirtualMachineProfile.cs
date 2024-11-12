@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Describes the base virtual machine profile for fleet</summary>
+    /// <summary>Describes the base virtual machine profile for computefleet</summary>
     public partial class BaseVirtualMachineProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfile,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IBaseVirtualMachineProfileInternal
@@ -410,7 +410,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Describes the base virtual machine profile for fleet
+    /// Describes the base virtual machine profile for computefleet
     public partial interface IBaseVirtualMachineProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -923,7 +923,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         int? VMSizePropertyVcpUsPerCore { get; set; }
 
     }
-    /// Describes the base virtual machine profile for fleet
+    /// Describes the base virtual machine profile for computefleet
     internal partial interface IBaseVirtualMachineProfileInternal
 
     {

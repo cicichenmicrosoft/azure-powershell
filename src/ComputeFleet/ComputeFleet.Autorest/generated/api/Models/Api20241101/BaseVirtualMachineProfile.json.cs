@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Describes the base virtual machine profile for fleet</summary>
+    /// <summary>Describes the base virtual machine profile for computefleet</summary>
     public partial class BaseVirtualMachineProfile
     {
 

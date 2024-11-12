@@ -1,6 +1,6 @@
 # region Generated 
   # Load the private module dll
-  $null = Import-Module -PassThru -Name (Join-Path $PSScriptRoot '..\bin\Fleet.private.dll')
+  $null = Import-Module -PassThru -Name (Join-Path $PSScriptRoot '..\bin\ComputeFleet.private.dll')
 
   # Get the private module's instance
   $instance = [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Module]::Instance

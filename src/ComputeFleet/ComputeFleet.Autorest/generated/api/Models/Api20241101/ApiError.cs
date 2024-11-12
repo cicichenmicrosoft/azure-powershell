@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>ApiError for Fleet</summary>
+    /// <summary>ApiError for ComputeFleet</summary>
     public partial class ApiError :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IApiError,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IApiErrorInternal
@@ -63,7 +63,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// ApiError for Fleet
+    /// ApiError for ComputeFleet
     public partial interface IApiError :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -135,7 +135,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         string Target { get; set; }
 
     }
-    /// ApiError for Fleet
+    /// ApiError for ComputeFleet
     internal partial interface IApiErrorInternal
 
     {

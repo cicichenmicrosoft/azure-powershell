@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Configuration Options for Regular instances in Compute Fleet.</summary>
+    /// <summary>Configuration Options for Regular instances in Compute ComputeFleet.</summary>
     public partial class RegularPriorityProfile
     {
 

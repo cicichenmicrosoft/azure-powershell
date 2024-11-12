@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Configuration Options for Spot instances in Compute Fleet.</summary>
+    /// <summary>Configuration Options for Spot instances in Compute ComputeFleet.</summary>
     public partial class SpotPriorityProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ISpotPriorityProfile,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ISpotPriorityProfileInternal
@@ -70,7 +70,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Configuration Options for Spot instances in Compute Fleet.
+    /// Configuration Options for Spot instances in Compute ComputeFleet.
     public partial interface ISpotPriorityProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -158,7 +158,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         int? MinCapacity { get; set; }
 
     }
-    /// Configuration Options for Spot instances in Compute Fleet.
+    /// Configuration Options for Spot instances in Compute ComputeFleet.
     internal partial interface ISpotPriorityProfileInternal
 
     {

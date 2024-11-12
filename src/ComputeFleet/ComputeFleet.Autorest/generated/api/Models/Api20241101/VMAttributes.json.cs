@@ -6,7 +6,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
     /// <summary>
-    /// VMAttributes that will be used to filter VMSizes which will be used to build Fleet.
+    /// VMAttributes that will be used to filter VMSizes which will be used to build ComputeFleet.
     /// </summary>
     public partial class VMAttributes
     {

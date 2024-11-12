@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>The response of a Fleet list operation.</summary>
+    /// <summary>The response of a ComputeFleet list operation.</summary>
     [System.ComponentModel.TypeConverter(typeof(FleetListResultTypeConverter))]
     public partial class FleetListResult
     {
@@ -136,7 +136,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// The response of a Fleet list operation.
+    /// The response of a ComputeFleet list operation.
     [System.ComponentModel.TypeConverter(typeof(FleetListResultTypeConverter))]
     public partial interface IFleetListResult
 

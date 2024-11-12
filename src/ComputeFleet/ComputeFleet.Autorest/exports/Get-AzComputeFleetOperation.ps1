@@ -17,9 +17,9 @@ List the operations for the provider
 .Outputs
 Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation
 .Link
-https://learn.microsoft.com/powershell/module/fleet/get-operation
+https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleetoperation
 #>
-function Get-Operation {
+function Get-AzComputeFleetOperation {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IOperation])]
 [CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
 param(
@@ -72,7 +72,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'Fleet.private\Get-Operation_List';
+            List = 'ComputeFleet.private\Get-Operation_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

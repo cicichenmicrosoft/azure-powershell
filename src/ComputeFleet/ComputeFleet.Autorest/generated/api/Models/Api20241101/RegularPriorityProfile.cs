@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Configuration Options for Regular instances in Compute Fleet.</summary>
+    /// <summary>Configuration Options for Regular instances in Compute ComputeFleet.</summary>
     public partial class RegularPriorityProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IRegularPriorityProfile,
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IRegularPriorityProfileInternal
@@ -43,7 +43,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 
         }
     }
-    /// Configuration Options for Regular instances in Compute Fleet.
+    /// Configuration Options for Regular instances in Compute ComputeFleet.
     public partial interface IRegularPriorityProfile :
         Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IJsonSerializable
     {
@@ -88,7 +88,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         int? MinCapacity { get; set; }
 
     }
-    /// Configuration Options for Regular instances in Compute Fleet.
+    /// Configuration Options for Regular instances in Compute ComputeFleet.
     internal partial interface IRegularPriorityProfileInternal
 
     {

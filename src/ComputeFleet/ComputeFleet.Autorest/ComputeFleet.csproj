@@ -5,14 +5,14 @@
     <LangVersion>7.1</LangVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AssemblyName>Fleet.private</AssemblyName>
+    <AssemblyName>ComputeFleet.private</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet</RootNamespace>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>./bin</OutputPath>
     <PublishDir>$(OutputPath)</PublishDir>
-    <NuspecFile>Fleet.nuspec</NuspecFile>
+    <NuspecFile>ComputeFleet.nuspec</NuspecFile>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <!-- Some methods are marked async and don't have an await in them -->
     <!-- warning CS1591: Missing XML comment for publicly visible type or member -->

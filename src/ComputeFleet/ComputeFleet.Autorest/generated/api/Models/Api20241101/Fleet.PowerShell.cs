@@ -5,9 +5,9 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>An Compute Fleet resource</summary>
+    /// <summary>An Compute ComputeFleet resource</summary>
     [System.ComponentModel.TypeConverter(typeof(FleetTypeConverter))]
-    public partial class Fleet
+    public partial class ComputeFleet
     {
 
         /// <summary>
@@ -53,33 +53,33 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         partial void BeforeDeserializePSObject(global::System.Management.Automation.PSObject content, ref bool returnNow);
 
         /// <summary>
-        /// Deserializes a <see cref="global::System.Collections.IDictionary" /> into an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet"
+        /// Deserializes a <see cref="global::System.Collections.IDictionary" /> into an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet"
         /// />.
         /// </summary>
         /// <param name="content">The global::System.Collections.IDictionary content that should be used.</param>
         /// <returns>an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet" />.</returns>
         public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet DeserializeFromDictionary(global::System.Collections.IDictionary content)
         {
-            return new Fleet(content);
+            return new ComputeFleet(content);
         }
 
         /// <summary>
-        /// Deserializes a <see cref="global::System.Management.Automation.PSObject" /> into an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet"
+        /// Deserializes a <see cref="global::System.Management.Automation.PSObject" /> into an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet"
         /// />.
         /// </summary>
         /// <param name="content">The global::System.Management.Automation.PSObject content that should be used.</param>
         /// <returns>an instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet" />.</returns>
         public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet DeserializeFromPSObject(global::System.Management.Automation.PSObject content)
         {
-            return new Fleet(content);
+            return new ComputeFleet(content);
         }
 
         /// <summary>
-        /// Deserializes a <see cref="global::System.Collections.IDictionary" /> into a new instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet"
+        /// Deserializes a <see cref="global::System.Collections.IDictionary" /> into a new instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet"
         /// />.
         /// </summary>
         /// <param name="content">The global::System.Collections.IDictionary content that should be used.</param>
-        internal Fleet(global::System.Collections.IDictionary content)
+        internal ComputeFleet(global::System.Collections.IDictionary content)
         {
             bool returnNow = false;
             BeforeDeserializeDictionary(content, ref returnNow);
@@ -296,11 +296,11 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         }
 
         /// <summary>
-        /// Deserializes a <see cref="global::System.Management.Automation.PSObject" /> into a new instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet"
+        /// Deserializes a <see cref="global::System.Management.Automation.PSObject" /> into a new instance of <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet"
         /// />.
         /// </summary>
         /// <param name="content">The global::System.Management.Automation.PSObject content that should be used.</param>
-        internal Fleet(global::System.Management.Automation.PSObject content)
+        internal ComputeFleet(global::System.Management.Automation.PSObject content)
         {
             bool returnNow = false;
             BeforeDeserializePSObject(content, ref returnNow);
@@ -517,10 +517,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         }
 
         /// <summary>
-        /// Creates a new instance of <see cref="Fleet" />, deserializing the content from a json string.
+        /// Creates a new instance of <see cref="ComputeFleet" />, deserializing the content from a json string.
         /// </summary>
         /// <param name="jsonText">a string containing a JSON serialized instance of this model.</param>
-        /// <returns>an instance of the <see cref="Fleet" /> model class.</returns>
+        /// <returns>an instance of the <see cref="ComputeFleet" /> model class.</returns>
         public static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet FromJsonString(string jsonText) => FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(jsonText));
 
         /// <summary>Serializes this instance to a json string.</summary>
@@ -528,7 +528,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// An Compute Fleet resource
+    /// An Compute ComputeFleet resource
     [System.ComponentModel.TypeConverter(typeof(FleetTypeConverter))]
     public partial interface IFleet
 

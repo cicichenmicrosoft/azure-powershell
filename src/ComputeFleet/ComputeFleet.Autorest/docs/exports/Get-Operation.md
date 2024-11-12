@@ -1,7 +1,7 @@
 ---
 external help file:
-Module Name: Fleet
-online version: https://learn.microsoft.com/powershell/module/fleet/get-operation
+Module Name: ComputeFleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-operation
 schema: 2.0.0
 ---
 

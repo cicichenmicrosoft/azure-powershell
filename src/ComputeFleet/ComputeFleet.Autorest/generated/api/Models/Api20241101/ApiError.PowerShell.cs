@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>ApiError for Fleet</summary>
+    /// <summary>ApiError for ComputeFleet</summary>
     [System.ComponentModel.TypeConverter(typeof(ApiErrorTypeConverter))]
     public partial class ApiError
     {
@@ -176,7 +176,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// ApiError for Fleet
+    /// ApiError for ComputeFleet
     [System.ComponentModel.TypeConverter(typeof(ApiErrorTypeConverter))]
     public partial interface IApiError
 

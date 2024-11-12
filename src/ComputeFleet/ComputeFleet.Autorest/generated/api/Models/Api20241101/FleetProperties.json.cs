@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using static Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Extensions;
 
-    /// <summary>Details of the Compute Fleet.</summary>
+    /// <summary>Details of the Compute ComputeFleet.</summary>
     public partial class FleetProperties
     {
 

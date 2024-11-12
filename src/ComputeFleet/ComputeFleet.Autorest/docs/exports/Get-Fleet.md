@@ -1,39 +1,39 @@
 ---
 external help file:
-Module Name: Fleet
-online version: https://learn.microsoft.com/powershell/module/fleet/get-fleet
+Module Name: ComputeFleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/get-computefleet
 schema: 2.0.0
 ---
 
-# Get-Fleet
+# Get-ComputeFleet
 
 ## SYNOPSIS
-Get a Fleet
+Get a ComputeFleet
 
 ## SYNTAX
 
 ### List (Default)
 ```
-Get-Fleet -SubscriptionId <String> [<CommonParameters>]
+Get-ComputeFleet -SubscriptionId <String> [<CommonParameters>]
 ```
 
 ### Get
 ```
-Get-Fleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> [<CommonParameters>]
+Get-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-Fleet -InputObject <IFleetIdentity> [<CommonParameters>]
+Get-ComputeFleet -InputObject <IFleetIdentity> [<CommonParameters>]
 ```
 
 ### List1
 ```
-Get-Fleet -ResourceGroupName <String> -SubscriptionId <String> [<CommonParameters>]
+Get-ComputeFleet -ResourceGroupName <String> -SubscriptionId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Get a Fleet
+Get a ComputeFleet
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ Get a Fleet
 ## PARAMETERS
 
 ### -FleetName
-The name of the Compute Fleet
+The name of the Compute ComputeFleet
 
 ```yaml
 Type: System.String
@@ -134,8 +134,8 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `INPUTOBJECT <IFleetIdentity>`: Identity Parameter
-  - `[FleetName <String>]`: The name of the Compute Fleet
-  - `[Name <String>]`: The name of the Fleet
+  - `[FleetName <String>]`: The name of the Compute ComputeFleet
+  - `[Name <String>]`: The name of the ComputeFleet
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
 

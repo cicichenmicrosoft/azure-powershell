@@ -11,10 +11,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
     public partial class MicrosoftAzureFleet
     {
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">Resource create parameters.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -60,7 +60,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">Resource create parameters.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
@@ -119,7 +119,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">Resource create parameters.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
@@ -176,10 +176,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">Resource create parameters.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -342,7 +342,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
@@ -496,7 +496,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
@@ -523,7 +523,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">Resource create parameters.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
@@ -545,10 +545,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Delete a Fleet</summary>
+        /// <summary>Delete a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="onNoContent">a delegate that is called when the remote service returns 204 (NoContent).</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -589,7 +589,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Delete a Fleet</summary>
+        /// <summary>Delete a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="onNoContent">a delegate that is called when the remote service returns 204 (NoContent).</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
@@ -799,7 +799,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
@@ -818,10 +818,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Get a Fleet</summary>
+        /// <summary>Get a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
@@ -861,7 +861,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Get a Fleet</summary>
+        /// <summary>Get a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -914,7 +914,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Get a Fleet</summary>
+        /// <summary>Get a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -965,10 +965,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>Get a Fleet</summary>
+        /// <summary>Get a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
@@ -1033,7 +1033,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
@@ -1095,7 +1095,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
@@ -1122,7 +1122,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
@@ -1141,7 +1141,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by resource group</summary>
+        /// <summary>List ComputeFleet resources by resource group</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
@@ -1182,7 +1182,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by resource group</summary>
+        /// <summary>List ComputeFleet resources by resource group</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -1233,7 +1233,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by resource group</summary>
+        /// <summary>List ComputeFleet resources by resource group</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -1282,7 +1282,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by resource group</summary>
+        /// <summary>List ComputeFleet resources by resource group</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
@@ -1455,7 +1455,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by subscription ID</summary>
+        /// <summary>List ComputeFleet resources by subscription ID</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -1493,7 +1493,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by subscription ID</summary>
+        /// <summary>List ComputeFleet resources by subscription ID</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -1541,7 +1541,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by subscription ID</summary>
+        /// <summary>List ComputeFleet resources by subscription ID</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -1587,7 +1587,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List Fleet resources by subscription ID</summary>
+        /// <summary>List ComputeFleet resources by subscription ID</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -1751,10 +1751,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
+        /// <summary>List VirtualMachineScaleSet resources by ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="name">The name of the Fleet</param>
+        /// <param name="name">The name of the ComputeFleet</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
         /// elsewhere).</param>
@@ -1795,7 +1795,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
+        /// <summary>List VirtualMachineScaleSet resources by ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -1849,7 +1849,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
+        /// <summary>List VirtualMachineScaleSet resources by ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -1901,10 +1901,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>List VirtualMachineScaleSet resources by Fleet</summary>
+        /// <summary>List VirtualMachineScaleSet resources by ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="name">The name of the Fleet</param>
+        /// <param name="name">The name of the ComputeFleet</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
         /// <returns>
@@ -2061,7 +2061,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="name">The name of the Fleet</param>
+        /// <param name="name">The name of the ComputeFleet</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>
         /// A <see cref="global::System.Threading.Tasks.Task" /> that will be complete when handling of the response is completed.
@@ -2080,10 +2080,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">The resource properties to be updated.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
         /// <param name="onDefault">a delegate that is called when the remote service returns default (any response code not handled
@@ -2129,7 +2129,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">The resource properties to be updated.</param>
         /// <param name="onOk">a delegate that is called when the remote service returns 200 (OK).</param>
@@ -2188,7 +2188,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="viaIdentity"></param>
         /// <param name="body">The resource properties to be updated.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
@@ -2245,10 +2245,10 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
             }
         }
 
-        /// <summary>update a Fleet</summary>
+        /// <summary>update a ComputeFleet</summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">The resource properties to be updated.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <param name="sender">an instance of an Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.ISendAsync pipeline to use to make the request.</param>
@@ -2412,7 +2412,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return null; }
-                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
+                            var _result = _response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers));
                             return await _result;
                         }
                         default:
@@ -2567,7 +2567,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
                         case global::System.Net.HttpStatusCode.OK:
                         {
                             await eventListener.Signal(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Events.BeforeResponseDispatch, _response); if( eventListener.Token.IsCancellationRequested ) { return; }
-                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Fleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
+                            await onOk(_response,_response.Content.ReadAsStringAsync().ContinueWith( body => Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.ComputeFleet.FromJson(Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.Json.JsonNode.Parse(body.Result)) .ReadHeaders(_response.Headers)));
                             break;
                         }
                         default:
@@ -2594,7 +2594,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet
         /// </summary>
         /// <param name="subscriptionId">The ID of the target subscription. The value must be an UUID.</param>
         /// <param name="resourceGroupName">The name of the resource group. The name is case insensitive.</param>
-        /// <param name="fleetName">The name of the Compute Fleet</param>
+        /// <param name="fleetName">The name of the Compute ComputeFleet</param>
         /// <param name="body">The resource properties to be updated.</param>
         /// <param name="eventListener">an <see cref="Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.IEventListener" /> instance that will receive events.</param>
         /// <returns>

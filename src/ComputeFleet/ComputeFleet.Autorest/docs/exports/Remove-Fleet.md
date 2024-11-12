@@ -1,31 +1,31 @@
 ---
 external help file:
-Module Name: Fleet
-online version: https://learn.microsoft.com/powershell/module/fleet/remove-fleet
+Module Name: ComputeFleet
+online version: https://learn.microsoft.com/powershell/module/computefleet/remove-computefleet
 schema: 2.0.0
 ---
 
-# Remove-Fleet
+# Remove-ComputeFleet
 
 ## SYNOPSIS
-Delete a Fleet
+Delete a ComputeFleet
 
 ## SYNTAX
 
 ### Delete (Default)
 ```
-Remove-Fleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> [-AsJob] [-NoWait]
+Remove-ComputeFleet -FleetName <String> -ResourceGroupName <String> -SubscriptionId <String> [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### DeleteViaIdentity
 ```
-Remove-Fleet -InputObject <IFleetIdentity> [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
+Remove-ComputeFleet -InputObject <IFleetIdentity> [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a Fleet
+Delete a ComputeFleet
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -FleetName
-The name of the Compute Fleet
+The name of the Compute ComputeFleet
 
 ```yaml
 Type: System.String
@@ -202,8 +202,8 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `INPUTOBJECT <IFleetIdentity>`: Identity Parameter
-  - `[FleetName <String>]`: The name of the Compute Fleet
-  - `[Name <String>]`: The name of the Fleet
+  - `[FleetName <String>]`: The name of the Compute ComputeFleet
+  - `[Name <String>]`: The name of the ComputeFleet
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
 

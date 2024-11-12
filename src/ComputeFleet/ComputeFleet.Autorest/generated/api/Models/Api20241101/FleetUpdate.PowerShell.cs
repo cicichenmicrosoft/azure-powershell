@@ -5,7 +5,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
 {
     using Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.PowerShell;
 
-    /// <summary>Fleet Update Model</summary>
+    /// <summary>ComputeFleet Update Model</summary>
     [System.ComponentModel.TypeConverter(typeof(FleetUpdateTypeConverter))]
     public partial class FleetUpdate
     {
@@ -408,7 +408,7 @@ namespace Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101
         /// <returns>a <see cref="System.String" /> containing this model serialized to JSON text.</returns>
         public string ToJsonString() => ToJson(null, Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.SerializationMode.IncludeAll)?.ToString();
     }
-    /// Fleet Update Model
+    /// ComputeFleet Update Model
     [System.ComponentModel.TypeConverter(typeof(FleetUpdateTypeConverter))]
     public partial interface IFleetUpdate
 
