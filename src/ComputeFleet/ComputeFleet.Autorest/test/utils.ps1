@@ -41,8 +41,13 @@ $env | Add-Member -Type ScriptMethod -Value { param( [string]$key, [object]$val,
 function setupEnv() {
     # Preload subscriptionId and tenant from context, which will be used in test
     # as default. You could change them if needed.
-    $env.SubscriptionId = (Get-AzContext).Subscription.Id
+    $env.SubscriptionId = "ca8520e1-3c83-4b64-bb99-60a64673daa3" # (Get-AzContext).Subscription.Id
     $env.Tenant = (Get-AzContext).Tenant.Id
+    $env.ResourceGroupName = "test-fleet"
+    $env.FleetName = "testFleet"
+    $env.NewFleetName = "testFleet2"
+    $env.Location = "centralus"
+    
     # For any resources you created for test, you should add it to $env here.
     $envFile = 'env.json'
     if ($TestMode -eq 'live') {

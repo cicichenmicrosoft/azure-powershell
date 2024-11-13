@@ -1,0 +1,146 @@
+{
+  "Update-AzComputeFleet+[NoContext]+Update+$GET+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "2f4f25f9-0cbb-4eb2-b8c1-4860e8095c32" ],
+        "x-ms-correlation-request-id": [ "2f4f25f9-0cbb-4eb2-b8c1-4860e8095c32" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012325Z:2f4f25f9-0cbb-4eb2-b8c1-4860e8095c32" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: B3B70430D0754B42A4DB30E8CD7A1FB4 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:25Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Update-AzComputeFleet+[NoContext]+UpdateViaIdentity+$GET+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "a04840ce-17a0-4134-999e-acc9a2d1ba6f" ],
+        "x-ms-correlation-request-id": [ "a04840ce-17a0-4134-999e-acc9a2d1ba6f" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012325Z:a04840ce-17a0-4134-999e-acc9a2d1ba6f" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 7B657591591C44D4BACE43B5DB5AE0FF Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:25Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Update-AzComputeFleet+[NoContext]+UpdateExpanded+$GET+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "8aad3600-1776-42c7-9c7c-a4398a0dd15c" ],
+        "x-ms-correlation-request-id": [ "8aad3600-1776-42c7-9c7c-a4398a0dd15c" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012326Z:8aad3600-1776-42c7-9c7c-a4398a0dd15c" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 9CF9F1A6CB1549F88E490FF475F06D44 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:25Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Update-AzComputeFleet+[NoContext]+UpdateViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "726a14e7-4dc4-4ec3-8316-1f9e00679266" ],
+        "x-ms-correlation-request-id": [ "726a14e7-4dc4-4ec3-8316-1f9e00679266" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012326Z:726a14e7-4dc4-4ec3-8316-1f9e00679266" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: FE7B4F468B74425D9A6B609229C195BF Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:26Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  }
+}

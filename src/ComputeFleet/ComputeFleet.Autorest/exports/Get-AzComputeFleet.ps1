@@ -33,7 +33,7 @@ https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleet
 #>
 function Get-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
-[CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
+[CmdletBinding(DefaultParameterSetName='ListBySubscriptionId', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
@@ -42,7 +42,7 @@ param(
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
@@ -50,8 +50,8 @@ param(
     ${ResourceGroupName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='ListBySubscriptionId', Mandatory)]
+    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
@@ -113,10 +113,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Get = 'ComputeFleet.private\Get-Fleet_Get';
-            GetViaIdentity = 'ComputeFleet.private\Get-Fleet_GetViaIdentity';
-            List = 'ComputeFleet.private\Get-Fleet_List';
-            List1 = 'ComputeFleet.private\Get-Fleet_List1';
+            Get = 'Az.ComputeFleet.private\Get-Fleet_Get';
+            GetViaIdentity = 'Az.ComputeFleet.private\Get-Fleet_GetViaIdentity';
+            ListBySubscriptionId = 'Az.ComputeFleet.private\Get-Fleet_List';
+            ListByResourceGroup = 'Az.ComputeFleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

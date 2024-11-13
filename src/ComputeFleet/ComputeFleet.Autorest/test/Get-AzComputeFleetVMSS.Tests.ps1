@@ -1,11 +1,11 @@
-if(($null -eq $TestName) -or ($TestName -contains 'Remove-ComputeFleet'))
+if(($null -eq $TestName) -or ($TestName -contains 'Get-AzComputeFleetVMSS'))
 {
   $loadEnvPath = Join-Path $PSScriptRoot 'loadEnv.ps1'
   if (-Not (Test-Path -Path $loadEnvPath)) {
       $loadEnvPath = Join-Path $PSScriptRoot '..\loadEnv.ps1'
   }
   . ($loadEnvPath)
-  $TestRecordingFile = Join-Path $PSScriptRoot 'Remove-ComputeFleet.Recording.json'
+  $TestRecordingFile = Join-Path $PSScriptRoot 'Get-AzComputeFleetVMSS.Recording.json'
   $currentPath = $PSScriptRoot
   while(-not $mockingPath) {
       $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -14,12 +14,11 @@ if(($null -eq $TestName) -or ($TestName -contains 'Remove-ComputeFleet'))
   . ($mockingPath | Select-Object -First 1).FullName
 }
 
-Describe 'Remove-ComputeFleet' {
-    It 'Delete' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
-    }
-
-    It 'DeleteViaIdentity' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+Describe 'Get-AzComputeFleetVMSS' {
+    It 'List' {
+        {
+            $fleetVMSS = Get-AzComputeFleetVMSS -SubscriptionId $env.SubscriptionId -ResourceGroupName $env.ResourceGroupName -FleetName $env.FleetName
+            $fleetVMSS.Count | Should -BeGreaterOrEqual 1
+        } | Should -Not -Throw
     }
 }

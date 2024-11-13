@@ -930,10 +930,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Create = 'ComputeFleet.private\New-Fleet_Create';
-            CreateExpanded = 'ComputeFleet.private\New-Fleet_CreateExpanded';
-            CreateViaIdentity = 'ComputeFleet.private\New-Fleet_CreateViaIdentity';
-            CreateViaIdentityExpanded = 'ComputeFleet.private\New-Fleet_CreateViaIdentityExpanded';
+            Create = 'Az.ComputeFleet.private\New-Fleet_Create';
+            CreateExpanded = 'Az.ComputeFleet.private\New-Fleet_CreateExpanded';
+            CreateViaIdentity = 'Az.ComputeFleet.private\New-Fleet_CreateViaIdentity';
+            CreateViaIdentityExpanded = 'Az.ComputeFleet.private\New-Fleet_CreateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

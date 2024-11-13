@@ -611,7 +611,7 @@ VMATTRIBUTES <IVMAttributes>: Attribute based ComputeFleet.
   [VMCategories <List<String>>]: The VM category specified as a list. Optional parameter.
 
 VMSIZESPROFILE <IVMSizeProfile[]>: List of VM sizes supported for Compute ComputeFleet
-  Name <String>: The Sku name (e.g. 'Standard_DS1_v2')
+  [Name <String>]: The Sku name (e.g. 'Standard_DS1_v2')
   [Rank <Int32?>]: The rank of the VM size. This is used with 'RegularPriorityAllocationStrategy.Prioritized'         The lower the number, the higher the priority. Starting with 0.
 .Link
 https://learn.microsoft.com/powershell/module/computefleet/update-azcomputefleet
@@ -910,10 +910,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Update = 'ComputeFleet.private\Update-Fleet_Update';
-            UpdateExpanded = 'ComputeFleet.private\Update-Fleet_UpdateExpanded';
-            UpdateViaIdentity = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentity';
-            UpdateViaIdentityExpanded = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentityExpanded';
+            Update = 'Az.ComputeFleet.private\Update-Fleet_Update';
+            UpdateExpanded = 'Az.ComputeFleet.private\Update-Fleet_UpdateExpanded';
+            UpdateViaIdentity = 'Az.ComputeFleet.private\Update-Fleet_UpdateViaIdentity';
+            UpdateViaIdentityExpanded = 'Az.ComputeFleet.private\Update-Fleet_UpdateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

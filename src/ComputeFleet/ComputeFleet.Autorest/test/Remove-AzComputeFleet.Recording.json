@@ -1,0 +1,74 @@
+{
+  "Remove-ComputeFleet+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "6b94ef56-1421-43e9-8ea9-8e674a283af7" ],
+        "x-ms-correlation-request-id": [ "6b94ef56-1421-43e9-8ea9-8e674a283af7" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012325Z:6b94ef56-1421-43e9-8ea9-8e674a283af7" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: EA445EFF2F4A4A1A92945A96233FC7E8 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:25Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Remove-ComputeFleet+[NoContext]+DeleteViaIdentity+$GET+https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers/Microsoft.AzureFleet/fleets/testFleet?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "0d4e3875-e13e-4c1b-ac5e-38e4124f67f8" ],
+        "x-ms-correlation-request-id": [ "0d4e3875-e13e-4c1b-ac5e-38e4124f67f8" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012325Z:0d4e3875-e13e-4c1b-ac5e-38e4124f67f8" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 68BA60D5EE70460083340CB65EACDE33 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:25Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:25 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  }
+}

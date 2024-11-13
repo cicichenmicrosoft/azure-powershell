@@ -1,0 +1,38 @@
+{
+  "Get-AzComputeFleetOperation+[NoContext]+List+$GET+https://management.azure.com/providers/Microsoft.AzureFleet/operations?api-version=2024-11-01+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/providers/Microsoft.AzureFleet/operations?api-version=2024-11-01",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 401,
+      "Headers": {
+        "Pragma": [ "no-cache" ],
+        "x-ms-failure-cause": [ "gateway" ],
+        "x-ms-request-id": [ "6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
+        "x-ms-correlation-request-id": [ "6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T012324Z:6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 53CAAEF05EA946AC92F6475726256FA6 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:24Z" ],
+        "Cache-Control": [ "no-cache" ],
+        "Date": [ "Wed, 13 Nov 2024 01:23:23 GMT" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "115" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"error\":{\"code\":\"AuthenticationFailed\",\"message\":\"Authentication failed. The \u0027Authorization\u0027 header is missing.\"}}",
+      "isContentBase64": false
+    }
+  }
+}

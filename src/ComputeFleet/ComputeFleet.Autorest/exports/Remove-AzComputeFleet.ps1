@@ -128,8 +128,8 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Delete = 'ComputeFleet.private\Remove-Fleet_Delete';
-            DeleteViaIdentity = 'ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
+            Delete = 'Az.ComputeFleet.private\Remove-Fleet_Delete';
+            DeleteViaIdentity = 'Az.ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)

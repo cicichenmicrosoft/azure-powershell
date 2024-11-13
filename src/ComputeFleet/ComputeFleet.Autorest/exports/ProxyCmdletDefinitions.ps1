@@ -92,7 +92,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'ComputeFleet.private\Get-FleetVirtualMachineScaleSet_List';
+            List = 'Az.ComputeFleet.private\Get-FleetVirtualMachineScaleSet_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -156,7 +156,7 @@ https://learn.microsoft.com/powershell/module/computefleet/get-azcomputefleet
 #>
 function Get-AzComputeFleet {
 [OutputType([Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet])]
-[CmdletBinding(DefaultParameterSetName='List', PositionalBinding=$false)]
+[CmdletBinding(DefaultParameterSetName='ListBySubscriptionId', PositionalBinding=$false)]
 param(
     [Parameter(ParameterSetName='Get', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
@@ -165,7 +165,7 @@ param(
     ${FleetName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The name of the resource group.
@@ -173,8 +173,8 @@ param(
     ${ResourceGroupName},
 
     [Parameter(ParameterSetName='Get', Mandatory)]
-    [Parameter(ParameterSetName='List', Mandatory)]
-    [Parameter(ParameterSetName='List1', Mandatory)]
+    [Parameter(ParameterSetName='ListBySubscriptionId', Mandatory)]
+    [Parameter(ParameterSetName='ListByResourceGroup', Mandatory)]
     [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Category('Path')]
     [System.String]
     # The ID of the target subscription.
@@ -236,10 +236,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Get = 'ComputeFleet.private\Get-Fleet_Get';
-            GetViaIdentity = 'ComputeFleet.private\Get-Fleet_GetViaIdentity';
-            List = 'ComputeFleet.private\Get-Fleet_List';
-            List1 = 'ComputeFleet.private\Get-Fleet_List1';
+            Get = 'Az.ComputeFleet.private\Get-Fleet_Get';
+            GetViaIdentity = 'Az.ComputeFleet.private\Get-Fleet_GetViaIdentity';
+            ListBySubscriptionId = 'Az.ComputeFleet.private\Get-Fleet_List';
+            ListByResourceGroup = 'Az.ComputeFleet.private\Get-Fleet_List1';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -342,7 +342,7 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            List = 'ComputeFleet.private\Get-Operation_List';
+            List = 'Az.ComputeFleet.private\Get-Operation_List';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -1303,10 +1303,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Create = 'ComputeFleet.private\New-Fleet_Create';
-            CreateExpanded = 'ComputeFleet.private\New-Fleet_CreateExpanded';
-            CreateViaIdentity = 'ComputeFleet.private\New-Fleet_CreateViaIdentity';
-            CreateViaIdentityExpanded = 'ComputeFleet.private\New-Fleet_CreateViaIdentityExpanded';
+            Create = 'Az.ComputeFleet.private\New-Fleet_Create';
+            CreateExpanded = 'Az.ComputeFleet.private\New-Fleet_CreateExpanded';
+            CreateViaIdentity = 'Az.ComputeFleet.private\New-Fleet_CreateViaIdentity';
+            CreateViaIdentityExpanded = 'Az.ComputeFleet.private\New-Fleet_CreateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -1465,8 +1465,8 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Delete = 'ComputeFleet.private\Remove-Fleet_Delete';
-            DeleteViaIdentity = 'ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
+            Delete = 'Az.ComputeFleet.private\Remove-Fleet_Delete';
+            DeleteViaIdentity = 'Az.ComputeFleet.private\Remove-Fleet_DeleteViaIdentity';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
@@ -2407,10 +2407,10 @@ begin {
         $parameterSet = $PSCmdlet.ParameterSetName
 
         $mapping = @{
-            Update = 'ComputeFleet.private\Update-Fleet_Update';
-            UpdateExpanded = 'ComputeFleet.private\Update-Fleet_UpdateExpanded';
-            UpdateViaIdentity = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentity';
-            UpdateViaIdentityExpanded = 'ComputeFleet.private\Update-Fleet_UpdateViaIdentityExpanded';
+            Update = 'Az.ComputeFleet.private\Update-Fleet_Update';
+            UpdateExpanded = 'Az.ComputeFleet.private\Update-Fleet_UpdateExpanded';
+            UpdateViaIdentity = 'Az.ComputeFleet.private\Update-Fleet_UpdateViaIdentity';
+            UpdateViaIdentityExpanded = 'Az.ComputeFleet.private\Update-Fleet_UpdateViaIdentityExpanded';
         }
         $cmdInfo = Get-Command -Name $mapping[$parameterSet]
         [Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Runtime.MessageAttributeHelper]::ProcessCustomAttributesAtRuntime($cmdInfo, $MyInvocation, $parameterSet, $PSCmdlet)
