@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -FleetName
-Fleet name
+ComputeFleet name
 
 ```yaml
 Type: System.String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Identity Parameter
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.IFleetIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleetIdentity
 Parameter Sets: GetViaIdentity
 Aliases:
 
@@ -227,7 +227,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.IFleet
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.IFleet
 ## NOTES
 
 ## RELATED LINKS

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzComputeFleet
 
 ## SYNOPSIS
-Create Fleet resource
+Create ComputeFleet resource
 
 ## SYNTAX
 
@@ -65,7 +65,7 @@ New-AzComputeFleet -Location <String> -InputObject <IFleetIdentity> [-LocationPr
 ```
 
 ## DESCRIPTION
-Create Fleet resource
+Create ComputeFleet resource
 
 ## EXAMPLES
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeApiVersion
-Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute Fleet
+Specifies the Microsoft.Compute API version to use when creating underlying Virtual Machine scale sets and Virtual Machines.The default value will be the latest supported computeApiVersion by Compute ComputeFleet
 
 ```yaml
 Type: System.String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -FleetName
-Fleet name
+ComputeFleet name
 
 ```yaml
 Type: System.String
@@ -459,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-An Compute Fleet resource
+An Compute ComputeFleet resource
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.IFleet
@@ -641,7 +641,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMAttributes
-Attribute based Fleet
+Attribute based ComputeFleet
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.IVMAttributes
@@ -656,7 +656,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMSizesProfile
-List of VM sizes supported for Compute Fleet
+List of VM sizes supported for Compute ComputeFleet
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeFleet.Models.Api20241101.Api20241101.IVMSizeProfile
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -Zones
-Zones in which the Compute Fleet is available
+Zones in which the Compute ComputeFleet is available
 
 ```yaml
 Type: System.String
@@ -733,7 +733,7 @@ For information on hash tables, run Get-Help about_Hash_Tables.
 
 INPUTOBJECT \<IFleet\>: Identity Parameter
   \[Id \<String\>\]: Resource identity path
-  \[FleetName \<String\>\]: Fleet resource name
+  \[FleetName \<String\>\]: ComputeFleet resource name
   \[ResourceGroupName \<String\>\]: Resource group name
   \[SubscriptionId \<String\>\]: Microsoft Azure subscription id
 
