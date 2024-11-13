@@ -4,7 +4,7 @@
 # ----------------------------------------------------------------------------------
 param([switch]$NotIsolated, [switch]$Live, [switch]$Record, [switch]$Playback, [switch]$RegenerateSupportModule, [switch]$UsePreviousConfigForRecord, [string[]]$TestName)
 $ErrorActionPreference = 'Stop'
-
+$Record = $True
 if(-not $NotIsolated)
 {
   Write-Host -ForegroundColor Green 'Creating isolated process...'
@@ -31,7 +31,7 @@ if ($requireResourceModule)
 {
   # Load the latest Az.Accounts installed
   Import-Module -Name Az.Accounts -RequiredVersion (Get-Module -Name Az.Accounts -ListAvailable | Sort-Object -Property Version -Descending)[0].Version
-  $resourceModulePSD = Get-Item -Path (Join-Path $HOME '.PSSharedModules\Resources\Az.Resources.TestSupport.psd1')
+  $resourceModulePSD = Get-Item -Path (Join-Path $HOME '.PSSharedModules\Resources\Az.Resources.TestSupport.psm1')
   Import-Module -Name $resourceModulePSD.FullName
 }
 

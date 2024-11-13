@@ -13,18 +13,18 @@
     "Response": {
       "StatusCode": 401,
       "Headers": {
+        "Cache-Control": [ "no-cache" ],
         "Pragma": [ "no-cache" ],
+        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ],
         "x-ms-failure-cause": [ "gateway" ],
-        "x-ms-request-id": [ "6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
-        "x-ms-correlation-request-id": [ "6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
-        "x-ms-routing-request-id": [ "WESTUS2:20241113T012324Z:6483ee0d-35df-4fd0-8680-2f81ea86193b" ],
+        "x-ms-request-id": [ "5e576fcd-15e9-439f-8ee4-862d3860a5ad" ],
+        "x-ms-correlation-request-id": [ "5e576fcd-15e9-439f-8ee4-862d3860a5ad" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20241113T025800Z:5e576fcd-15e9-439f-8ee4-862d3860a5ad" ],
         "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
         "X-Content-Type-Options": [ "nosniff" ],
         "X-Cache": [ "CONFIG_NOCACHE" ],
-        "X-MSEdge-Ref": [ "Ref A: 53CAAEF05EA946AC92F6475726256FA6 Ref B: CO6AA3150217029 Ref C: 2024-11-13T01:23:24Z" ],
-        "Cache-Control": [ "no-cache" ],
-        "Date": [ "Wed, 13 Nov 2024 01:23:23 GMT" ],
-        "WWW-Authenticate": [ "Bearer authorization_uri=\"https://login.windows.net/\", error=\"invalid_token\", error_description=\"The authentication failed because of missing \u0027Authorization\u0027 header.\"" ]
+        "X-MSEdge-Ref": [ "Ref A: 1C2732665E0C4E49A05779B72A4B05F8 Ref B: CO6AA3150219033 Ref C: 2024-11-13T02:58:00Z" ],
+        "Date": [ "Wed, 13 Nov 2024 02:58:00 GMT" ]
       },
       "ContentHeaders": {
         "Content-Length": [ "115" ],
